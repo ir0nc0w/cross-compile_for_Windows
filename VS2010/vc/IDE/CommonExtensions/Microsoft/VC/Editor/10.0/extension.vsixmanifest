@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Microsoft.VisualC.Editor.Implementation">
+    <Name>Visual C++ Editor Component Implementation</Name>
+    <Author>Microsoft</Author>
+    <Version>10.0</Version>
+    <Description>Visual C++ Editor Component implementation of colorization, outlining, squiggles, and inactive code classification</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Premium</Edition>
+        <Edition>Express_All</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+
+  <References />
+
+  <Content>
+    <MefComponent>Microsoft.VisualC.Editor.Implementation.dll</MefComponent>
+  </Content>
+
+</Vsix>

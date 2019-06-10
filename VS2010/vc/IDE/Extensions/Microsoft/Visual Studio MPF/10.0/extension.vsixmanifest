@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+
+  <!-- VSIX Manifest for the Visual Studio Managed Package Framework (MPF) 10.0 Assemblies -->
+
+  <Identifier Id="Microsoft.VisualStudio.MPF">
+    <Name>Visual Studio MPF</Name>
+    <Author>Microsoft</Author>
+    <Version>10.0</Version>
+    <Description>Microsoft Visual Studio MPF Assemblies</Description>
+    <Locale>1033</Locale>
+    <InstalledByMsi>true</InstalledByMsi>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Pro</Edition>
+        <Edition>Express_All</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+
+  <References />
+
+  <Content />
+  <!-- Though not specified as Content, this manifest is used to detect the presence
+       or absence of the MPF Assemblies:
+        - Microsoft.VisualStudio.Shell.10.0.dll
+        - Microsoft.VisualStudio.Package.LanguageService.10.0.dll
+  -->
+
+</Vsix>

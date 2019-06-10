@@ -1,0 +1,2955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.Text.UI</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.Text.Adornments.ErrorTypeDefinition">
+      <summary>오류 유형을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Adornments.ErrorTypeDefinition.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Adornments.ErrorTypeDefinition" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Adornments.ISquiggleProviderFactory">
+      <summary>지정된 버퍼에 대한 물결선 태거(<see cref="T:Microsoft.VisualStudio.Text.Tagging.SquiggleTag" /> 형식의 <see cref="T:Microsoft.VisualStudio.Text.Tagging.SimpleTagger`1" />)를 가져오거나, 해당 버퍼에 속한 속성에 캐시된 물결선 태거가 없는 경우 새로 만듭니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Adornments.ISquiggleProviderFactory.GetSquiggleTagger(Microsoft.VisualStudio.Text.ITextBuffer)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />에 대한 캐시된 물결선 태거를 가져옵니다. </summary>
+      <returns>
+        <paramref name="textBuffer" />에 대한 캐시된 물결선 태거입니다.</returns>
+      <param name="textBuffer">물결선 태거를 가져올 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Adornments.ITextMarkerProviderFactory">
+      <summary>지정된 버퍼에 대한 텍스트 표식 태거(<see cref="T:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag" /> 형식의 <see cref="T:Microsoft.VisualStudio.Text.Tagging.SimpleTagger`1" />)를 가져오거나, 해당 버퍼에 속한 속성에 캐시된 텍스트 표식 태거가 없는 경우 새로 만듭니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Adornments.ITextMarkerProviderFactory.GetTextMarkerTagger(Microsoft.VisualStudio.Text.ITextBuffer)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />에 대한 캐시된 텍스트 표식 태거를 가져옵니다. </summary>
+      <returns>
+        <paramref name="textBuffer" />에 대한 캐시된 <see cref="T:Microsoft.VisualStudio.Text.Tagging.SimpleTagger`1" />입니다.</returns>
+      <param name="textBuffer">텍스트 표식 태거를 가져올 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Adornments.IToolTipProvider">
+      <summary>임의의 개체를 콘텐츠로 사용하여 도구 설명을 만들고 표시합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Adornments.IToolTipProvider.ClearToolTip">
+      <summary>현재 표시된 도구 설명이 있는 경우 제거합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Adornments.IToolTipProvider.ShowToolTip(Microsoft.VisualStudio.Text.ITrackingSpan,System.Object)">
+      <summary>도구 설명을 만들고 표시합니다.</summary>
+      <param name="span">도구 설명과 관련된 텍스트 범위입니다.</param>
+      <param name="toolTipContent">도구 설명에 표시할 콘텐츠입니다. 이것은 WPF 도구 설명 장식 화면을 위한 UIElement이거나 문자열이어야 합니다. </param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Adornments.IToolTipProvider.ShowToolTip(Microsoft.VisualStudio.Text.ITrackingSpan,System.Object,Microsoft.VisualStudio.Text.Adornments.PopupStyles)">
+      <summary>도구 설명을 만들고 표시합니다.</summary>
+      <param name="span">도구 설명과 관련된 텍스트 범위입니다.</param>
+      <param name="toolTipContent">도구 설명에 표시할 콘텐츠입니다. 이것은 WPF 도구 설명 장식 화면을 위한 UIElement이거나 문자열이어야 합니다.</param>
+      <param name="style">
+                도구 설명에 대한 <see cref="T:Microsoft.VisualStudio.Text.Adornments.PopupStyles" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Adornments.IToolTipProviderFactory">
+      <summary>캐시된 목록에서 기존 도구 설명 장식 공급자를 가져오거나 캐시에 기존 도구 설명 장식 공급자가 없는 경우 새로 만듭니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Adornments.IToolTipProviderFactory.GetToolTipProvider(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 캐시된 <see cref="T:Microsoft.VisualStudio.Text.Adornments.IToolTipProvider" />를 가져옵니다. </summary>
+      <returns>
+        <paramref name="textView" />에 대한 캐시된 <see cref="T:Microsoft.VisualStudio.Text.Adornments.IToolTipProvider" />입니다.</returns>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Adornments.IToolTipProvider" />를 가져올 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Adornments.PopupStyles">
+      <summary>팝업 창과 연결된 스타일을 나타냅니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.PopupStyles.None">
+      <summary>기본 동작으로 설정합니다. 기본 동작은 팝업 창에 테두리가 없고 크기를 조정할 수 없으며 마우스를 움직일 때 닫히지 않습니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.PopupStyles.DismissOnMouseLeaveText">
+      <summary>마우스가 연결된 텍스트 범위를 벗어날 경우 팝업 창을 닫습니다. 이 설정은 <see cref="F:Microsoft.VisualStudio.Text.Adornments.PopupStyles.DismissOnMouseLeaveTextOrContent" />와 함께 사용할 수 없습니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.PopupStyles.DismissOnMouseLeaveTextOrContent">
+      <summary>마우스가 연결된 텍스트 범위나 팝업 콘텐츠를 벗어날 경우 팝업 창을 닫습니다. 이 설정은 <see cref="F:Microsoft.VisualStudio.Text.Adornments.PopupStyles.DismissOnMouseLeaveText" />와 함께 사용할 수 없습니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.PopupStyles.PositionLeftOrRight">
+      <summary>팝업 창을 표시 범위의 왼쪽이나 오른쪽에 위치시키려고 시도합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.PopupStyles.PreferLeftOrTopPosition">
+      <summary>팝업 창을 표시 범위의 왼쪽이나 위쪽에 위치시키려고 시도합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.PopupStyles.RightOrBottomJustify">
+      <summary>팝업 창의 오른쪽 또는 아래쪽 가장자리를 표시 범위의 오른쪽 또는 아래쪽 가장자리에 맞춥니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.PopupStyles.PositionClosest">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Adornments.StandardErrorTypeService">
+      <summary>플랫폼에서 선언한 표준 오류 유형을 나타냅니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.StandardErrorTypeService.CompilerError">
+      <summary>컴파일러 오류를 나타냅니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.StandardErrorTypeService.OtherError">
+      <summary>기타 오류를 나타냅니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.StandardErrorTypeService.SyntaxError">
+      <summary>구문 오류를 나타냅니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Adornments.StandardErrorTypeService.Warning">
+      <summary>컴파일러 경고를 나타냅니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Classification.IViewClassifierAggregatorService">
+      <summary>특정 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 버퍼 그래프에 있는 모든 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />에 대한 모든<see cref="T:Microsoft.VisualStudio.Text.Classification.IClassifier" /> 정보를 집계하고 정규화하는 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassifier" />를 반환하는 서비스입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Classification.IViewClassifierAggregatorService.GetClassifier(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 캐시된 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassifier" />를 가져옵니다. 해당 항목이 없을 경우 뷰의 버퍼 그래프에 있는 각 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />에 대해 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassifier" />가 만들어지고 캐시됩니다.</summary>
+      <returns>캐시된 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassifier" />입니다.</returns>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassifier" />를 검색하거나 만드는 데 사용할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="textView" /> is null.</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.AutoScrollEnabled">
+      <summary>자동 스크롤을 사용하도록 설정하는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.AutoScrollEnabled.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.AutoScrollEnabled" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.AutoScrollEnabled.Default">
+      <summary>기본값인 false를 가져옵니다.</summary>
+      <returns>false입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.AutoScrollEnabled.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+      <returns>키입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.CaretPosition">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에서 캐럿의 위치를 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.CaretPosition.#ctor(Microsoft.VisualStudio.Text.VirtualSnapshotPoint,Microsoft.VisualStudio.Text.IMappingPoint,Microsoft.VisualStudio.Text.PositionAffinity)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="bufferPosition">캐럿의 인덱스입니다. 이것은 내부 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />에서 두 문자 사이의 간격에 해당합니다.</param>
+      <param name="mappingPoint">버퍼에서 해당 위치를 찾는 데 사용할 수 있는 캐럿의 매핑 지점입니다.</param>
+      <param name="caretAffinity">캐럿의 <see cref="T:Microsoft.VisualStudio.Text.PositionAffinity" />입니다. 캐럿은 간격의 앞쪽 가장자리 또는 간격의 뒤쪽 가장자리에 대한 선호도를 가질 수 있습니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.CaretPosition.Affinity">
+      <summary>캐럿의 선호도를 가져옵니다. <see cref="F:Microsoft.VisualStudio.Text.PositionAffinity.Predecessor" />는 캐럿이 간격의 앞쪽 가장자리에 바인딩되어 있음을 나타냅니다. <see cref="F:Microsoft.VisualStudio.Text.PositionAffinity.Successor" />는 캐럿이 간격의 뒤쪽 가장자리에 바인딩되어 있음을 나타냅니다.</summary>
+      <returns>캐럿의 선호도입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.CaretPosition.BufferPosition">
+      <summary>뷰의 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />에 있는 두 문자 사이의 간격에 해당하는 캐럿의 위치를 가져옵니다.</summary>
+      <returns>캐럿의 위치입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.CaretPosition.Equals(System.Object)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" /> 개체가 같은지 여부를 확인합니다.</summary>
+      <returns>
+            두 개체가 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="obj">두 번째 CaretPosition 개체입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.CaretPosition.GetHashCode">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />의 해시 코드를 가져옵니다.</summary>
+      <returns>해시 코드입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.CaretPosition.op_Equality(Microsoft.VisualStudio.Text.Editor.CaretPosition,Microsoft.VisualStudio.Text.Editor.CaretPosition)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" /> 개체가 같은지 여부를 확인합니다.</summary>
+      <returns>
+            두 개체가 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="caretPosition1">첫 번째 CaretPosition 개체입니다.</param>
+      <param name="caretPosition2">두 번째 CaretPosition 개체입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.CaretPosition.op_Inequality(Microsoft.VisualStudio.Text.Editor.CaretPosition,Microsoft.VisualStudio.Text.Editor.CaretPosition)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" /> 개체가 다른지 여부를 확인합니다.</summary>
+      <returns>
+            두 개체가 다르면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="caretPosition1">첫 번째 CaretPosition 개체입니다.</param>
+      <param name="caretPosition2">두 번째 CaretPosition 개체입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.CaretPosition.Point">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.IMappingPoint" />를 가져옵니다. 이것은 버퍼에서 캐럿의 위치를 표시합니다.</summary>
+      <returns>위치의 매핑 지점입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.CaretPosition.ToString">
+      <summary>캐럿 위치의 문자열 표현을 제공합니다.</summary>
+      <returns>캐럿 위치의 문자열 표현입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.CaretPosition.VirtualBufferPosition">
+      <summary>가상 버퍼 위치를 <see cref="T:Microsoft.VisualStudio.Text.VirtualSnapshotPoint" />로 가져옵니다.</summary>
+      <returns>가상 버퍼 위치입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.CaretPosition.VirtualSpaces">
+      <summary>캐럿이 위치한 줄의 실제 끝 다음에 있는 공간 수를 가져옵니다.</summary>
+      <returns>가상 공간 수입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.CaretPositionChangedEventArgs">
+      <summary>
+        <see cref="E:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged" /> 이벤트에 대한 정보를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.CaretPositionChangedEventArgs.#ctor(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Text.Editor.CaretPosition,Microsoft.VisualStudio.Text.Editor.CaretPosition)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPositionChangedEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="textView">캐럿이 포함된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="oldPosition">이전 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</param>
+      <param name="newPosition">새 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.CaretPositionChangedEventArgs.NewPosition">
+      <summary>새 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />을 가져옵니다.</summary>
+      <returns>새 캐럿 위치입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.CaretPositionChangedEventArgs.OldPosition">
+      <summary>이전의 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />을 가져옵니다.</summary>
+      <returns>이전 캐럿 위치입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.CaretPositionChangedEventArgs.TextView">
+      <summary>캐럿이 포함된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />를 가져옵니다.</summary>
+      <returns>텍스트 뷰입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ChangeTrackingMarginEnabled">
+      <summary>변경 내용 추적 여백을 사용하도록 설정하는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ChangeTrackingMarginEnabled.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ChangeTrackingMarginEnabled" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ChangeTrackingMarginEnabled.Default">
+      <summary>기본값인 false를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ChangeTrackingMarginEnabled.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.CutOrCopyBlankLineIfNoSelection">
+      <summary>선택 영역이 비어 있을 경우 빈 줄을 잘라내거나 복사하는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.CutOrCopyBlankLineIfNoSelection.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.CutOrCopyBlankLineIfNoSelection" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.CutOrCopyBlankLineIfNoSelection.Default">
+      <summary>기본값인 true를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.CutOrCopyBlankLineIfNoSelection.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.DefaultTextViewHostOptions">
+      <summary>공통되는 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 호스트 관련 옵션의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewHostOptions.ChangeTrackingId">
+      <summary>변경 내용 추적 여백을 갖는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewHostOptions.GlyphMarginId">
+      <summary>문자 모양 여백을 갖는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewHostOptions.HorizontalScrollBarId">
+      <summary>가로 스크롤 막대를 갖는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewHostOptions.LineNumberMarginId">
+      <summary>줄 번호 여백을 갖는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewHostOptions.OutliningMarginId">
+      <summary>개요 여백을 갖는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewHostOptions.SelectionMarginId">
+      <summary>선택 영역 여백을 갖는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewHostOptions.VerticalScrollBarId">
+      <summary>세로 스크롤 막대를 갖는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewHostOptions.ZoomControlId">
+      <summary>확대/축소 컨트롤을 갖는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions">
+      <summary>공통되는 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 옵션을 정의합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.AutoScrollId">
+      <summary>뷰가 텍스트 변경 내용을 자동 스크롤하는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.CutOrCopyBlankLineIfNoSelectionId">
+      <summary>선택 영역이 비어 있을 경우 잘라내기 및 복사를 수행하면 빈 줄이 잘라지거나 복사되는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.DisplayUrlsAsHyperlinksId">
+      <summary>URL을 하이퍼링크로 표시할 것인지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.DragDropEditingId">
+      <summary>끌기/놓기 편집 기능을 사용할 수 있는지 여부를 확인하는 기본 옵션입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.IsViewportLeftClippedId"></member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.OutliningUndoOptionId">
+      <summary>개요 기능을 실행 취소할 수 있는지 여부를 확인하는 기본 옵션입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.OverwriteModeId">
+      <summary>덮어쓰기 모드를 사용할 수 있는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.ProduceScreenReaderFriendlyTextId">
+      <summary>코딩 문자 및 특수 기호(예: (,),{,} 등)를 자동화된 개체의 텍스트 표현으로 바꾸어 화면 판독기에 대해 친숙한 문자를 생성할 것인지 여부입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.UseVirtualSpaceId">
+      <summary>뷰에서 가상 공간을 사용할 수 있는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.UseVisibleWhitespaceId">
+      <summary>공백 및 탭을 볼 수 있는 문자 모양으로 표시할 것인지 여부를 확인합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.ViewProhibitUserInputId">
+      <summary>사용자 입력을 금지할 것인지 여부를 확인합니다. 뷰의 버퍼에 있는 텍스트는 여전히 수정할 수 있으며 동일한 버퍼에 있는 다른 뷰에서는 사용자 입력을 허용합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions.WordWrapStyleId">
+      <summary>기본 뷰의 자동 줄 바꿈 스타일을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.DisplayUrlsAsHyperlinks">
+      <summary>URL을 하이퍼링크로 표시할 것인지 여부를 결정하는 옵션 정의입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.DisplayUrlsAsHyperlinks.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.DisplayUrlsAsHyperlinks" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.DisplayUrlsAsHyperlinks.Default">
+      <summary>기본값(true)을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.DisplayUrlsAsHyperlinks.Key">
+      <summary>편집기 옵션 키를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.DragDropEditing">
+      <summary>끌기/놓기 편집에 대한 뷰 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.DragDropEditing.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.DragDropEditing" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.DragDropEditing.Default">
+      <summary>기본값인 true를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.DragDropEditing.Key">
+      <summary>끌기/놓기 편집 옵션에 대한 기본 키를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.EnsureSpanVisibleOptions">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.IViewScroller" /> EnsureSpanVisible의 동작을 제어하는 옵션입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.EnsureSpanVisibleOptions.ShowStart">
+      <summary>전체 범위를 표시하지 못할 경우 범위의 시작 부분이 표시되도록 합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.EnsureSpanVisibleOptions.MinimumScroll">
+      <summary>뷰에 범위를 표시하는 데 최소한의 스크롤을 수행합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.EnsureSpanVisibleOptions.AlwaysCenter">
+      <summary>범위를 항상 뷰의 가운데에 배치합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.EnsureSpanVisibleOptions.None">
+      <summary>전체 범위를 표시하지 못할 경우 범위의 끝 부분이 표시되도록 합니다. 범위에 속한 텍스트가 현재 표시되지 않으면 뷰의 가운데에 범위를 배치합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.GlyphMarginEnabled">
+      <summary>문자 모양 여백을 사용하도록 설정하는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.GlyphMarginEnabled.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.GlyphMarginEnabled" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.GlyphMarginEnabled.Default">
+      <summary>기본값인 true를 가져옵니다.</summary>
+      <returns>true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.GlyphMarginEnabled.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+      <returns>키입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.HorizontalScrollBarEnabled">
+      <summary>가로 스크롤 막대를 사용하도록 설정하는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.HorizontalScrollBarEnabled.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.HorizontalScrollBarEnabled" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.HorizontalScrollBarEnabled.Default">
+      <summary>기본값인 true를 가져옵니다.</summary>
+      <returns>true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.HorizontalScrollBarEnabled.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+      <returns>키입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.IScrollMap">
+      <summary>문자 위치와 스크롤 맵 좌표 간의 매핑을 정의합니다. 이것은 스크롤 막대가 렌더링되는 좌표계와 같지 않습니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IScrollMap.AreElisionsExpanded">
+      <summary>이 스크롤 맵에서 사용하는 좌표계가 모든 생략 부분이 확장된 것처럼 동작하는지 여부를 확인합니다.</summary>
+      <returns>생략 부분이 확장되면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IScrollMap.CoordinateOfBufferEnd">
+      <summary>버퍼의 끝 바로 다음에 해당되는 스크롤 맵 좌표를 가져옵니다.</summary>
+      <returns>버퍼의 끝 바로 다음에 해당되는 스크롤 맵 좌표입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IScrollMap.GetBufferPositionAtCoordinate(System.Double)">
+      <summary>스크롤 맵 좌표에 대응되는 버퍼 위치를 가져옵니다.</summary>
+      <returns>대응되는 버퍼 위치입니다.</returns>
+      <param name="coordinate">스크롤 막대 좌표입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="coordinate" /> is NaN, less than 0.0 or greater than Maximum.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IScrollMap.GetCoordinateAtBufferPosition(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>버퍼 위치에 대한 스크롤 맵 좌표를 가져옵니다.</summary>
+      <returns>스크롤 맵 좌표입니다.</returns>
+      <param name="bufferPosition">버퍼 위치입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IScrollMap.ThumbSize">
+      <summary>뷰에 표시되는 텍스트의 크기를 가져옵니다(스크롤 맵 좌표 내).</summary>
+      <returns>뷰에 표시되는 텍스트의 크기입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.IScrollMapFactoryService">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 <see cref="T:Microsoft.VisualStudio.Text.Editor.IScrollMap" />을 만들거나 다시 사용합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IScrollMapFactoryService.Create(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 기존 스크롤 맵을 만들거나 다시 사용합니다.</summary>
+      <returns>
+        <paramref name="textView" />에 대한 <see cref="T:Microsoft.VisualStudio.Text.Editor.IScrollMap" />입니다.</returns>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.IScrollMap" />을 가져올 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IScrollMapFactoryService.Create(Microsoft.VisualStudio.Text.Editor.ITextView,System.Boolean)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 기존 스크롤 맵을 만들거나 다시 사용합니다.</summary>
+      <returns>
+        <paramref name="textView" />에 대한 <see cref="T:Microsoft.VisualStudio.Text.Editor.IScrollMap" />입니다.</returns>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.IScrollMap" />을 가져올 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="areElisionsExpanded">이 스크롤 맵에서 사용하는 좌표계가 모든 생략 부분이 확장된 것처럼 동작하는지 여부를 확인합니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ISmartIndent">
+      <summary>줄에 필요한 들여쓰기를 계산하는 메서드를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ISmartIndent.GetDesiredIndentation(Microsoft.VisualStudio.Text.ITextSnapshotLine)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshotLine" />에 필요한 들여쓰기를 가져옵니다.</summary>
+      <returns>줄의 시작에 배치할 공백 수이거나, 들여쓰기가 필요 없을 경우 null입니다.</returns>
+      <param name="line">들여쓰기를 계산할 줄입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ISmartIndentationService"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ISmartIndentationService.GetDesiredIndentation(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Text.ITextSnapshotLine)"></member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ISmartIndentProvider"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ISmartIndentProvider.CreateSmartIndent(Microsoft.VisualStudio.Text.Editor.ITextView)"></member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.IsViewportLeftClipped"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IsViewportLeftClipped.#ctor"></member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IsViewportLeftClipped.Default"></member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IsViewportLeftClipped.Key"></member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ITextCaret">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />와 연결된 캐럿을 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.Bottom">
+      <summary>텍스트 렌더링 좌표계에서 캐럿의 아래쪽 가장자리 위치를 가져옵니다.</summary>
+      <returns>아래쪽 가장자리 위치입니다.</returns>
+      <exception cref="T:System.InvalidOperationException">The caret does not lie in the text formatted by the view.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.ContainingTextViewLine">
+      <summary>해당 텍스트 줄이 뷰에 표시되는 경우 캐럿을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />을 가져옵니다.</summary>
+      <returns>포함하는 줄입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.EnsureVisible">
+      <summary>뷰를 위/아래 및 왼쪽/오른쪽으로 스크롤하여 캐럿이 표시되도록 합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.Height">
+      <summary>텍스트 렌더링 좌표계에서 캐럿의 높이를 가져옵니다.</summary>
+      <returns>캐럿의 높이입니다.</returns>
+      <exception cref="T:System.InvalidOperationException">The caret does not lie in the text formatted by the view.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.InVirtualSpace">
+      <summary>캐럿이 가상 공간에 있는지 여부를 확인합니다. 가상 공간은 줄의 실제 끝 다음에 있는 공간입니다.</summary>
+      <returns>캐럿이 가상 공간에 있으면 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.IsHidden">
+      <summary>캐럿의 표시 여부를 가져오거나 설정합니다.</summary>
+      <returns>캐럿이 숨겨지면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.Left">
+      <summary>텍스트 렌더링 좌표계에서 캐럿의 왼쪽 가장자리 위치를 가져옵니다.</summary>
+      <returns>왼쪽 가장자리 위치입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveTo(Microsoft.VisualStudio.Text.Formatting.ITextViewLine)">
+      <summary>현재 x 좌표를 유지하면서 캐럿을 지정된 <paramref name="textLine" />으로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿의 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+      <param name="textLine">캐럿을 포함할 텍스트 줄입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveTo(Microsoft.VisualStudio.Text.Formatting.ITextViewLine,System.Double)">
+      <summary>캐럿을 지정된 x 좌표와 텍스트 줄에 대한 최상의 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />으로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿의 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+      <param name="textLine">캐럿을 포함할 텍스트 줄입니다.</param>
+      <param name="xCoordinate">텍스트 렌더링 좌표계에서 캐럿의 x 좌표입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="xCoordinate" /> is NaN.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveTo(Microsoft.VisualStudio.Text.Formatting.ITextViewLine,System.Double,System.Boolean)">
+      <summary>캐럿을 지정된 x 좌표와 텍스트 줄에 대한 최상의 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />으로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿의 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+      <param name="textLine">캐럿을 포함할 텍스트 줄입니다.</param>
+      <param name="xCoordinate">텍스트 렌더링 좌표계에서 캐럿의 x 좌표입니다.</param>
+      <param name="captureHorizontalPosition">
+                이후의 위 또는 아래로의 이동에 대해 캐럿에서 수평 위치를 캡처해야 하면 true입니다. 캐럿에서 이전에 캡처한 수평 위치를 유지해야 하면 false입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="xCoordinate" /> is NaN.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveTo(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>캐럿을 내부 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />의 지정된 인덱스로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿의 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+      <param name="bufferPosition">캐럿을 이동할 대상이 되는 내부 텍스트 버퍼의 <see cref="T:Microsoft.VisualStudio.Text.SnapshotPoint" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveTo(Microsoft.VisualStudio.Text.SnapshotPoint,Microsoft.VisualStudio.Text.PositionAffinity)">
+      <summary>캐럿을 내부 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />의 지정된 인덱스로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿 위치에 대한 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+      <param name="bufferPosition">캐럿을 이동할 대상이 되는 내부 텍스트 버퍼의 <see cref="T:Microsoft.VisualStudio.Text.SnapshotPoint" />입니다.</param>
+      <param name="caretAffinity">캐럿의 선호도입니다. <paramref name="bufferPosition" />에서 자동 줄 바꿈되는 두 줄 사이의 연결되는 위치를 지정하지 않을 경우에는 이 값이 무시됩니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveTo(Microsoft.VisualStudio.Text.SnapshotPoint,Microsoft.VisualStudio.Text.PositionAffinity,System.Boolean)">
+      <summary>캐럿을 내부 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />의 지정된 인덱스로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿 위치에 대한 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+      <param name="bufferPosition">캐럿을 이동할 대상이 되는 내부 텍스트 버퍼의 <see cref="T:Microsoft.VisualStudio.Text.SnapshotPoint" />입니다.</param>
+      <param name="caretAffinity">캐럿의 선호도입니다. <paramref name="bufferPosition" />에서 자동 줄 바꿈되는 두 줄 사이의 연결되는 위치를 지정하지 않을 경우에는 이 값이 무시됩니다.</param>
+      <param name="captureHorizontalPosition">
+                이후의 위 또는 아래로의 이동에 대해 캐럿에서 해당 수평 위치를 캡처해야 하면 true이고, 캐럿에서 이전에 캡처한 수평 위치를 유지해야 하면 false입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveTo(Microsoft.VisualStudio.Text.VirtualSnapshotPoint)">
+      <summary>캐럿을 지정된 <paramref name="bufferPosition" />으로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿 위치에 대한 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+      <param name="bufferPosition">캐럿을 이동할 대상이 되는 내부 텍스트 버퍼의 <see cref="T:Microsoft.VisualStudio.Text.VirtualSnapshotPoint" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveTo(Microsoft.VisualStudio.Text.VirtualSnapshotPoint,Microsoft.VisualStudio.Text.PositionAffinity)">
+      <summary>캐럿을 지정된 <paramref name="bufferPosition" />으로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿 위치에 대한 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+      <param name="bufferPosition">캐럿을 이동할 대상이 되는 내부 텍스트 버퍼의 <see cref="T:Microsoft.VisualStudio.Text.VirtualSnapshotPoint" />입니다.</param>
+      <param name="caretAffinity">캐럿의 선호도입니다. <paramref name="bufferPosition" />에서 자동 줄 바꿈되는 두 줄 사이의 연결되는 위치를 지정하지 않을 경우에는 이 값이 무시됩니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveTo(Microsoft.VisualStudio.Text.VirtualSnapshotPoint,Microsoft.VisualStudio.Text.PositionAffinity,System.Boolean)">
+      <summary>캐럿을 지정된 <paramref name="bufferPosition" />으로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿 위치에 대한 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+      <param name="bufferPosition">캐럿을 이동할 대상이 되는 내부 텍스트 버퍼의 <see cref="T:Microsoft.VisualStudio.Text.VirtualSnapshotPoint" />입니다.</param>
+      <param name="caretAffinity">캐럿의 선호도입니다. <paramref name="bufferPosition" />에서 자동 줄 바꿈되는 두 줄 사이의 연결되는 위치를 지정하지 않을 경우에는 이 값이 무시됩니다.</param>
+      <param name="captureHorizontalPosition">이후의 위 또는 아래로의 이동에 대해 캐럿에서 수평 위치를 캡처하면 true입니다. 캐럿에서 이전에 캡처한 수평 위치를 유지해야 하면 false입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveToNextCaretPosition">
+      <summary>캐럿을 유효한 다음 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />으로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿의 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveToPreferredCoordinates">
+      <summary>캐럿을 선호하는 x 및 y 좌표로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿 위치에 대한 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextCaret.MoveToPreviousCaretPosition">
+      <summary>캐럿을 이전의 유효한 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />으로 이동합니다.</summary>
+      <returns>이동이 발생한 이후 캐럿의 유효한 값을 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.CaretPosition" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.OverwriteMode">
+      <summary>캐럿이 덮어쓰기 모드에 있는지 여부를 확인합니다.</summary>
+      <returns>캐럿이 덮어쓰기 모드에 있으면 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.Position">
+      <summary>캐럿의 현재 위치를 가져옵니다.</summary>
+      <returns>현재 위치입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.ITextCaret.PositionChanged">
+      <summary>캐럿의 위치가 명시적으로 변경된 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.Right">
+      <summary>텍스트 렌더링 좌표계에서 캐럿의 오른쪽 가장자리 위치를 가져옵니다.</summary>
+      <returns>오른쪽 가장자리 위치입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.Top">
+      <summary>텍스트 렌더링 좌표계에서 캐럿의 위쪽 가장자리 위치를 가져옵니다.</summary>
+      <returns>위쪽 가장자리 위치입니다.</returns>
+      <exception cref="T:System.InvalidOperationException">The caret does not lie in the text formatted by the view.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextCaret.Width">
+      <summary>텍스트 렌더링 좌표계에서 캐럿의 너비를 가져옵니다.</summary>
+      <returns>캐럿의 너비입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ITextSelection">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에서 선택된 텍스트를 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.ActivationTracksFocus"></member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.ActivePoint">
+      <summary>선택 영역의 활성 지점을 가져옵니다.</summary>
+      <returns>활성 지점입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.AnchorPoint">
+      <summary>선택 영역의 앵커 지점을 가져옵니다.</summary>
+      <returns>앵커 지점입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextSelection.Clear">
+      <summary>이 메서드는 현재 선택 영역의 논리적 끝에 있는 시작 및 끝 위치를 사용하여 이 선택 영역의 길이를 0으로 만듭니다. </summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.End">
+      <summary>선택 영역의 끝점을 가져옵니다.</summary>
+      <returns>끝점입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextSelection.GetSelectionOnTextViewLine(Microsoft.VisualStudio.Text.Formatting.ITextViewLine)">
+      <summary>특정 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 선택 영역을 가져옵니다.</summary>
+      <returns>
+        <paramref name="line" />의 선택 영역입니다.</returns>
+      <param name="line">선택 영역을 가져올 줄입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.IsActive"></member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.IsEmpty">
+      <summary>선택 영역이 비어 있어서 길이가 0인지 여부를 확인합니다.</summary>
+      <returns>선택 영역이 비어 있으면 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.IsReversed">
+      <summary>선택이 역방향으로 이루어졌는지 여부를 확인합니다.</summary>
+      <returns>선택이 역방향으로 이루어졌으면 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.Mode">
+      <summary>선택 영역 모드를 가져오거나 설정합니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.TextSelectionMode" />입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextSelection.Select(Microsoft.VisualStudio.Text.SnapshotSpan,System.Boolean)">
+      <summary>지정된 <paramref name="selectionSpan" /> 내의 텍스트를 선택합니다.</summary>
+      <param name="selectionSpan">내부 텍스트 버퍼에서 선택할 텍스트의 <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan" />입니다.</param>
+      <param name="isReversed">
+                선택이 역방향으로 이루어졌으면 true이고, 그렇지 않으면 false입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextSelection.Select(Microsoft.VisualStudio.Text.VirtualSnapshotPoint,Microsoft.VisualStudio.Text.VirtualSnapshotPoint)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.VirtualSnapshotPoint" /> 개체 사이의 텍스트를 선택합니다.</summary>
+      <param name="anchorPoint">선택 영역의 앵커 지점입니다.</param>
+      <param name="activePoint">선택 영역의 활성 지점입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.SelectedSpans">
+      <summary>현재 선택된 범위입니다.</summary>
+      <returns>현재 선택된 범위입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.ITextSelection.SelectionChanged">
+      <summary>선택 또는 지우기가 호출되기 시작할 때 발생합니다. 이벤트의 전송자는 이 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextSelection" />이 됩니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.Start">
+      <summary>선택 영역의 시작점을 가져옵니다.</summary>
+      <returns>시작점입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.StreamSelectionSpan">
+      <summary>현재 선택 모드에 상관 없이 현재 선택 영역을 스트림 선택 영역인 것처럼 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.VirtualSnapshotSpan" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.TextView">
+      <summary>이 선택 영역이 속한 텍스트 뷰를 가져옵니다.</summary>
+      <returns>텍스트 뷰입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextSelection.VirtualSelectedSpans">
+      <summary>현재 선택된 범위인 <see cref="T:Microsoft.VisualStudio.Text.VirtualSnapshotSpan" /> 개체입니다.</summary>
+      <returns>현재 선택된 범위의 컬렉션입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ITextView">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />에 있는 텍스트의 뷰를 나타냅니다. 서식이 지정된 텍스트를 렌더링할 수 있는 메서드가 들어 있는 플랫폼 관련 인터페이스에 대한 기본 클래스입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.BufferGraph">
+      <summary>이 뷰에 사용되는 소스 버퍼 집합이 포함된 <see cref="T:Microsoft.VisualStudio.Text.Projection.IBufferGraph" />를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Projection.IBufferGraph" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.Caret">
+      <summary>캐럿 요소를 가져옵니다.</summary>
+      <returns>캐럿입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextView.Close">
+      <summary>텍스트 뷰와 해당 뷰를 닫습니다.</summary>
+      <exception cref="T:System.InvalidOperationException">The text view host is already closed.</exception>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.ITextView.Closed">
+      <summary>텍스트 뷰가 닫힌 직후 발생합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextView.DisplayTextLineContainingBufferPosition(Microsoft.VisualStudio.Text.SnapshotPoint,System.Double,Microsoft.VisualStudio.Text.Editor.ViewRelativePosition)">
+      <summary>
+        <paramref name="bufferPosition" />이 포함된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />이 원하는 위치에 표시되도록 텍스트 버퍼의 콘텐츠에 서식을 지정하여 표시합니다.</summary>
+      <param name="bufferPosition">지정된 세로 위치에 표시되는 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />에 포함될 문자의 위치입니다.</param>
+      <param name="verticalDistance">
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />과 뷰 가장자리 사이의 거리(픽셀 단위)입니다. <paramref name="relativeTo" />가 ViewRelativePosition.Top과 같으면 거리는 뷰의 위쪽부터 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 위쪽까지입니다. 그렇지 않으면 거리는 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 아래쪽부터 뷰의 아래쪽까지입니다. 음수 값을 사용할 수 있으며, 음수 값일 경우 줄이 뷰포트의 외부에 표시될 수 있습니다. 이 메서드는 <paramref name="verticalDistance" />가 클 경우 부담이 상당히 커질 수 있습니다. <paramref name="verticalDistance" />를 뷰 높이보다 크게 지정하지 않도록 해야 합니다.</param>
+      <param name="relativeTo">줄 오프셋이 뷰의 위쪽이나 아래쪽에 상대적인지 여부를 지정합니다.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="bufferPosition" /> is from the wrong <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshot" /> or <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="relativeTo" /> is not a valid <see cref="T:Microsoft.VisualStudio.Text.Editor.ViewRelativePosition" />.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextView.DisplayTextLineContainingBufferPosition(Microsoft.VisualStudio.Text.SnapshotPoint,System.Double,Microsoft.VisualStudio.Text.Editor.ViewRelativePosition,System.Nullable{System.Double},System.Nullable{System.Double})">
+      <summary>
+        <paramref name="bufferPosition" />이 포함된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />이 원하는 위치에 표시되도록 텍스트 버퍼의 콘텐츠에 서식을 지정하여 표시합니다.</summary>
+      <param name="bufferPosition">지정된 세로 위치에 표시되는 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />에 포함될 문자의 위치입니다.</param>
+      <param name="verticalDistance">
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />과 뷰 가장자리 사이의 거리(픽셀 단위)입니다. <paramref name="relativeTo" />가 ViewRelativePosition.Top과 같으면 거리는 뷰의 위쪽부터 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 위쪽까지입니다. 그렇지 않으면 거리는 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 아래쪽부터 뷰의 아래쪽까지입니다. 음수 값을 사용할 수 있으며, 음수 값일 경우 줄이 뷰포트의 외부에 표시될 수 있습니다. 이 메서드는 <paramref name="verticalDistance" />가 클 경우 부담이 상당히 커질 수 있습니다. <paramref name="verticalDistance" />를 뷰 높이보다 크게 지정하지 않도록 해야 합니다.</param>
+      <param name="relativeTo">줄 오프셋이 뷰의 위쪽이나 아래쪽에 상대적인지 여부를 지정합니다.</param>
+      <param name="viewportWidthOverride">이 값이 지정될 경우 뷰포트에 지정된 너비가 있는 것처럼 텍스트의 서식이 지정됩니다.</param>
+      <param name="viewportHeightOverride">이 값이 지정될 경우 뷰포트에 지정된 높이가 있는 것처럼 텍스트의 서식이 지정됩니다.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="bufferPosition" /> is from the wrong <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshot" /> or <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="relativeTo" /> is not a valid <see cref="T:Microsoft.VisualStudio.Text.Editor.ViewRelativePosition" />.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextView.GetTextElementSpan(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.SnapshotPoint" />에 있는 텍스트 요소(단일한 시각적 표시)를 구성하는 텍스트의 <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan" />을 가져옵니다.</summary>
+      <returns>텍스트 요소의 범위가 포함된 <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan" />입니다.</returns>
+      <param name="point">텍스트 요소를 가져올 텍스트 스냅숏의 <see cref="T:Microsoft.VisualStudio.Text.SnapshotPoint" />입니다.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="point" /> is from the wrong <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextView.GetTextViewLineContainingBufferPosition(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>지정된 텍스트 버퍼 위치가 포함된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />을 가져옵니다.</summary>
+      <returns>지정된 버퍼 위치가 포함된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />입니다.</returns>
+      <param name="bufferPosition">텍스트 줄을 검색하는 데 사용되는 텍스트 버퍼 위치입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferPosition" /> is not a valid buffer position.</exception>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.ITextView.GotAggregateFocus">
+      <summary>키보드 포커스가 뷰 또는 뷰의 도구 영역 중 하나로 전환될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.HasAggregateFocus">
+      <summary>뷰 또는 뷰의 도구 영역 중 하나에 포커스가 있는지 여부를 확인합니다.</summary>
+      <returns>뷰에 포커스가 있으면 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.InLayout">
+      <summary>뷰가 레이아웃되는 중인지 여부를 확인합니다.</summary>
+      <returns>뷰가 레이아웃되고 있으면 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.IsClosed">
+      <summary>이 텍스트 뷰가 닫혔는지 여부를 확인합니다.</summary>
+      <returns>텍스트 뷰가 닫혔으면 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.IsMouseOverViewOrAdornments">
+      <summary>뷰 또는 뷰의 도구 영역 중 하나에 마우스가 있는지 여부를 확인합니다.</summary>
+      <returns>마우스가 뷰 위에 있으면 true입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.ITextView.LayoutChanged">
+      <summary>텍스트 편집기에서 텍스트 줄 레이아웃을 수행할 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.LineHeight"></member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.ITextView.LostAggregateFocus">
+      <summary>키보드 포커스가 뷰 및 뷰의 도구 영역을 벗어날 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.MaxTextRightCoordinate">
+      <summary>해당 줄이 현재 표시되는지 여부에 상관 없이 가장 긴 줄의 오른쪽 좌표를 논리 픽셀 단위로 가져옵니다.</summary>
+      <returns>오른쪽 좌표입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.ITextView.MouseHover">
+      <summary>마우스가 동일한 문자 위에 있는 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.Options">
+      <summary>이 텍스트 뷰의 옵션을 가져옵니다.</summary>
+      <returns>뷰 옵션입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.ProvisionalTextHighlight">
+      <summary>임시적인 텍스트 강조 표시에 포함된 텍스트 범위를 가져옵니다.</summary>
+      <returns>강조 표시된 텍스트 범위입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextView.QueueSpaceReservationStackRefresh">
+      <summary>공간 예약 스택을 새로 고치도록 요청합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.Roles">
+      <summary>이 뷰의 역할입니다. 역할은 뷰에 대해 인스턴스화되는 확장을 부분적으로 결정합니다.</summary>
+      <returns>이 뷰의 역할입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.Selection">
+      <summary>선택 영역 요소를 가져옵니다.</summary>
+      <returns>선택 영역입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.TextBuffer">
+      <summary>이 뷰에서 텍스트를 렌더링하는 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />를 가져옵니다.</summary>
+      <returns>텍스트 버퍼입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.TextDataModel">
+      <summary>이 텍스트 뷰의 <see cref="T:Microsoft.VisualStudio.Text.ITextDataModel" />을 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.ITextDataModel" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.TextSnapshot">
+      <summary>뷰에서 현재 렌더링된 텍스트의 <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshot" />을 가져옵니다.</summary>
+      <returns>텍스트 스냅숏입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.TextViewLines">
+      <summary>이 뷰에서 렌더링된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 개체의 읽기 전용 목록을 가져옵니다.</summary>
+      <returns>텍스트 뷰 줄의 목록입니다.</returns>
+      <exception cref="T:System.InvalidOperationException">View is in the process of being laid out.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.TextViewModel">
+      <summary>이 텍스트 뷰의 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewModel" />을 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewModel" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.ViewportBottom">
+      <summary>텍스트 렌더링 좌표계에서 뷰포트의 아래쪽 가장자리 위치를 가져옵니다.</summary>
+      <returns>뷰포트의 아래쪽입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.ViewportHeight">
+      <summary>표시되는 콘텐츠 창의 높이(여백 포함)를 논리 픽셀 단위로 가져옵니다.</summary>
+      <returns>뷰포트의 높이입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.ITextView.ViewportHeightChanged">
+      <summary>뷰포트의 높이가 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.ViewportLeft">
+      <summary>텍스트 렌더링 좌표계에서 뷰포트의 왼쪽 가장자리 위치를 가져오거나 설정합니다.</summary>
+      <returns>뷰포트의 왼쪽 가장자리입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.ITextView.ViewportLeftChanged">
+      <summary>뷰포트의 왼쪽 가장자리 위치가 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.ViewportRight">
+      <summary>텍스트 렌더링 좌표계에서 뷰포트의 오른쪽 가장자리 위치를 가져옵니다.</summary>
+      <returns>뷰포트의 오른쪽 가장자리입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.ViewportTop">
+      <summary>텍스트 렌더링 좌표계에서 뷰포트의 위쪽 가장자리 위치를 가져옵니다.</summary>
+      <returns>뷰포트의 위쪽 가장자리입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.ViewportWidth">
+      <summary>표시되는 콘텐츠 창의 너비(여백 포함)를 논리 픽셀 단위로 가져옵니다.</summary>
+      <returns>뷰포트의 너비입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.ITextView.ViewportWidthChanged">
+      <summary>뷰포트의 너비가 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.ViewScroller">
+      <summary>뷰를 스크롤하거나 조작하는 다양한 메서드를 제공하는 도우미를 가져옵니다.</summary>
+      <returns>뷰 스크롤러입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextView.VisualSnapshot">
+      <summary>렌더링되고 있는 표시 버퍼의 <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshot" />을 가져옵니다.</summary>
+      <returns>텍스트 스냅숏입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection">
+      <summary>뷰의 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 개체 컬렉션에 액세스하기 위한 도우미 클래스를 나타냅니다. <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 TextViewLines 속성은 이 인터페이스의 인스턴스를 가져오는 데 사용됩니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.ContainsBufferPosition(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>지정된 버퍼 위치가 컬렉션의 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 개체에 포함되는지 여부를 확인합니다.</summary>
+      <returns>
+        <paramref name="bufferPosition" />이 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 개체에 포함되면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="bufferPosition">버퍼 위치입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.FirstVisibleLine">
+      <summary>완전히 숨겨지지 않은 첫 번째 줄을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.FormattedSpan">
+      <summary>이 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 컬렉션에 포함된 텍스트의 범위를 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.GetCharacterBounds(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>지정된 텍스트 버퍼 위치의 텍스트 범위를 가져옵니다.</summary>
+      <returns>사각형의 <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 구조체입니다.</returns>
+      <param name="bufferPosition">문자의 텍스트 버퍼 기준 인덱스입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferPosition" /> does not correspond to a position on this line.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.GetIndexOfTextLine(Microsoft.VisualStudio.Text.Formatting.ITextViewLine)">
+      <summary>지정된 텍스트 뷰 줄의 텍스트 줄에 있는 인덱스를 가져옵니다.</summary>
+      <returns>뷰의 TextLines 목록에 있는 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 인덱스입니다.</returns>
+      <param name="textLine">인덱스를 찾을 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="textLine" /> is null.</exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <paramref name="textLine" /> has been disposed.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.GetNormalizedTextBounds(Microsoft.VisualStudio.Text.SnapshotSpan)">
+      <summary>지정된 범위에 해당하는 텍스트의 <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 구조체 컬렉션을 가져옵니다.</summary>
+      <returns>
+        <paramref name="bufferSpan" />에 지정된 텍스트가 포함된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 구조체의 읽기 전용 컬렉션입니다.</returns>
+      <param name="bufferSpan">텍스트 범위를 계산할 텍스트를 나타내는 버퍼 범위입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferSpan" /> is not a legal span in the underlying text buffer.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.GetTextElementSpan(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>텍스트 요소 범위에 지정된 버퍼 위치가 포함되어 있는 범위를 가져옵니다.</summary>
+      <returns>지정된 텍스트 요소 인덱스에 해당하는 <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan" />입니다.</returns>
+      <param name="bufferPosition">버퍼 위치입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferPosition" /> does not correspond to a position on this line.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.GetTextViewLineContainingBufferPosition(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>지정된 텍스트 버퍼 위치가 포함된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />을 가져옵니다.</summary>
+      <returns>위치가 포함된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />이거나, 아무 것도 없을 경우 null입니다.</returns>
+      <param name="bufferPosition">텍스트 줄을 검색하는 데 사용되는 텍스트 버퍼 위치입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferPosition" /> is not a valid buffer position.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.GetTextViewLineContainingYCoordinate(System.Double)">
+      <summary>지정된 y 좌표가 포함된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />을 가져옵니다.</summary>
+      <returns>y 좌표가 포함된 텍스트 줄이거나, 해당되는 텍스트 줄이 없는 경우 null입니다.</returns>
+      <param name="y">텍스트 렌더링 좌표의 y 좌표입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="y" /> is NaN.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.GetTextViewLinesIntersectingSpan(Microsoft.VisualStudio.Text.SnapshotSpan)">
+      <summary>
+        <paramref name="bufferSpan" />과 교차하는 모든 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 개체를 가져옵니다.</summary>
+      <returns>버퍼 범위와 교차하는 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 개체의 정렬된 컬렉션입니다.</returns>
+      <param name="bufferSpan">범위입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.IntersectsBufferSpan(Microsoft.VisualStudio.Text.SnapshotSpan)">
+      <summary>지정된 버퍼 범위가 컬렉션의 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 개체와 교차되는지 여부를 확인합니다.</summary>
+      <returns>
+        <paramref name="bufferSpan" />이 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 개체에 포함되면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="bufferSpan">버퍼 범위입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.IsValid">
+      <summary>이 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection" /> 개체가 여전히 유효한지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextViewLineCollection.LastVisibleLine">
+      <summary>완전히 숨겨지지 않은 마지막 줄을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ITextViewMargin">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 가장자리에 추가된 여백을 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextViewMargin.Enabled">
+      <summary>여백을 사용할 수 있는지 여부를 확인합니다.</summary>
+      <exception cref="T:System.ObjectDisposedException">The margin is disposed.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewMargin.GetTextViewMargin(System.String)">
+      <summary>지정된 <paramref name="marginName" />을 사용하여 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewMargin" />을 가져옵니다.</summary>
+      <returns>이름이 <paramref name="marginName" />인 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewMargin" />이거나, 일치하는 것이 없을 경우 null입니다.</returns>
+      <param name="marginName">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewMargin" />의 이름입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="marginName" /> is null.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextViewMargin.MarginSize">
+      <summary>여백의 크기를 가져옵니다.</summary>
+      <exception cref="T:System.ObjectDisposedException">The margin is disposed.</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ITextViewModel">
+      <summary>특정 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에서 텍스트 표시에 고유하게 사용되는 0개 이상의 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" /> 개체 집합을 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.DataBuffer">
+      <summary>데이터 수준에 대한 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />를 나타냅니다. 데이터 수준 텍스트 버퍼는 여러 뷰 간에 공유되는 그래프에서 최상위 버퍼이므로 뷰 모델의 기반이 됩니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.DataModel">
+      <summary>뷰에 대한 <see cref="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.DataBuffer" /> 및 적용할 <see cref="T:Microsoft.VisualStudio.Utilities.IContentType" />을 제공하는 <see cref="T:Microsoft.VisualStudio.Text.ITextDataModel" />입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.EditBuffer">
+      <summary>편집 위치가 추적되고 편집 내용이 적용되는 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />입니다. 뷰에 나타나는 모든 텍스트는 이 버퍼에 있어야 합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewModel.GetNearestPointInVisualBuffer(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>편집 버퍼의 지정된 지점에 대응되는 <see cref="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.VisualBuffer" /> 내의 지점을 가져옵니다. 해당 지점이 숨겨졌거나 대체 표현이 있는 경우 해당 지점에 가장 가까운 지점을 가져옵니다.</summary>
+      <returns>지정된 지점에 대응되는 <see cref="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.VisualBuffer" /> 내의 지점입니다.</returns>
+      <param name="editBufferPoint">
+        <see cref="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.EditBuffer" /> 내의 지점입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewModel.GetNearestPointInVisualSnapshot(Microsoft.VisualStudio.Text.SnapshotPoint,Microsoft.VisualStudio.Text.ITextSnapshot,Microsoft.VisualStudio.Text.PointTrackingMode)">
+      <summary>편집 버퍼의 지정된 지점에 대응되는 <see cref="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.VisualBuffer" /> 내의 지점을 가져옵니다. 해당 지점이 숨겨졌거나 대체 표현이 있는 경우 해당 지점에 가장 가까운 지점을 가져옵니다.</summary>
+      <returns>
+        <paramref name="targetVisualSnapshot" />의 지정된 지점에 대응되는 <see cref="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.VisualBuffer" /> 내의 지점입니다.</returns>
+      <param name="editBufferPoint">
+        <see cref="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.EditBuffer" /> 내의 지점입니다.</param>
+      <param name="targetVisualSnapshot">매핑할 대상 <see cref="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.VisualBuffer" />의 스냅숏입니다.</param>
+      <param name="trackingMode">targetVisualSnapshot으로 변환할 때 사용할 <see cref="T:Microsoft.VisualStudio.Text.PointTrackingMode" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewModel.IsPointInVisualBuffer(Microsoft.VisualStudio.Text.SnapshotPoint,Microsoft.VisualStudio.Text.PositionAffinity)">
+      <summary>편집 버퍼의 지점이 표시 버퍼에 나타나는지 여부를 확인합니다.</summary>
+      <returns>
+            해당 지점이 표시 버퍼에 나타나면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="editBufferPoint">
+        <see cref="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.EditBuffer" /> 내의 지점입니다.</param>
+      <param name="affinity">매핑이 모호한 경우 이 매개 변수는 다음과 같이 매핑에 영향을 줍니다. <paramref name="affinity" />가 <see cref="F:Microsoft.VisualStudio.Text.PositionAffinity.Predecessor" />이면 매핑할 때 프로젝션 버퍼의 선행 문자 바로 뒤가 대상 위치가 됩니다. <paramref name="affinity" />가 <see cref="F:Microsoft.VisualStudio.Text.PositionAffinity.Successor" />이면 매핑할 때 프로젝션 버퍼의 후행 문자 바로 앞이 대상 위치가 됩니다. 매핑이 명확한 경우 이 매개 변수는 아무런 영향을 주지 않습니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ITextViewModel.VisualBuffer">
+      <summary>해당 콘텐츠를 편집기에 표시할 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ITextViewModelProvider">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewModel" /> 개체를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewModelProvider.CreateTextViewModel(Microsoft.VisualStudio.Text.ITextDataModel,Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.ITextDataModel" />에 대한 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewModel" />을 만듭니다.</summary>
+      <returns>
+        <paramref name="dataModel" />에 대해 만든 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewModel" />이거나, 텍스트 뷰 모델을 만들 수 없는 경우 null입니다.</returns>
+      <param name="dataModel">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewModel" />을 만들 <see cref="T:Microsoft.VisualStudio.Text.ITextDataModel" />입니다.</param>
+      <param name="roles">만들려는 뷰의 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet">
+      <summary>텍스트 뷰 역할 집합입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet.Contains(System.String)">
+      <summary>지정된 텍스트 뷰 역할이 집합의 멤버인지 여부를 계산합니다.</summary>
+      <param name="textViewRole">역할입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="textViewRole" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet.ContainsAll(System.Collections.Generic.IEnumerable{System.String})">
+      <summary>집합에 지정된 텍스트 뷰 역할이 모두 포함되어 있는지 여부를 계산합니다.</summary>
+      <param name="textViewRoles">포함 여부를 확인할 역할 목록입니다.</param>
+      <exception cref="T:System.ArgumentNullException">if <paramref name="textViewRoles" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet.ContainsAny(System.Collections.Generic.IEnumerable{System.String})">
+      <summary>집합에 지정된 텍스트 뷰 역할 중 최소한 하나 이상이 포함되어 있는지 여부를 계산합니다.</summary>
+      <param name="textViewRoles">포함 여부를 확인할 역할 목록입니다.</param>
+      <exception cref="T:System.ArgumentNullException">if <paramref name="textViewRoles" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet.UnionWith(Microsoft.VisualStudio.Text.Editor.ITextViewRoleSet)"></member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.IVerticalFractionMap">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 전체 세로 범위 비율과 문자 위치를 매핑합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IVerticalFractionMap.GetBufferPositionAtFraction(System.Double)">
+      <summary>뷰의 세로 범위의 비율에 해당하는 버퍼 위치를 가져옵니다(있는 경우).</summary>
+      <returns>해당하는 문자 위치입니다.</returns>
+      <param name="fraction">뷰의 세로 범위의 비율입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="fraction" /> is NaN, less than 0.0 or greater than 1.0.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IVerticalFractionMap.GetFractionAtBufferPosition(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>지정된 버퍼 위치에 해당하는 뷰의 세로 범위의 비율을 가져옵니다.</summary>
+      <returns>뷰의 세로 범위에 해당하는 비율입니다.</returns>
+      <param name="bufferPosition">버퍼 위치입니다.</param>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.IVerticalFractionMap.MappingChanged">
+      <summary>문자 위치와 해당 세로 비율의 매핑이 변경될 경우 발생합니다. 예를 들어, 뷰에서 일부 줄을 다시 렌더링하여 해당 글꼴 크기를 변경할 수 있습니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IVerticalFractionMap.TextView">
+      <summary>이 비율 맵이 적용되는 텍스트 뷰를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.IVerticalScrollBar">
+      <summary>세로 스크롤 막대를 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IVerticalScrollBar.GetBufferPositionOfYCoordinate(System.Double)">
+      <summary>스크롤 막대 트랙의 y 좌표에 대응되는 버퍼 위치를 가져옵니다.</summary>
+      <returns>버퍼 내의 위치입니다. <paramref name="y" />가 매핑된 좌표 범위를 벗어나는 경우도 해당됩니다.</returns>
+      <param name="y">원하는 y 좌표입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IVerticalScrollBar.GetYCoordinateOfBufferPosition(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>버퍼 위치에 대응되는 스크롤 막대 트랙의 y 좌표를 가져옵니다.</summary>
+      <returns>대응되는 y 좌표입니다.</returns>
+      <param name="bufferPosition">원하는 위치입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IVerticalScrollBar.GetYCoordinateOfScrollMapPosition(System.Double)">
+      <summary>스크롤 맵 좌표 위치에 대응되는 스크롤 막대 트랙의 y 좌표를 가져옵니다.</summary>
+      <returns>대응되는 y 좌표입니다.</returns>
+      <param name="scrollMapPosition">원하는 위치입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IVerticalScrollBar.Map">
+      <summary>텍스트 위치와 스크롤 막대의 스크롤 막대 좌표 간의 매핑을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IVerticalScrollBar.ThumbHeight">
+      <summary>스크롤 막대 엄지 단추의 높이를 픽셀 단위로 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IVerticalScrollBar.TrackSpanBottom">
+      <summary>화면에 렌더링될 때의 스크롤 막대 트랙 아래쪽의 y 좌표를 가져옵니다(맨 위 및 맨 아래의 스크롤 단추 제외).</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Editor.IVerticalScrollBar.TrackSpanChanged">
+      <summary>스크롤 막대 트랙 차원의 범위가 변경될 경우 발생합니다. 예를 들어, 뷰 크기를 조정하면 이러한 차원이 변경될 수 있습니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IVerticalScrollBar.TrackSpanHeight">
+      <summary>화면에 렌더링될 때의 스크롤 막대 트랙의 높이를 가져옵니다(맨 위 및 맨 아래의 스크롤 단추 제외).</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.IVerticalScrollBar.TrackSpanTop">
+      <summary>화면에 렌더링될 때의 스크롤 막대 트랙 위쪽의 y 좌표를 가져옵니다(맨 위 및 맨 아래의 스크롤 단추 제외).</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.IViewScroller">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 도우미 클래스를 나타내며 스크롤에 대한 기본 기능을 제공합니다. <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 <see cref="P:Microsoft.VisualStudio.Text.Editor.ITextView.ViewScroller" /> 속성이 이 인터페이스의 인스턴스를 가져오는 데 사용됩니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IViewScroller.EnsureSpanVisible(Microsoft.VisualStudio.Text.SnapshotSpan)">
+      <summary>
+        <paramref name="span" />의 모든 텍스트가 뷰에 모두 표시되도록 합니다.</summary>
+      <param name="span">표시할 범위입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IViewScroller.EnsureSpanVisible(Microsoft.VisualStudio.Text.SnapshotSpan,Microsoft.VisualStudio.Text.Editor.EnsureSpanVisibleOptions)">
+      <summary>
+        <paramref name="span" />의 모든 텍스트가 뷰에 모두 표시되도록 합니다.</summary>
+      <param name="span">표시할 범위입니다.</param>
+      <param name="options">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.EnsureSpanVisibleOptions" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IViewScroller.EnsureSpanVisible(Microsoft.VisualStudio.Text.VirtualSnapshotSpan,Microsoft.VisualStudio.Text.Editor.EnsureSpanVisibleOptions)"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IViewScroller.ScrollViewportHorizontallyByPixels(System.Double)">
+      <summary>뷰포트를 <paramref name="distanceToScroll" />만큼 가로로 스크롤합니다.</summary>
+      <param name="distanceToScroll">텍스트 렌더링 좌표계에서 뷰포트를 스크롤할 거리입니다. 양수 값은 뷰포트를 오른쪽으로 스크롤하고 음수 값은 뷰포트를 왼쪽으로 스크롤합니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="distanceToScroll" /> is NaN.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IViewScroller.ScrollViewportVerticallyByLine(Microsoft.VisualStudio.Text.Editor.ScrollDirection)">
+      <summary>뷰포트를 세로로 한 줄 위나 아래로 스크롤합니다.</summary>
+      <param name="direction">스크롤할 방향입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="direction" /> is not a <see cref="T:Microsoft.VisualStudio.Text.Editor.ScrollDirection" />.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IViewScroller.ScrollViewportVerticallyByLines(Microsoft.VisualStudio.Text.Editor.ScrollDirection,System.Int32)">
+      <summary>뷰포트를 세로로 여러 줄씩 위나 아래로 스크롤합니다.</summary>
+      <param name="direction">스크롤할 방향입니다.</param>
+      <param name="count">위나 아래로 스크롤할 줄 수입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="direction" /> is not a <see cref="T:Microsoft.VisualStudio.Text.Editor.ScrollDirection" />.-or-<paramref name="count" /> is negative.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IViewScroller.ScrollViewportVerticallyByPage(Microsoft.VisualStudio.Text.Editor.ScrollDirection)">
+      <summary>뷰포트를 세로로 한 페이지 위나 아래로 스크롤합니다.</summary>
+      <returns>
+            스크롤하기 전에 뷰에 완전히 표시된 줄이 하나 이상 포함되어 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="direction">스크롤할 방향입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="direction" /> is not a <see cref="T:Microsoft.VisualStudio.Text.Editor.ScrollDirection" />.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.IViewScroller.ScrollViewportVerticallyByPixels(System.Double)">
+      <summary>뷰포트를 <paramref name="distanceToScroll" />만큼 세로로 스크롤합니다.</summary>
+      <param name="distanceToScroll">텍스트 렌더링 좌표계에서 스크롤할 거리입니다. 양수 값은 뷰포트를 위쪽으로 스크롤하고 음수 값은 뷰포트를 아래쪽으로 스크롤합니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="distanceToScroll" /> is NaN.</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.LineNumberMarginEnabled">
+      <summary>줄 번호 여백을 사용하도록 설정하는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.LineNumberMarginEnabled.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.LineNumberMarginEnabled" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.LineNumberMarginEnabled.Default">
+      <summary>기본값인 false를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.LineNumberMarginEnabled.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.MarginContainerAttribute">
+      <summary>여백 컨테이너의 형식을 지정합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.MarginContainerAttribute.#ctor(System.String)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.MarginContainerAttribute" />의 새 인스턴스를 인스턴스화합니다.</summary>
+      <param name="marginContainer">이 여백에 대한 컨테이너의 이름입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="marginContainer" /> is null.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="marginContainer" /> is an empty string.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.MarginContainerAttribute.MarginContainer">
+      <summary>여백 컨테이너의 이름입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.MouseHoverAttribute">
+      <summary>
+        <see cref="E:Microsoft.VisualStudio.Text.Editor.ITextView.MouseHover" />의 이벤트 처리기에 놓여지는 특성으로, 마우스가 이동을 중지한 시간과 가리키기 이벤트가 생성된 시간 사이의 지연을 지정합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.MouseHoverAttribute.#ctor(System.Int32)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.MouseHoverAttribute" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="delay">마우스가 이동을 중지한 시간과 가리키기 이벤트가 생성된 시간 사이의 경과 시간(밀리초 단위)입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.MouseHoverAttribute.Delay">
+      <summary>마우스가 이동을 중지한 시간과 가리키기 이벤트가 생성된 시간 사이의 경과 시간(밀리초 단위)을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.MouseHoverEventArgs">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 MouseHover 이벤트에 대한 정보를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.MouseHoverEventArgs.#ctor(Microsoft.VisualStudio.Text.Editor.ITextView,System.Int32,Microsoft.VisualStudio.Text.IMappingPoint)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.MouseHoverEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="view">가리키기 이벤트를 생성할 뷰입니다.</param>
+      <param name="position">뷰의 스냅숏 범위에서 마우스 아래에 있는 문자의 위치입니다.</param>
+      <param name="textPosition">마우스 아래에 있는 문자의 버퍼 그래프에 매핑된 위치입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="view" /> is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="position" /> is negative or greater than the length of the view's buffer.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.MouseHoverEventArgs.Position">
+      <summary>가리키는 시점에 마우스 아래에 있는 문자의 SnapshotSpan에서의 위치입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.MouseHoverEventArgs.TextPosition">
+      <summary>가리키는 시점에 마우스 아래에 있는 문자의 버퍼 그래프에 매핑된 위치입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.MouseHoverEventArgs.View">
+      <summary>가리키기 이벤트를 생성할 뷰입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.OutliningMarginEnabled">
+      <summary>개요 여백을 사용하도록 설정하는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OutliningMarginEnabled.#ctor"></member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.OutliningMarginEnabled.Default">
+      <summary>기본값인 true를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.OutliningMarginEnabled.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.OutliningUndoEnabled">
+      <summary>개요 기능을 실행 취소할 수 있는지 여부를 결정하는 옵션 정의입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OutliningUndoEnabled.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.OutliningUndoEnabled" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.OutliningUndoEnabled.Default">
+      <summary>기본값(true)을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.OutliningUndoEnabled.Key">
+      <summary>편집기 옵션 키를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.OverwriteMode">
+      <summary>덮어쓰기 모드에 대한 뷰 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OverwriteMode.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.OverwriteMode" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.OverwriteMode.Default">
+      <summary>기본값인 false를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.OverwriteMode.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames">
+      <summary>미리 정의된 여백의 이름 집합입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.Bottom">
+      <summary>텍스트 뷰의 아래쪽 여백입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.BottomControl"></member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.Glyph">
+      <summary>중단점 및 기타 문자 모양을 표시하는 텍스트 뷰의 왼쪽 여백입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.HorizontalScrollBar">
+      <summary>표준 가로 스크롤 막대입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.HorizontalScrollBarContainer"></member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.Left">
+      <summary>텍스트 뷰의 왼쪽 여백입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.LeftSelection">
+      <summary>선 선택 영역에 대한 마우스 처리기를 구현하는 텍스트 뷰의 왼쪽 여백입니다. 이 동작은 왼쪽 선택 영역 여백에 포함된 여백에서 상속합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.LineNumber">
+      <summary>줄 번호를 표시하는 텍스트 뷰의 왼쪽 여백입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.Outlining">
+      <summary>개요 영역을 축소 및 확장할 수 있는 텍스트 뷰의 왼쪽 여백입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.Right">
+      <summary>텍스트 뷰의 오른쪽 여백입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.RightControl"></member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.Spacer">
+      <summary>줄 번호와 개요 여백 사이에 나타나며 현재 세션에서 변경된 텍스트를 표시하는 여백입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.Top">
+      <summary>텍스트 뷰의 위쪽 여백입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.VerticalScrollBar">
+      <summary>표준 세로 스크롤 막대입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.VerticalScrollBarContainer"></member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedMarginNames.ZoomControl">
+      <summary>뷰를 확대/축소하기 위한 확대/축소 컨트롤을 호스팅하는 가로 스크롤 막대의 왼쪽 여백입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles">
+      <summary>미리 정의된 텍스트 뷰 역할의 이름 집합입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Analyzable">
+      <summary>미리 정의된 Analyzable 역할입니다. 오류 또는 기타 정보(예: "요약 정보")에 대해 분석될 수 있는 엔터티로 이루어진 텍스트 뷰에 적용됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Debuggable">
+      <summary>미리 정의된 Debuggable 역할입니다. 런타임에 디버거가 정보를 표시할 수 있는 엔터티로 이루어진 텍스트 뷰에 적용됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document">
+      <summary>미리 정의된 Document 역할입니다. 주로 파일에 저장되어 있으면서 명확하게 첫 번째 줄과 마지막 줄을 가진 엔터티로 이루어진 텍스트 뷰에 적용됩니다. 폼에 제공되는 데이터의 텍스트 표시 또는 출력 로그와 같은 엔터티는 제외됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Editable">
+      <summary>미리 정의된 Editable 역할입니다. 키보드를 사용하여 변경할 수 있는 텍스트 뷰에 적용됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive">
+      <summary>미리 정의된 Interactive 역할입니다. 사용자가 마우스 및/또는 키보드를 사용하여 상호 작용할 수 있는 텍스트 뷰에 적용됩니다. 대화형 뷰가 아닌 경우 캐럿이나 선택 영역을 표시할 수 없으며 키보드 입력을 받을 수 없습니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.PrimaryDocument"></member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Structured">
+      <summary>미리 정의된 Structured 역할입니다. 개요 등과 같이 편집기 기능에 의해 노출되는 내부 구조를 가지고 있는 엔터티로 이루어진 텍스트 뷰에 적용됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Zoomable">
+      <summary>미리 정의된 Zoomable 역할입니다. 사용자가 확대/축소 작업을 수행할 수 있는 엔터티로 이루어진 텍스트 뷰에 적용됩니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ProduceScreenReaderFriendlyText">
+      <summary>화면 판독기에서 코드의 내용을 올바로 읽을 수 있도록 자동화 컨트롤에 주석이 추가된 텍스트를 제공할 수 있는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ProduceScreenReaderFriendlyText.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ProduceScreenReaderFriendlyText" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ProduceScreenReaderFriendlyText.Default">
+      <summary>기본값인 false를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ProduceScreenReaderFriendlyText.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ScrollDirection">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />를 스크롤할 방향입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.ScrollDirection.Up">
+      <summary>위로 스크롤합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.ScrollDirection.Down">
+      <summary>아래로 스크롤합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.SelectionMarginEnabled">
+      <summary>선택 영역 여백을 사용하도록 설정하는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.SelectionMarginEnabled.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.SelectionMarginEnabled" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.SelectionMarginEnabled.Default">
+      <summary>기본값인 true를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.SelectionMarginEnabled.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.TextSelectionMode">
+      <summary>서로 다른 선택 모드를 나타냅니다(단순 선택 및 상자 선택).</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.TextSelectionMode.Stream">
+      <summary>단순 선택(범위 하나만)입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.TextSelectionMode.Box">
+      <summary>상자 선택(시작 줄 및 열에서 끝 줄 및 열까지)입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.TextViewCreatedEventArgs">
+      <summary>새로 만들어진 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 정보를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.TextViewCreatedEventArgs.#ctor(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 텍스트 뷰에 대한 <see cref="T:Microsoft.VisualStudio.Text.Editor.TextViewCreatedEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewCreatedEventArgs.TextView">
+      <summary>새로 만들어진 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 LayoutChanged 이벤트에 대한 정보를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.#ctor(Microsoft.VisualStudio.Text.Editor.ViewState,Microsoft.VisualStudio.Text.Editor.ViewState,System.Collections.Generic.IList{Microsoft.VisualStudio.Text.Formatting.ITextViewLine},System.Collections.Generic.IList{Microsoft.VisualStudio.Text.Formatting.ITextViewLine})">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="oldState">레이아웃 이전의 뷰 상태입니다.</param>
+      <param name="newState">레이아웃 이후의 뷰 상태입니다.</param>
+      <param name="newOrReformattedLines">새로운 또는 서식이 다시 지정된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 개체의 목록입니다.</param>
+      <param name="translatedLines">변환된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> 개체의 목록입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.HorizontalTranslation">
+      <summary>마지막 레이아웃 이후 뷰가 가로로 변환되었는지 여부입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.NewOrReformattedLines">
+      <summary>새 줄 또는 서식이 다시 지정된 줄의 읽기 전용 컬렉션을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.NewOrReformattedSpans">
+      <summary>새 줄 또는 서식이 다시 지정된 범위의 컬렉션을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.NewSnapshot">
+      <summary>뷰의 새 스냅숏을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.NewViewState">
+      <summary>레이아웃 이후의 뷰 상태입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.OldSnapshot">
+      <summary>뷰의 이전 스냅숏을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.OldViewState">
+      <summary>레이아웃 이전의 뷰 상태입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.TranslatedLines">
+      <summary>변환된 줄의 컬렉션을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.TranslatedSpans">
+      <summary>변환된 범위의 컬렉션을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewLayoutChangedEventArgs.VerticalTranslation">
+      <summary>마지막 레이아웃 이후 뷰가 세로로 변환되었는지 여부입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute">
+      <summary>확장을 적용할 TextView 종류를 지정하려면 이 특성을 사용합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute.#ctor(System.String)">
+      <summary>특성의 새 인스턴스를 생성합니다.</summary>
+      <param name="role">역할의 이름(대/소문자 구분)입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="role" /> is null or empty.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute.TextViewRoles">
+      <summary>역할 이름입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.UseVirtualSpace"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.UseVirtualSpace.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.UseVirtualSpace" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.UseVirtualSpace.Default"></member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.UseVirtualSpace.Key"></member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.UseVisibleWhitespace">
+      <summary>공백 표시 사용 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.UseVisibleWhitespace.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.UseVisibleWhitespace" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.UseVisibleWhitespace.Default">
+      <summary>기본값인 false를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.UseVisibleWhitespace.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.VerticalScrollBarEnabled">
+      <summary>세로 스크롤 막대를 사용하도록 설정하는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.VerticalScrollBarEnabled.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.VerticalScrollBarEnabled" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.VerticalScrollBarEnabled.Default">
+      <summary>기본값인 true를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.VerticalScrollBarEnabled.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ViewOptionDefinition`1">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 관련 편집기 옵션을 정의합니다.</summary>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ViewOptionDefinition`1.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ViewOptionDefinition`1" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ViewOptionDefinition`1.IsApplicableToScope(Microsoft.VisualStudio.Utilities.IPropertyOwner)">
+      <summary>옵션을 지정된 범위에 적용할 수 있는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ViewProhibitUserInput">
+      <summary>사용자 입력 금지 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ViewProhibitUserInput.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ViewProhibitUserInput" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ViewProhibitUserInput.Default">
+      <summary>기본값인 false를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ViewProhibitUserInput.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ViewRelativePosition">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />.DisplayTextLineContaining(...)에서 verticalOffset 매개 변수의 의미를 정의합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.ViewRelativePosition.Top">
+      <summary>뷰 위쪽에 관련된 오프셋입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.ViewRelativePosition.Bottom">
+      <summary>뷰 아래쪽에 관련된 오프셋입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ViewState">
+      <summary>특정 시점에서의 뷰 상태입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ViewState.#ctor(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 텍스트 뷰에 대한 <see cref="T:Microsoft.VisualStudio.Text.Editor.ViewState" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="view">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ViewState.#ctor(Microsoft.VisualStudio.Text.Editor.ITextView,System.Double,System.Double)">
+      <summary>지정된 뷰, 뷰포트 너비 및 뷰포트 높이에 대해 <see cref="T:Microsoft.VisualStudio.Text.Editor.ViewState" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="view">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="effectiveViewportWidth">뷰포트의 너비입니다.</param>
+      <param name="effectiveViewportHeight">뷰포트의 높이입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ViewState.EditSnapshot">
+      <summary>뷰의 편집 스냅숏을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ViewState.ViewportBottom">
+      <summary>뷰포트 아래쪽 가장자리의 y 좌표를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ViewState.ViewportHeight">
+      <summary>뷰포트의 높이를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ViewState.ViewportLeft">
+      <summary>뷰포트 왼쪽 가장자리의 x 좌표를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ViewState.ViewportRight">
+      <summary>뷰포트 오른쪽 가장자리의 x 좌표를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ViewState.ViewportTop">
+      <summary>뷰포트 위쪽 가장자리의 y 좌표를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ViewState.ViewportWidth">
+      <summary>뷰포트의 너비를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ViewState.VisualSnapshot">
+      <summary>뷰의 시각적 스냅숏을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.WordWrapStyle">
+      <summary>자동 줄 바꿈 스타일 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.WordWrapStyle.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.WordWrapStyle" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.WordWrapStyle.Default">
+      <summary>기본값인 WordWrapStyles.None을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.WordWrapStyle.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.WordWrapStyles">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 자동 줄 바꿈 스타일을 지정하는 열거형 값의 비트 조합을 설정합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.WordWrapStyles.None">
+      <summary>자동 줄 바꿈이 사용되지 않습니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.WordWrapStyles.WordWrap">
+      <summary>자동 줄 바꿈이 사용됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.WordWrapStyles.VisibleGlyphs">
+      <summary>자동 줄 바꿈이 사용되는 경우 문자 모양 표시를 사용합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.WordWrapStyles.AutoIndent">
+      <summary>자동 줄 바꿈이 사용되는 경우 자동 들여쓰기를 사용합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ZoomConstants">
+      <summary>확대/축소 작업에 사용할 상수를 정의합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.ZoomConstants.DefaultZoom">
+      <summary>텍스트 뷰의 기본 확대/축소 수준입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.ZoomConstants.MaxZoom">
+      <summary>텍스트 뷰에 허용되는 최대 확대/축소입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.ZoomConstants.MinZoom">
+      <summary>텍스트 뷰에 허용되는 최소 확대/축소입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Editor.ZoomConstants.ScalingFactor">
+      <summary>뷰의 확대/축소에 사용할 배율 인수입니다. 뷰는 10% 인수 단위로 확대/축소됩니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.ZoomControlEnabled">
+      <summary>확대/축소 컨트롤을 사용하도록 설정하는 옵션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.ZoomControlEnabled.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ZoomControlEnabled" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ZoomControlEnabled.Default">
+      <summary>기본값인 true를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Editor.ZoomControlEnabled.Key">
+      <summary>기본 텍스트 뷰 호스트 값을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewHostOptionExtensions">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 호스트 관련 옵션에 대한 메서드를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewHostOptionExtensions.IsChangeTrackingEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>변경 내용 추적이 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            변경 내용 추적을 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewHostOptionExtensions.IsGlyphMarginEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>문자 모양 여백이 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            문자 모양 여백을 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewHostOptionExtensions.IsHorizontalScrollBarEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>가로 스크롤 막대가 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            가로 스크롤 막대를 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewHostOptionExtensions.IsLineNumberMarginEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>줄 번호 여백이 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            줄 번호 여백을 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewHostOptionExtensions.IsOutliningMarginEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>개요 여백이 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            개요 여백을 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewHostOptionExtensions.IsSelectionMarginEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>선택 영역 여백이 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            선택 영역 여백을 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewHostOptionExtensions.IsVerticalScrollBarEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>세로 스크롤 막대가 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            세로 스크롤 막대를 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewHostOptionExtensions.IsZoomControlEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>확대/축소 컨트롤이 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            확대/축소 컨트롤을 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewOptionExtensions">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 관련 옵션에 대한 메서드를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewOptionExtensions.DoesViewProhibitUserInput(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>뷰에서 모든 사용자 입력을 금지하는지 여부를 확인합니다.</summary>
+      <returns>뷰에 대한 사용자 입력이 모두 금지된 경우 true입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewOptionExtensions.IsAutoScrollEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>자동 스크롤이 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            자동 스크롤을 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewOptionExtensions.IsDragDropEditingEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>끌기/놓기 편집 옵션을 지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.IEditorOptions" />에서 사용할 수 있는지 여부를 확인합니다.</summary>
+      <returns>
+            끌기/놓기 편집 옵션을 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">옵션 값을 찾는 데 사용되는 <see cref="T:Microsoft.VisualStudio.Text.Editor.IEditorOptions" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewOptionExtensions.IsOutliningUndoEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>실행 취소 개요 옵션을 지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.IEditorOptions" />에서 사용할 수 있는지 여부를 확인합니다.</summary>
+      <returns>
+            옵션을 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.IEditorOptions" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewOptionExtensions.IsOverwriteModeEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>덮어쓰기 모드가 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            덮어쓰기 모드를 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewOptionExtensions.IsViewportLeftClipped(Microsoft.VisualStudio.Text.Editor.IEditorOptions)"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewOptionExtensions.IsVirtualSpaceEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>지정된 편집기 옵션 집합에 대해 가상 공간을 사용할 수 있는지 여부를 확인합니다.</summary>
+      <returns>
+            가상 공간을 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewOptionExtensions.IsVisibleWhitespaceEnabled(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>공백 표시가 지정된 편집기 옵션 집합을 사용하도록 설정되었는지 여부를 확인합니다.</summary>
+      <returns>
+            공백 표시를 사용할 수 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Editor.OptionsExtensionMethods.TextViewOptionExtensions.WordWrapStyle(Microsoft.VisualStudio.Text.Editor.IEditorOptions)">
+      <summary>지정된 편집기 옵션 집합을 가진 자동 줄 바꿈 스타일 집합을 가져옵니다.</summary>
+      <returns>편집기 옵션 집합의 <see cref="T:Microsoft.VisualStudio.Text.Editor.WordWrapStyles" />입니다.</returns>
+      <param name="options">편집기 옵션 집합입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.IAdornmentElement">
+      <summary>장식을 구성하는 시퀀스 요소를 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.IAdornmentElement.Affinity">
+      <summary>장식의 <see cref="T:Microsoft.VisualStudio.Text.PositionAffinity" />를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.IAdornmentElement.Baseline">
+      <summary>장식 텍스트의 위쪽과 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 기준선 간 거리(논리 픽셀 단위)입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.IAdornmentElement.BottomSpace">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 텍스트 아래쪽 밑에 유지할 공백의 양(논리 픽셀 단위)입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.IAdornmentElement.IdentityTag">
+      <summary>이 장식과 관련된 고유 식별자를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.IAdornmentElement.ProviderTag">
+      <summary>장식의 공급자와 관련된 고유 식별자를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.IAdornmentElement.TextHeight">
+      <summary>장식 텍스트의 높이를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.IAdornmentElement.TopSpace">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 텍스트 위쪽 위에 유지할 공백의 양(논리 픽셀 단위)을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.IAdornmentElement.Width">
+      <summary>장식의 너비(논리 픽셀 단위)를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.ISequenceElement">
+      <summary>요소 시퀀스에서 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />을 구성하는 기본 요소를 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ISequenceElement.ShouldRenderText">
+      <summary>해당 범위의 텍스트를 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />에 렌더링할지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ISequenceElement.Span">
+      <summary>요소의 <see cref="T:Microsoft.VisualStudio.Text.IMappingSpan" />을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentCollection">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer" />에서 생성한 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ISequenceElement" /> 개체의 목록을 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentCollection.Sequencer">
+      <summary>컬렉션을 생성한 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer" />를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshotLine" />을 구성하는 텍스트 및 장식 요소의 시퀀스를 만듭니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer.BufferGraph">
+      <summary>시퀀서에서 사용하는 <see cref="T:Microsoft.VisualStudio.Text.Projection.IBufferGraph" />를 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer.CreateTextAndAdornmentCollection(Microsoft.VisualStudio.Text.ITextSnapshotLine,Microsoft.VisualStudio.Text.ITextSnapshot)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshotLine" />을 구성하는 텍스트 및 장식 요소의 시퀀스를 만듭니다.</summary>
+      <returns>텍스트 및 장식 요소를 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ISequenceElement" /> 개체의 정규화된 컬렉션입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer.CreateTextAndAdornmentCollection(Microsoft.VisualStudio.Text.SnapshotSpan,Microsoft.VisualStudio.Text.ITextSnapshot)"></member>
+    <member name="E:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer.SequenceChanged">
+      <summary>시퀀서에서 사용하는 데이터가 변경되었을 때 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer.SourceBuffer">
+      <summary>버퍼 그래프의 소스 버퍼를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer.TopBuffer">
+      <summary>버퍼 그래프의 위쪽 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencerFactoryService">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer" />의 인스턴스를 만드는 서비스입니다. MEF 구성 요소 부분에 해당하며 [Export(NameSource=typeof(ITextAndAdornmentSequencerFactoryService))] 특성을 사용하여 내보내야 합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencerFactoryService.Create(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer" />를 만듭니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextAndAdornmentSequencer" />입니다.</returns>
+      <param name="view">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine">
+      <summary>텍스트 뷰에 표시하도록 서식이 지정된 텍스트를 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Baseline">
+      <summary>텍스트의 맨 위에서 줄의 기준선 텍스트까지의 거리를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Bottom">
+      <summary>텍스트 렌더링 좌표계에서 이 줄의 아래쪽 가장자리 위치를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Change">
+      <summary>이 렌더링된 텍스트 줄에서 현재 레이아웃과 이전 레이아웃 사이에 변경된 내용을 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.ContainsBufferPosition(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>지정된 버퍼 위치가 이 텍스트 줄 내에 있는지 여부를 확인합니다.</summary>
+      <returns>
+        <paramref name="bufferPosition" />이 이 텍스트 줄 내에 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="bufferPosition">버퍼 위치입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.DefaultLineTransform"></member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.DeltaY">
+      <summary>이 렌더링된 텍스트 줄의 맨 위에서 현재 레이아웃의 <see cref="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Top" /> 값과 이전 레이아웃의 <see cref="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Top" /> 값 사이에 변경된 내용을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.End">
+      <summary>줄 바꿈 문자를 제외하고 줄의 끝을 벗어나는 첫째 문자의 위치를 가져옵니다. 대부분의 경우 이 속성은 줄 바꿈 문자를 참조합니다. 단, 버퍼 끝을 벗어나는 위치를 포함하는 버퍼의 마지막 줄은 예외입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.EndIncludingLineBreak">
+      <summary>줄 바꿈 문자를 포함하여 줄의 끝을 벗어나는 첫째 문자의 위치를 가져옵니다. 대부분의 경우 이 속성은 다음 줄의 첫 문자를 참조합니다. 단, 버퍼 끝을 벗어나는 위치를 포함하는 버퍼의 마지막 줄이 다음 줄인 경우에는 예외입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.EndOfLineWidth">
+      <summary>이 줄에서 마지막 문자의 오른쪽 가장자리부터 이 줄의 공간 끝까지의 거리를 가져옵니다. 줄 바꿈 문자 또는 파일 끝 문자에 대한 여백을 포함할 수 있습니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Extent">
+      <summary>줄 바꿈 문자를 제외하고 줄의 범위를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.ExtentAsMappingSpan">
+      <summary>줄의 <see cref="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Extent" />에 해당하는 <see cref="T:Microsoft.VisualStudio.Text.IMappingSpan" />을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.ExtentIncludingLineBreak">
+      <summary>줄 바꿈 문자를 포함하여 줄의 범위를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.ExtentIncludingLineBreakAsMappingSpan">
+      <summary>
+        <see cref="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.ExtentIncludingLineBreak" />에 해당하는 <see cref="T:Microsoft.VisualStudio.Text.IMappingSpan" />을 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetAdornmentBounds(System.Object)">
+      <summary>지정된 장식의 범위를 계산합니다.</summary>
+      <returns>이 줄에 지정된 <paramref name="identityTag" />가 있는 장식이 포함되어 있으면 <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 구조체이고, 그렇지 않으면 null입니다.</returns>
+      <param name="identityTag">범위를 계산할 장식의 IAdornmentElement.IdentityTag입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetAdornmentTags(System.Object)">
+      <summary>해당 줄에 있는 장식을 가져옵니다.</summary>
+      <returns>줄에 표시되는 순서를 나타내는 장식 ID 태그의 시퀀스입니다. 이 컬렉션은 항상 null이 아니지만 비어 있을 수 있습니다.</returns>
+      <param name="providerTag">공급자의 ID 태그입니다. 이 태그는 SpaceNegotiatingAdornmentTag.ProviderTag와 일치해야 합니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="providerTag" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetBufferPositionFromXCoordinate(System.Double)">
+      <summary>문자 범위에 지정된 X 좌표가 포함된 문자의 버퍼 위치를 가져옵니다.</summary>
+      <returns>X 축에서 문자의 텍스트 버퍼 기준 지점이거나 해당 위치에 문자가 없을 경우 null입니다.</returns>
+      <param name="xCoordinate">원하는 문자의 X 좌표입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetBufferPositionFromXCoordinate(System.Double,System.Boolean)">
+      <summary>문자 범위에 지정된 X 좌표가 포함된 문자의 버퍼 위치를 가져옵니다.</summary>
+      <returns>X 축에서 문자의 텍스트 버퍼 기준 지점이거나 해당 위치에 문자가 없을 경우 null입니다.</returns>
+      <param name="xCoordinate">원하는 문자의 X 좌표입니다.</param>
+      <param name="textOnly">true인 경우 <paramref name="xCoordinate" />가 장식 위에 있으면 이 메서드는 null을 반환합니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetCharacterBounds(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>지정된 버퍼 위치에 있는 문자의 범위를 계산합니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 구조체입니다.</returns>
+      <param name="bufferPosition">문자의 텍스트 버퍼 기준 인덱스입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferPosition" /> does not correspond to a position on this line.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetCharacterBounds(Microsoft.VisualStudio.Text.VirtualSnapshotPoint)">
+      <summary>지정된 버퍼 위치에 있는 문자의 범위를 계산합니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 구조체입니다.</returns>
+      <param name="bufferPosition">문자의 텍스트 버퍼 기준 인덱스입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferPosition" /> does not correspond to a position on this line.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetExtendedCharacterBounds(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>지정된 버퍼 위치에 있는 문자의 범위를, 이와 인접한 공간 협상 프로세스가 필요한 장식 요소와 함께 계산합니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 구조체입니다.</returns>
+      <param name="bufferPosition">문자의 텍스트 버퍼 기준 인덱스입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferPosition" /> does not correspond to a position on this line.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetExtendedCharacterBounds(Microsoft.VisualStudio.Text.VirtualSnapshotPoint)">
+      <summary>지정된 가상 버퍼 위치에 있는 문자의 범위를, 이와 인접한 공간 협상 프로세스가 필요한 장식 요소와 함께 계산합니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 구조체입니다.</returns>
+      <param name="bufferPosition">문자의 텍스트 버퍼 기준 인덱스입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferPosition" /> does not correspond to a position on this line.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetInsertionBufferPositionFromXCoordinate(System.Double)">
+      <summary>새 데이터를 지정된 X 좌표에 삽입하려는 경우 사용되는 버퍼 위치를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.VirtualSnapshotPoint" />입니다.</returns>
+      <param name="xCoordinate">원하는 지점의 X 좌표입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetNormalizedTextBounds(Microsoft.VisualStudio.Text.SnapshotSpan)">
+      <summary>지정된 범위에 해당하는 텍스트의 <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 구조체 컬렉션을 가져옵니다.</summary>
+      <returns>
+        <paramref name="bufferSpan" />에 지정된 텍스트를 포함하는 <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 구조체 컬렉션입니다.</returns>
+      <param name="bufferSpan">텍스트 범위를 계산할 텍스트를 나타내는 <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan" />입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferSpan" /> is not a legal span in the underlying text buffer.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetTextElementSpan(Microsoft.VisualStudio.Text.SnapshotPoint)">
+      <summary>텍스트 요소 인덱스가 지정된 버퍼 위치에 해당하는 범위를 가져옵니다.</summary>
+      <returns>지정된 텍스트 요소에 해당하는 <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan" />입니다.</returns>
+      <param name="bufferPosition">버퍼 위치입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetVirtualBufferPositionFromXCoordinate(System.Double)">
+      <summary>문자 범위에 지정된 X 좌표가 포함된 문자의 버퍼 위치를 가져옵니다.</summary>
+      <returns>X 축에서 문자의 텍스트 버퍼 기준 지점입니다.</returns>
+      <param name="xCoordinate">원하는 문자의 X 좌표입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Height">
+      <summary>이 줄의 위쪽 및 아래쪽 가장자리 사이의 거리를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.IdentityTag">
+      <summary>뷰의 레이아웃 전체에서 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 ID를 추적하는 데 사용할 수 있는 태그를 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.IntersectsBufferSpan(Microsoft.VisualStudio.Text.SnapshotSpan)">
+      <summary>
+        <paramref name="bufferSpan" />이 이 텍스트 줄과 교차하는지 여부를 확인합니다.</summary>
+      <returns>
+        <paramref name="bufferSpan" />이 텍스트 줄과 교차하면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="bufferSpan">버퍼 범위입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.IsFirstTextViewLineForSnapshotLine">
+      <summary>이 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />이 특정 <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshotLine" />에 대해 서식이 지정된 줄 목록의 첫째 줄인지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.IsLastTextViewLineForSnapshotLine">
+      <summary>이 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />이 특정 <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshotLine" />에 대해 서식이 지정된 줄 목록의 마지막 줄인지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.IsValid">
+      <summary>이 텍스트 뷰 줄이 아직 유효한지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Left">
+      <summary>텍스트 렌더링 좌표계에서 이 줄의 왼쪽 가장자리 위치를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Length">
+      <summary>줄 바꿈 문자를 제외하고 줄의 길이를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.LengthIncludingLineBreak">
+      <summary>줄 바꿈 문자를 포함하여 줄의 길이를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.LineBreakLength">
+      <summary>이 줄 끝에 나타나는 줄 바꿈 시퀀스(예: "\r\n")의 길이를 가져옵니다.</summary>
+      <returns>[0..2] 범위의 정수입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.LineTransform">
+      <summary>이 줄을 렌더링하는 데 사용되는 <see cref="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.LineTransform" />을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Right">
+      <summary>텍스트 렌더링 좌표계에서 이 줄의 오른쪽 가장자리 위치를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Snapshot">
+      <summary>이 맵의 기반이 되는 <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshot" />을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Start">
+      <summary>줄에 있는 첫째 문자의 <see cref="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Snapshot" /> 위치를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.TextBottom">
+      <summary>렌더링된 줄의 텍스트 아래쪽 Y 좌표를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.TextHeight">
+      <summary>렌더링된 줄의 텍스트 위쪽 및 아래쪽 사이의 세로 거리를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.TextLeft">
+      <summary>렌더링된 줄의 텍스트 왼쪽 가장자리 X 좌표를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.TextRight">
+      <summary>렌더링된 줄의 텍스트 오른쪽 가장자리 X 좌표를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.TextTop">
+      <summary>렌더링된 줄의 텍스트 위쪽 Y 좌표를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.TextWidth">
+      <summary>
+        <see cref="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.TextRight" /> 및 <see cref="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.TextLeft" /> 사이의 가로 거리를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Top">
+      <summary>텍스트 렌더링 좌표계에서 이 줄의 위쪽 가장자리 위치를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.VirtualSpaceWidth">
+      <summary>이 줄 끝의 가상 공간 너비를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.VisibilityState">
+      <summary>뷰의 위쪽 및 아래쪽을 기준으로 이 렌더링된 텍스트 줄의 표시 상태를 가져옵니다.</summary>
+      <exception cref="T:System.ObjectDisposedException">This <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" /> has been disposed.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.Width">
+      <summary>이 줄의 왼쪽 및 오른쪽 가장자리 사이의 거리를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.LineTransform">
+      <summary>서식이 지정된 텍스트 줄에서 렌더링된 텍스트 줄로의 변환을 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.LineTransform.#ctor(System.Double)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.LineTransform" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="verticalScale">줄의 텍스트와 줄 위쪽 및 아래쪽 공백에 적용할 세로 배율 인수입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.LineTransform.#ctor(System.Double,System.Double,System.Double)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.LineTransform" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="topSpace">
+        <paramref name="verticalScale" />을 적용하기 전 줄의 텍스트 위쪽에 필요한 공백의 양입니다.</param>
+      <param name="bottomSpace">
+        <paramref name="verticalScale" />을 적용하기 전 줄의 텍스트 아래쪽에 필요한 공백의 양입니다.</param>
+      <param name="verticalScale">줄의 텍스트와 줄 위쪽 및 아래쪽 공백에 적용할 세로 배율 인수입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.LineTransform.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.LineTransform" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="topSpace">
+        <paramref name="verticalScale" />을 적용하기 전 줄의 텍스트 위쪽에 필요한 공백의 양입니다.</param>
+      <param name="bottomSpace">
+        <paramref name="verticalScale" />을 적용하기 전 줄의 텍스트 아래쪽에 필요한 공백의 양입니다.</param>
+      <param name="verticalScale">줄의 텍스트와 줄 위쪽 및 아래쪽 공백에 적용할 세로 배율 인수입니다.</param>
+      <param name="right">줄의 오른쪽 가장자리 X 좌표입니다. 일반적으로 줄 텍스트 오른쪽으로 확장되는 줄 장식의 오른쪽 가장자리입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.LineTransform.BottomSpace">
+      <summary>
+        <see cref="P:Microsoft.VisualStudio.Text.Formatting.LineTransform.VerticalScale" /> 인수를 적용하기 전 줄의 텍스트 아래쪽에 필요한 공백의 양을 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.LineTransform.Combine(Microsoft.VisualStudio.Text.Formatting.LineTransform,Microsoft.VisualStudio.Text.Formatting.LineTransform)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.Formatting.LineTransform" /> 개체를 결합합니다.</summary>
+      <returns>결합된 <see cref="T:Microsoft.VisualStudio.Text.Formatting.LineTransform" />입니다.</returns>
+      <param name="transform1">결합할 첫 번째 <see cref="T:Microsoft.VisualStudio.Text.Formatting.LineTransform" />입니다.</param>
+      <param name="transform2">결합할 두 번째 <see cref="T:Microsoft.VisualStudio.Text.Formatting.LineTransform" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.LineTransform.Equals(System.Object)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.Formatting.LineTransform" /> 개체가 같은지 여부를 확인합니다.</summary>
+      <returns>두 개체가 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="obj">같은지 비교할 개체입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.LineTransform.GetHashCode">
+      <summary>해당 개체의 해시 코드를 가져옵니다.</summary>
+      <returns>해시 코드입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.LineTransform.op_Equality(Microsoft.VisualStudio.Text.Formatting.LineTransform,Microsoft.VisualStudio.Text.Formatting.LineTransform)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.Formatting.LineTransform" /> 개체가 같은지 여부를 확인합니다.</summary>
+      <returns>줄 변환이 서로 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="transform1">첫 번째 줄 변환입니다.</param>
+      <param name="transform2">두 번째 줄 변환입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.LineTransform.op_Inequality(Microsoft.VisualStudio.Text.Formatting.LineTransform,Microsoft.VisualStudio.Text.Formatting.LineTransform)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.Formatting.LineTransform" /> 개체가 다른지 여부를 확인합니다.</summary>
+      <returns>줄 변환이 서로 다르면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="transform1">첫 번째 줄 변환입니다.</param>
+      <param name="transform2">두 번째 줄 변환입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.LineTransform.Right">
+      <summary>줄의 유효한 오른쪽 가장자리 X 좌표를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.LineTransform.TopSpace">
+      <summary>
+        <see cref="P:Microsoft.VisualStudio.Text.Formatting.LineTransform.VerticalScale" /> 인수를 적용하기 전 줄의 텍스트 위쪽에 필요한 공백의 양을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.LineTransform.VerticalScale">
+      <summary>줄의 텍스트와 줄 위쪽 및 아래쪽 공백에 적용할 세로 배율 인수를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.TextAndAdornmentSequenceChangedEventArgs">
+      <summary>태그 집계 TagsChanged 이벤트에 대한 정보를 제공하고 변경된 태그의 범위를 매핑 범위로 반환합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.TextAndAdornmentSequenceChangedEventArgs.#ctor(Microsoft.VisualStudio.Text.IMappingSpan)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.IMappingSpan" />을 사용하여 <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextAndAdornmentSequenceChangedEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="span">변경된 범위입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="span" /> is null.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextAndAdornmentSequenceChangedEventArgs.Span">
+      <summary>태그가 변경된 범위를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.TextBounds">
+      <summary>지정된 텍스트 줄에 있는 텍스트 범위의 경계입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.TextBounds.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="leading">경계 사각형 선행 가장자리의 X 좌표입니다.</param>
+      <param name="top">경계 사각형 위쪽 가장자리의 Y 좌표입니다.</param>
+      <param name="bidiWidth">경계 사각형의 선행 및 후행 가장자리 사이 거리입니다. 오른쪽에서 왼쪽 방향 텍스트의 경우 음수일 수 있습니다.</param>
+      <param name="height">사각형의 높이입니다. 높이는 음수가 아니어야 합니다.</param>
+      <param name="textTop">텍스트를 포함하는 줄을 기준으로 측정한 텍스트의 위쪽입니다.</param>
+      <param name="textHeight">텍스트를 포함하는 줄을 기준으로 측정한 텍스트의 높이입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="leading" /> or <paramref name="bidiWidth" /> is not a valid number, or <paramref name="height" /> is negative or not a valid number.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.Bottom">
+      <summary>텍스트 렌더링 좌표계에서 사각형의 아래쪽 가장자리 위치를 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.TextBounds.Equals(System.Object)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 개체가 같은지 여부를 확인합니다.</summary>
+      <returns>텍스트 범위가 서로 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="obj">다른 텍스트 범위입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.TextBounds.GetHashCode">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 개체의 해시 코드를 가져옵니다.</summary>
+      <returns>해시 코드입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.Height">
+      <summary>텍스트 렌더링 좌표계에서 사각형의 위쪽 및 아래쪽 가장자리 사이의 거리를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.IsRightToLeft">
+      <summary>문자가 오른쪽에서 왼쪽 방향 문자인지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.Leading">
+      <summary>텍스트 렌더링 좌표계에서 사각형의 선행 가장자리 위치를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.Left">
+      <summary>텍스트 렌더링 좌표계에서 사각형의 왼쪽 가장자리 위치를 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.TextBounds.op_Equality(Microsoft.VisualStudio.Text.Formatting.TextBounds,Microsoft.VisualStudio.Text.Formatting.TextBounds)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 개체가 같은지 여부를 확인합니다.</summary>
+      <returns>텍스트 범위가 서로 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="bounds1">첫 번째 텍스트 범위입니다.</param>
+      <param name="bounds2">두 번째 텍스트 범위입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.TextBounds.op_Inequality(Microsoft.VisualStudio.Text.Formatting.TextBounds,Microsoft.VisualStudio.Text.Formatting.TextBounds)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 개체가 다른지 여부를 확인합니다.</summary>
+      <returns>텍스트 범위가 다르면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="bounds1">첫 번째 텍스트 범위입니다.</param>
+      <param name="bounds2">두 번째 텍스트 범위입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.Right">
+      <summary>텍스트 렌더링 좌표계에서 사각형의 오른쪽 가장자리 위치를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.TextBottom">
+      <summary>문자를 포함하는 줄의 텍스트 아래쪽을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.TextHeight">
+      <summary>문자를 포함하는 줄의 텍스트 높이를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.TextTop">
+      <summary>텍스트를 포함하는 줄의 텍스트 위쪽을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.Top">
+      <summary>텍스트 렌더링 좌표계에서 사각형의 위쪽 가장자리 위치를 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Formatting.TextBounds.ToString">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.TextBounds" /> 개체를 문자열로 변환합니다.</summary>
+      <returns>텍스트 범위의 문자열 표현입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.Trailing">
+      <summary>텍스트 렌더링 좌표계에서 사각형의 후행 가장자리 위치를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Formatting.TextBounds.Width">
+      <summary>텍스트 렌더링 좌표계에서 사각형의 선행 및 후행 가장자리 사이의 거리를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.TextViewLineChange">
+      <summary>레이아웃 간에 렌더링된 텍스트 줄에서 가능한 변경 형식을 정의합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Formatting.TextViewLineChange.None">
+      <summary>변경 형식을 지정하지 않았습니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Formatting.TextViewLineChange.NewOrReformatted">
+      <summary>새 줄이거나 서식이 다시 지정된 줄입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Formatting.TextViewLineChange.Translated">
+      <summary>텍스트가 변경되지 않았지만 일부 변경 내용으로 인해 Y 좌표가 변경되었습니다. 예를 들어, 이 줄 위에 줄을 삽입했거나 사용자가 뷰를 위 또는 아래로 스크롤했을 수 있습니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Formatting.VisibilityState">
+      <summary>줄이 렌더링되었을 때 표시 영역에 대해 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 표시 여부를 지정합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Formatting.VisibilityState.Unattached">
+      <summary>줄을 연결하지 않습니다. 즉, 텍스트 뷰 내 레이아웃의 일부로 서식이 지정되지 않습니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Formatting.VisibilityState.Hidden">
+      <summary>줄을 숨깁니다. 즉, 뷰 안에 줄이 표시되지 않습니다. 줄의 아래쪽 가장자리 또는 위쪽 가장자리가 뷰의 위쪽과 대등한 경우에도 줄을 숨깁니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Formatting.VisibilityState.PartiallyVisible">
+      <summary>줄을 부분적으로 표시합니다. 즉, 줄의 일부가 뷰의 위쪽 및/또는 뷰의 아래쪽으로 확장됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.Formatting.VisibilityState.FullyVisible">
+      <summary>줄을 완전히 표시합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch">
+      <summary>증분 검색 작업을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.AppendCharAndSearch(System.Char)">
+      <summary>검색 중인 현재 용어를 한 문자씩 확장합니다. 새 용어가 일치하면 선택됩니다. 선택 용어는 일치 항목에 액세스하는 데 사용할 수 있습니다.</summary>
+      <param name="toAppend">현재 검색어에 추가할 문자입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.Clear">
+      <summary>선택 항목을 변경하지 않고 기존 검색어를 지웁니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.DeleteCharAndSearch">
+      <summary>현재 검색어의 마지막 문자를 제거하고 새 용어에 따라 검색 결과를 업데이트합니다.</summary>
+      <exception cref="T:System.InvalidOperationException">The search string is empty. To avoid this exception, check the <see cref="P:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.SearchString" /> property before calling this method.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.Dismiss">
+      <summary>증분 검색 작업을 종료합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.IsActive">
+      <summary>증분 검색이 진행 중인지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.SearchDirection">
+      <summary>증분 검색의 방향을 가져오거나 설정합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.SearchString">
+      <summary>현재 검색어를 가져오거나 설정합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.SelectNextResult">
+      <summary>증분 검색 작업에서 다음 결과를 선택합니다. 일치된 용어가 선택됩니다.</summary>
+      <returns>새로 선택한 항목으로 인해 문서의 끝이나 시작에서 래핑되었는지와 검색이 처음 찾은 항목에서 반복되었는지 여부를 나타내는 <see cref="T:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult" />입니다. </returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.Start">
+      <summary>증분 검색 작업을 시작하고 캐럿의 위치를 검색의 시작 위치로 표시합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch.TextView">
+      <summary>이 검색과 관련된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />를 가져옵니다. </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearchFactoryService">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 증분 검색 서비스를 가져오거나 만드는 데 사용됩니다. 지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대해 최대 하나의 <see cref="T:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch" />가 항상 있습니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearchFactoryService.GetIncrementalSearch(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 <see cref="T:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch" />를 가져옵니다. 뷰에 대한 <see cref="T:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch" />가 없는 경우 새로 만들어집니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />와 연결된 <see cref="T:Microsoft.VisualStudio.Text.IncrementalSearch.IIncrementalSearch" />입니다.</returns>
+      <param name="textView">증분 검색을 수행할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchDirection">
+      <summary>증분 검색의 방향을 결정합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchDirection.Forward">
+      <summary>정방향 검색입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchDirection.Backward">
+      <summary>역방향 검색입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult">
+      <summary>증분 검색 작업의 결과를 통합합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>지정된 속성을 사용하여 <see cref="T:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="passedEndOfBuffer">검색이 버퍼 끝에서 래핑되었는지 여부를 나타냅니다.</param>
+      <param name="passedStartOfBuffer">검색이 버퍼 시작에서 래핑되었는지 여부를 나타냅니다.</param>
+      <param name="passedStartOfSearch">검색에서 처음 찾은 항목을 지나갔는지 여부를 나타냅니다.</param>
+      <param name="resultFound">검색의 성공 여부를 나타냅니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult.Equals(System.Object)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult" /> 개체의 내용이 같은지 여부를 확인합니다.</summary>
+      <returns>
+            두 개체의 내용이 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="obj">비교할 개체입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult.GetHashCode">
+      <summary>개체의 해시 코드를 가져옵니다.</summary>
+      <returns>기본 클래스 구현입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult.op_Equality(Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult,Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult" /> 개체의 내용이 같은지 여부를 확인합니다.</summary>
+      <returns>
+            두 개체의 내용이 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="first">첫 번째 결과입니다.</param>
+      <param name="second">두 번째 결과입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult.op_Inequality(Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult,Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult" /> 개체의 내용이 다른지 여부를 확인합니다.</summary>
+      <returns>
+            두 개체의 내용이 다르면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="first">첫 번째 결과입니다.</param>
+      <param name="second">두 번째 결과입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult.PassedEndOfBuffer">
+      <summary>검색이 버퍼의 끝에서 처음으로 래핑되었는지 여부를 확인합니다.</summary>
+      <returns>검색이 버퍼 끝에서 래핑되었을 경우 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult.PassedStartOfBuffer">
+      <summary>검색이 버퍼의 시작에서 끝으로 래핑되었는지 여부를 확인합니다.</summary>
+      <returns>검색이 버퍼의 시작에서 끝으로 래핑되었을 경우 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult.PassedStartOfSearch">
+      <summary>검색에서 처음 찾은 항목을 지나갔는지 여부를 확인합니다.</summary>
+      <returns>검색에서 처음 찾은 항목을 지나갔을 경우 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.IncrementalSearch.IncrementalSearchResult.ResultFound">
+      <summary>용어 검색의 성공 여부를 확인합니다.</summary>
+      <returns>검색이 성공했을 경우 true입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Operations.IEditorOperations">
+      <summary>편집기 관련 작업을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.AddAfterTextBufferChangePrimitive">
+      <summary>다시 실행될 경우 선택 항목을 현재 상태로 복원할 버퍼의 <see cref="T:Microsoft.VisualStudio.Text.Operations.ITextUndoHistory" />에 <see cref="T:Microsoft.VisualStudio.Text.Operations.ITextUndoPrimitive" />를 추가합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.AddBeforeTextBufferChangePrimitive">
+      <summary>실행 취소될 경우 선택 항목을 현재 상태로 복원할 버퍼의 <see cref="T:Microsoft.VisualStudio.Text.Operations.ITextUndoHistory" />에 <see cref="T:Microsoft.VisualStudio.Text.Operations.ITextUndoPrimitive" />를 추가합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.Backspace">
+      <summary>현재 캐럿의 왼쪽에 있는 문자 하나를 삭제합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Operations.IEditorOperations.CanCut">
+      <summary>잘라내기 작업이 가능한지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Operations.IEditorOperations.CanDelete">
+      <summary>삭제 작업이 가능한지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Operations.IEditorOperations.CanPaste">
+      <summary>붙여넣기 작업이 가능한지 여부를 확인합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.Capitalize">
+      <summary>선택 항목의 모든 문자를 소문자로 변환한 다음 이 항목에서 각 단어의 첫 문자를 대문자로 변환합니다. 선택 항목이 비어 있을 경우 다음 문자를 대문자로 만듭니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ConvertSpacesToTabs">
+      <summary>선택 항목에서 또는 선택 항목이 비어 있을 경우 캐럿이 설정된 줄에서 공백을 탭으로 변환합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ConvertTabsToSpaces">
+      <summary>선택 항목에서 또는 선택 항목이 비어 있을 경우 캐럿이 설정된 줄에서 탭을 공백으로 변환합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.CopySelection">
+      <summary>선택한 텍스트를 클립보드에 복사합니다.</summary>
+      <returns>
+            클립보드 작업이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.CutFullLine">
+      <summary>선택 항목이 있을 경우 이 항목이 접한 모든 줄을 줄 바꿈 문자와 함께 삭제하고 텍스트를 클립보드로 복사합니다. 그렇지 않으면 캐럿이 설정된 줄을 줄 바꿈 문자와 함께 삭제하고 텍스트를 클립보드로 복사합니다.</summary>
+      <returns>
+            편집 및 클립보드 작업이 모두 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.CutSelection">
+      <summary>선택한 텍스트를 잘라냅니다.</summary>
+      <returns>
+            편집 및 클립보드 작업이 모두 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.DecreaseLineIndent">
+      <summary>여러 줄의 항목을 선택한 경우 선택 항목의 모든 줄에서 들여쓰기를 제거하거나 그렇지 않은 경우 캐럿이 설정된 줄에서 들여쓰기를 제거합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.Delete">
+      <summary>선택 항목이 있을 경우 삭제합니다. 또는 버퍼에서 다음 문자가 있을 경우 삭제합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.DeleteBlankLines">
+      <summary>선택 항목에서 공백만 있는 줄이나 빈 줄을 모두 삭제합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.DeleteFullLine">
+      <summary>선택 항목이 있을 경우 이 항목이 접한 모든 줄을 줄 바꿈 문자와 함께 삭제합니다. 그렇지 않으면 캐럿이 설정된 줄을 줄 바꿈 문자와 함께 삭제합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.DeleteHorizontalWhiteSpace">
+      <summary>선택한 줄의 처음과 끝에서 공백을 모두 삭제하고 줄 안의 공백을 지웁니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.DeleteToBeginningOfLine">
+      <summary>캐럿이 설정된 줄을 이전 줄 바꿈 문자 및 선택 항목이 있을 경우 해당 항목까지 삭제합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.DeleteToEndOfLine">
+      <summary>캐럿이 설정된 줄을 줄 바꿈 문자 및 선택 항목이 있을 경우 해당 항목까지 삭제합니다.</summary>
+      <returns>작업이 성공하면 true이고 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.DeleteWordToLeft">
+      <summary>현재 캐럿 위치의 왼쪽에 있는 단어를 삭제합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.DeleteWordToRight">
+      <summary>현재 캐럿 위치의 오른쪽에 있는 단어를 삭제합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ExtendSelection(System.Int32)">
+      <summary>현재 선택 항목 범위를 새 선택 항목 끝까지 확장합니다.</summary>
+      <param name="newEnd">선택 항목을 확장할 새 문자 위치입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="newEnd" /> is less than 0.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.GotoLine(System.Int32)">
+      <summary>캐럿을 지정된 줄의 처음으로 이동합니다.</summary>
+      <param name="lineNumber">캐럿을 이동할 줄 번호입니다.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="lineNumber" /> is less than zero or greater than the line number of the last line in the text buffer.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.IncreaseLineIndent">
+      <summary>여러 줄의 항목을 선택한 경우 선택 항목의 모든 줄에 들여쓰기를 추가하거나 그렇지 않은 경우 캐럿이 설정된 줄에 들여쓰기를 추가합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.Indent">
+      <summary>여러 줄의 항목을 선택한 경우 선택 항목을 들여쓰거나 그렇지 않은 경우 캐럿 위치에 탭을 삽입합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.InsertFile(System.String)">
+      <summary>디스크의 파일을 텍스트 버퍼로 삽입합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="filePath">디스크의 파일 경로입니다.</param>
+      <exception cref="T:System.IO.DirectoryNotFoundException">The specified path is invalid (for example, it is on an unmapped drive). </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="filePath" /> is a zero-length string, contains only white space, or contains one or more invalid characters as defined by InvalidPathChars.</exception>
+      <exception cref="T:System.IO.FileNotFoundException">The file specified in <paramref name="filePath" /> was not found.</exception>
+      <exception cref="T:System.Security.SecurityException">The caller does not have the required permission.</exception>
+      <exception cref="T:System.IO.PathTooLongException">The specified path, file name, or both exceed the system-defined maximum length.  For example, on Windows-based platforms, paths must be less than 248 characters, and file names must be less than 260 characters. </exception>
+      <exception cref="T:System.UnauthorizedAccessException">
+        <paramref name="filePath" /> specified a file that is read-only, or this operation is not supported on the current platform, or <paramref name="filePath" /> specified a directory, or the caller does not have the required permission.</exception>
+      <exception cref="T:System.IO.IOException">An I/O error occurred while opening the file. </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="filePath" /> is null.</exception>
+      <exception cref="T:System.NotSupportedException">
+        <paramref name="filePath" /> is in an invalid format. </exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.InsertNewLine">
+      <summary>현재 캐럿 위치에 새 줄을 삽입합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.InsertProvisionalText(System.String)">
+      <summary>지정된 텍스트를 현재 캐럿 위치에 임시 텍스트로 삽입합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="text">버퍼에 삽입할 텍스트입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="text" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.InsertText(System.String)">
+      <summary>지정된 텍스트를 현재 캐럿 위치에 삽입합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="text">버퍼에 삽입할 텍스트입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="text" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.InsertTextAsBox(System.String,Microsoft.VisualStudio.Text.VirtualSnapshotPoint@,Microsoft.VisualStudio.Text.VirtualSnapshotPoint@)">
+      <summary>지정된 텍스트를 현재 캐럿 위치에 상자로 삽입합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="text">버퍼에 삽입할 텍스트입니다. 텍스트의 각 "줄"은 한 번에 하나씩 쓰여집니다.</param>
+      <param name="boxStart">새로 삽입한 상자의 처음입니다.</param>
+      <param name="boxEnd">새로 삽입한 상자의 끝입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="text" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MakeLowercase">
+      <summary>선택 항목에서 대문자를 소문자로 변환합니다. 선택 항목이 비어 있을 경우 다음 문자를 소문자로 만듭니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MakeUppercase">
+      <summary>선택 항목에서 소문자를 대문자로 변환합니다. 선택 항목이 비어 있을 경우 다음 문자를 대문자로 만듭니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveCaret(Microsoft.VisualStudio.Text.Formatting.ITextViewLine,System.Double,System.Boolean)">
+      <summary>캐럿을 지정된 <paramref name="horizontalOffset" />의 지정된 <paramref name="textLine" />으로 이동합니다.</summary>
+      <param name="textLine">캐럿을 둘 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />입니다.</param>
+      <param name="horizontalOffset">지정된 <paramref name="textLine" />에서 캐럿을 이동할 수평 위치입니다.</param>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="textLine" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveCurrentLineToBottom">
+      <summary>현재 줄을 뷰의 맨 아래로 이동합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveCurrentLineToTop">
+      <summary>현재 줄을 뷰의 맨 위로 이동합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveLineDown(System.Boolean)">
+      <summary>캐럿을 한 줄 아래로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveLineUp(System.Boolean)">
+      <summary>캐럿을 한 줄 위로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToBottomOfView(System.Boolean)">
+      <summary>캐럿을 뷰에서 완전히 표시된 마지막 줄로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToEndOfDocument(System.Boolean)">
+      <summary>캐럿을 문서의 끝으로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToEndOfLine(System.Boolean)">
+      <summary>캐럿을 줄의 끝으로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToHome(System.Boolean)">
+      <summary>캐럿을 줄의 첫 번째 텍스트 열로 이동합니다. 캐럿이 이미 첫 번째 텍스트 열에 있거나 텍스트가 없을 경우 캐럿을 줄의 첫 번째 열로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToLastNonWhiteSpaceCharacter(System.Boolean)">
+      <summary>캐럿을 줄에서 공백이 아닌 마지막 문자 바로 앞으로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToNextCharacter(System.Boolean)">
+      <summary>캐럿을 다음 문자로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToNextWord(System.Boolean)">
+      <summary>캐럿을 다음 단어로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToPreviousCharacter(System.Boolean)">
+      <summary>캐럿을 이전 문자로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToPreviousWord(System.Boolean)">
+      <summary>캐럿을 이전 단어로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToStartOfDocument(System.Boolean)">
+      <summary>캐럿을 문서의 처음으로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToStartOfLine(System.Boolean)">
+      <summary>캐럿을 줄의 처음으로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToStartOfLineAfterWhiteSpace(System.Boolean)">
+      <summary>캐럿을 모든 공백 뒤 줄의 처음으로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToStartOfNextLineAfterWhiteSpace(System.Boolean)">
+      <summary>캐럿을 모든 공백 뒤 다음 줄의 처음으로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToStartOfPreviousLineAfterWhiteSpace(System.Boolean)">
+      <summary>캐럿을 모든 공백 뒤 이전 줄의 처음으로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.MoveToTopOfView(System.Boolean)">
+      <summary>캐럿을 뷰에서 완전히 표시된 첫 번째 줄로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.NormalizeLineEndings(System.String)">
+      <summary>
+        <paramref name="replacement" />와 일치하지 않는 모든 줄 끝을 <paramref name="replacement" />로 바꿉니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="replacement">모든 줄 끝이 일치될 문자 시퀀스입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.OpenLineAbove">
+      <summary>캐럿이 설정된 줄의 처음에 새 줄을 삽입합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.OpenLineBelow">
+      <summary>캐럿이 설정된 줄의 끝에 새 줄을 삽입합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Operations.IEditorOperations.Options">
+      <summary>이 뷰와 관련된 옵션을 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.PageDown(System.Boolean)">
+      <summary>캐럿을 한 페이지 아래로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.PageUp(System.Boolean)">
+      <summary>캐럿을 한 페이지 위로 이동합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.Paste">
+      <summary>클립보드의 텍스트를 텍스트 버퍼로 붙여 넣습니다.</summary>
+      <returns>
+            편집 및 클립보드 작업이 모두 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ProvisionalCompositionSpan">
+      <summary>현재 임시 컴퍼지션의 범위(임시 컴퍼지션이 없을 경우 null)를 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ReplaceAllMatches(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>지정된 문자열의 일치 항목을 모두 바꿉니다.</summary>
+      <returns>발견된 일치 항목의 개수입니다.</returns>
+      <param name="searchText">일치시킬 텍스트입니다.</param>
+      <param name="replaceText">대체 텍스트입니다.</param>
+      <param name="matchCase">
+                검색에서 대/소문자를 구분하면 true이고, 그렇지 않으면 false입니다.</param>
+      <param name="matchWholeWord">
+                검색에서 단어 단위로 찾으면 true이고, 그렇지 않으면 false입니다.</param>
+      <param name="useRegularExpressions">
+                검색에서 정규식을 사용하면 true이고, 그렇지 않으면 false입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="searchText" /> is null.</exception>
+      <exception cref="T:System.ArgumentException">if <paramref name="useRegularExpressions" /> is true and <paramref name="searchText" /> is an invalid regular expression.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ReplaceSelection(System.String)">
+      <summary>선택한 텍스트를 새 텍스트로 바꿉니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="text">이전 텍스트를 바꿀 새 텍스트입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="text" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ReplaceText(Microsoft.VisualStudio.Text.Span,System.String)">
+      <summary>지정된 범위의 텍스트를 새 텍스트로 바꿉니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="replaceSpan">바꿀 텍스트의 범위입니다.</param>
+      <param name="text">새 텍스트입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ResetSelection">
+      <summary>텍스트에서 선택한 모든 항목을 다시 설정합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ScrollColumnLeft">
+      <summary>뷰를 한 열 왼쪽으로 스크롤합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ScrollColumnRight">
+      <summary>뷰를 한 열 오른쪽으로 스크롤합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ScrollDownAndMoveCaretIfNecessary">
+      <summary>뷰를 한 줄 아래쪽으로 스크롤하고 페이지를 벗어날 경우 캐럿 위치를 뷰에서 완전히 표시되는 첫 번째 줄로 다시 설정합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ScrollLineBottom">
+      <summary>뷰에서 완전히 표시되는 마지막 줄이 되도록 캐럿이 설정된 줄을 스크롤합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ScrollLineCenter">
+      <summary>뷰에서 가운데에 맞춰지도록 캐럿이 설정된 줄을 스크롤합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ScrollLineTop">
+      <summary>뷰에서 완전히 표시되는 첫 번째 줄이 되도록 캐럿이 설정된 줄을 스크롤합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ScrollPageDown">
+      <summary>캐럿을 이동하지 않고 뷰를 한 페이지 아래로 스크롤합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ScrollPageUp">
+      <summary>캐럿을 이동하지 않고 뷰를 한 페이지 위로 스크롤합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ScrollUpAndMoveCaretIfNecessary">
+      <summary>뷰를 한 줄 위쪽으로 스크롤하고 페이지를 벗어날 경우 캐럿 위치를 뷰에서 완전히 표시되는 마지막 줄로 다시 설정합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectAll">
+      <summary>모든 텍스트를 선택합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectAndMoveCaret(Microsoft.VisualStudio.Text.VirtualSnapshotPoint,Microsoft.VisualStudio.Text.VirtualSnapshotPoint)"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectAndMoveCaret(Microsoft.VisualStudio.Text.VirtualSnapshotPoint,Microsoft.VisualStudio.Text.VirtualSnapshotPoint,Microsoft.VisualStudio.Text.Editor.TextSelectionMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectAndMoveCaret(Microsoft.VisualStudio.Text.VirtualSnapshotPoint,Microsoft.VisualStudio.Text.VirtualSnapshotPoint,Microsoft.VisualStudio.Text.Editor.TextSelectionMode,System.Nullable{Microsoft.VisualStudio.Text.Editor.EnsureSpanVisibleOptions})"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectCurrentWord">
+      <summary>현재 단어를 선택합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectedText">
+      <summary>선택한 텍스트를 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectEnclosing">
+      <summary>바깥쪽 부모를 선택합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectFirstChild">
+      <summary>첫 번째 자식을 선택합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectLine(Microsoft.VisualStudio.Text.Formatting.ITextViewLine,System.Boolean)">
+      <summary>지정된 줄을 선택합니다.</summary>
+      <param name="viewLine">선택할 줄입니다.</param>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="viewLine" /> is null</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectNextSibling(System.Boolean)">
+      <summary>다음 형제를 선택합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SelectPreviousSibling(System.Boolean)">
+      <summary>이전 형제를 선택합니다.</summary>
+      <param name="extendSelection">true이면 캐럿을 이동할 때 선택 항목이 확장되고, false이면 선택 항목이 확장되지 않습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.SwapCaretAndAnchor">
+      <summary>캐럿을 현재 위치에서 선택 항목의 반대 끝으로 이동합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.Tabify">
+      <summary>선택 항목 및 캐럿이 접한 모든 줄에서 선행 공백을 탭으로 변환합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Operations.IEditorOperations.TextView">
+      <summary>작업이 수행되는 텍스트 뷰를 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ToggleCase">
+      <summary>선택 항목에서 각 문자의 대/소문자를 바꿉니다. 선택 항목이 비어 있을 경우 다음 문자의 대/소문자를 바꿉니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.TransposeCharacter">
+      <summary>커서가 위치한 문자를 다음 문자와 서로 바꿉니다. 커서가 줄 처음에 있을 경우 처음 두 문자를 서로 바꾸고, 커서가 줄 끝에 있을 경우 마지막 두 문자를 서로 바꿉니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.TransposeLine">
+      <summary>커서가 있는 줄을 다음 줄과 서로 바꿉니다. 커서가 마지막 줄에 있을 경우 마지막 두 줄을 서로 바꿉니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.TransposeWord">
+      <summary>현재 단어를 다음 단어와 서로 바꿉니다. 공백 및 문장 부호는 단어로 간주되지 않습니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.Unindent">
+      <summary>여러 줄의 항목을 선택한 경우 선택 항목을 내어씁니다. 단일 줄 항목을 선택한 경우에는 선택 항목의 처음 앞에서 탭의 공백까지 제거합니다. 선택 항목이 없을 경우 캐럿 위치 앞에서 탭의 공백까지 제거합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.Untabify">
+      <summary>선택 항목 및 캐럿이 접한 모든 줄에서 선행 공백을 공백으로 변환합니다.</summary>
+      <returns>
+            편집이 성공하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ZoomIn">
+      <summary>텍스트 뷰를 10%의 배율 인수 단위로 확대합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ZoomOut">
+      <summary>텍스트 뷰를 10%의 배율 인수 단위로 축소합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperations.ZoomTo(System.Double)">
+      <summary>지정된 확대/축소 수준을 텍스트 뷰에 적용합니다.</summary>
+      <param name="zoomLevel">20%에서 400% 사이의 적용할 확대/축소 수준입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Operations.IEditorOperationsFactoryService">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Operations.IEditorOperations" /> 개체를 제공하는 서비스입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Operations.IEditorOperationsFactoryService.GetEditorOperations(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 <see cref="T:Microsoft.VisualStudio.Text.Operations.IEditorOperations" /> 개체를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Operations.IEditorOperations" />입니다.</returns>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Outlining.ICollapsed">
+      <summary>축소된 <see cref="T:Microsoft.VisualStudio.Text.Outlining.ICollapsible" />을 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.ICollapsed.CollapsedChildren"></member>
+    <member name="T:Microsoft.VisualStudio.Text.Outlining.ICollapsible">
+      <summary>축소될 수 있는 범위를 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.ICollapsible.CollapsedForm">
+      <summary>축소된 UI의 데이터 개체를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.ICollapsible.CollapsedHintForm">
+      <summary>축소된 UI 도구 설명의 데이터 개체를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.ICollapsible.Extent">
+      <summary>이 축소 가능한 영역의 범위를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.ICollapsible.IsCollapsed">
+      <summary>개요 영역이 축소되었는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.ICollapsible.IsCollapsible">
+      <summary>이 영역이 축소 가능한지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.ICollapsible.Tag">
+      <summary>이 축소 가능한 영역을 생성하는 데 사용된 <see cref="T:Microsoft.VisualStudio.Text.Tagging.IOutliningRegionTag" />를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Outlining.IOutliningManager">
+      <summary>개요 기능을 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.CollapseAll(Microsoft.VisualStudio.Text.SnapshotSpan,System.Predicate{Microsoft.VisualStudio.Text.Outlining.ICollapsible})">
+      <summary>지정된 조건자와 일치하는 모든 영역을 축소합니다.</summary>
+      <returns>새로 축소된 영역입니다.</returns>
+      <param name="span">이 범위와 교차하는 영역입니다.</param>
+      <param name="match">일치할 조건자입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.Enabled">
+      <summary>개요 기능이 설정되었는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.Expand(Microsoft.VisualStudio.Text.Outlining.ICollapsed)">
+      <summary>축소할 수 있는 범위를 확장합니다.</summary>
+      <returns>새로 확장된 범위입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.ExpandAll(Microsoft.VisualStudio.Text.SnapshotSpan,System.Predicate{Microsoft.VisualStudio.Text.Outlining.ICollapsed})">
+      <summary>지정된 조건자와 일치하는 모든 영역을 확장합니다.</summary>
+      <returns>새로 확장된 영역입니다.</returns>
+      <param name="span">이 범위와 교차하는 영역입니다.</param>
+      <param name="match">일치할 조건자입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.GetAllRegions(Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection)"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.GetAllRegions(Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection,System.Boolean)"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.GetAllRegions(Microsoft.VisualStudio.Text.SnapshotSpan)">
+      <summary>축소 여부에 관계없이 지정된 범위와 교차하는 모든 영역을 가져옵니다.</summary>
+      <returns>교차하는 모든 축소 가능한 영역의 정렬된 시퀀스입니다.</returns>
+      <param name="span">범위입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.GetAllRegions(Microsoft.VisualStudio.Text.SnapshotSpan,System.Boolean)"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.GetCollapsedRegions(Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection)"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.GetCollapsedRegions(Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection,System.Boolean)"></member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.GetCollapsedRegions(Microsoft.VisualStudio.Text.SnapshotSpan)">
+      <summary>지정된 범위와 교차하는 모든 축소된 영역을 가져옵니다.</summary>
+      <returns>축소된 영역의 정렬된 시퀀스입니다.</returns>
+      <param name="span">범위입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.GetCollapsedRegions(Microsoft.VisualStudio.Text.SnapshotSpan,System.Boolean)"></member>
+    <member name="E:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.OutliningEnabledChanged">
+      <summary>개요 기능이 설정되었거나 해제되었을 때 발생합니다.</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.RegionsChanged">
+      <summary>해당하는 생략 버퍼에서 <see cref="T:Microsoft.VisualStudio.Text.Outlining.ICollapsible" /> 영역 집합이 변경되는 경우 발생합니다.</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.RegionsCollapsed">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Outlining.ICollapsible" /> 영역이 축소될 때 발생합니다.</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.RegionsExpanded">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Outlining.ICollapsed" /> 영역이 확장될 때 발생합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.TryCollapse(Microsoft.VisualStudio.Text.Outlining.ICollapsible)">
+      <summary>지정된 영역을 축소하려고 시도합니다.</summary>
+      <returns>성공할 경우 새로 축소된 범위이고, 그렇지 않으면 null입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Outlining.IOutliningManagerService">
+      <summary>지정된 뷰 모델에 대한 <see cref="T:Microsoft.VisualStudio.Text.Outlining.IOutliningManager" />를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.IOutliningManagerService.GetOutliningManager(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 뷰에 대한 <see cref="T:Microsoft.VisualStudio.Text.Outlining.IOutliningManager" />를 가져옵니다.</summary>
+      <returns>뷰 모델에서 개요를 지원하는 경우 유효한 개요 관리자이고, 그렇지 않으면 null입니다.</returns>
+      <param name="textView">개요 관리자를 가져올 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="textView" /> is null.</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Outlining.OutliningEnabledEventArgs">
+      <summary>
+        <see cref="E:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.OutliningEnabledChanged" /> 이벤트에 대한 정보를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.OutliningEnabledEventArgs.#ctor(System.Boolean)">
+      <summary>지정된 변경 내용에 대해 <see cref="T:Microsoft.VisualStudio.Text.Outlining.OutliningEnabledEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="enabled">
+                개요 기능이 설정된 경우 true이고, 해제된 경우 false입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.OutliningEnabledEventArgs.Enabled">
+      <summary>개요 기능이 설정되었는지 아니면 해제되었는지를 확인합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Outlining.RegionsChangedEventArgs">
+      <summary>
+        <see cref="E:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.RegionsChanged" /> 이벤트에 대한 정보를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.RegionsChangedEventArgs.#ctor(Microsoft.VisualStudio.Text.SnapshotSpan)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan" />을 사용하여 <see cref="T:Microsoft.VisualStudio.Text.Outlining.RegionsChangedEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="affectedSpan">축소 가능한 영역이 변경된 <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan" />입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.RegionsChangedEventArgs.AffectedSpan">
+      <summary>축소 가능한 범위가 변경된 <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan" />을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Outlining.RegionsCollapsedEventArgs">
+      <summary>
+        <see cref="E:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.RegionsCollapsed" /> 이벤트에 대한 정보를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.RegionsCollapsedEventArgs.#ctor(System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.Text.Outlining.ICollapsed})">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Outlining.ICollapsed" /> 영역을 사용하여 <see cref="T:Microsoft.VisualStudio.Text.Outlining.RegionsCollapsedEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="collapsedRegions">새로 축소된 영역입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.RegionsCollapsedEventArgs.CollapsedRegions">
+      <summary>현재 축소되어 있는 <see cref="T:Microsoft.VisualStudio.Text.Outlining.ICollapsed" /> 영역을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Outlining.RegionsExpandedEventArgs">
+      <summary>
+        <see cref="E:Microsoft.VisualStudio.Text.Outlining.IOutliningManager.RegionsExpanded" /> 이벤트에 대한 정보를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.RegionsExpandedEventArgs.#ctor(System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.Text.Outlining.ICollapsible})">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Outlining.ICollapsible" /> 영역을 사용하여 <see cref="T:Microsoft.VisualStudio.Text.Outlining.RegionsExpandedEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="expandedRegions">새로 확장된 영역입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Outlining.RegionsExpandedEventArgs.#ctor(System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.Text.Outlining.ICollapsible},System.Boolean)"></member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.RegionsExpandedEventArgs.ExpandedRegions">
+      <summary>현재 확장되어 있는 <see cref="T:Microsoft.VisualStudio.Text.Outlining.ICollapsible" /> 영역을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Outlining.RegionsExpandedEventArgs.RemovalPending"></member>
+    <member name="T:Microsoft.VisualStudio.Text.Tagging.IOutliningRegionTag">
+      <summary>개요 영역의 태그를 제공합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.IOutliningRegionTag.CollapsedForm">
+      <summary>축소된 UI의 데이터 개체를 가져옵니다. 기본값이 설정된 경우 null을 반환합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.IOutliningRegionTag.CollapsedHintForm">
+      <summary>축소된 UI 도구 설명의 데이터 개체를 가져옵니다. 기본값이 설정된 경우 null을 반환합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.IOutliningRegionTag.IsDefaultCollapsed">
+      <summary>영역이 기본적으로 축소되었는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.IOutliningRegionTag.IsImplementation">
+      <summary>영역이 구현 영역인지 여부를 확인합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Tagging.IViewTagAggregatorFactoryService">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 <see cref="T:Microsoft.VisualStudio.Text.Tagging.ITagAggregator`1" />를 만드는 서비스입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.IViewTagAggregatorFactoryService.CreateTagAggregator``1(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 형식의 태그를 집계하는 지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 태그 집계를 만듭니다.</summary>
+      <returns>
+        <paramref name="textView" />에 대한 올바른 형식의 <see cref="T:Microsoft.VisualStudio.Text.Tagging.ITagAggregator`1" />입니다.</returns>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Tagging.ITagAggregator`1" />를 가져올 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <typeparam name="T">집계할 태그 형식입니다.</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.IViewTagAggregatorFactoryService.CreateTagAggregator``1(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Text.Tagging.TagAggregatorOptions)">
+      <summary>지정된 형식의 태그를 집계하는 지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 태그 집계를 지정된 옵션을 사용하여 만듭니다.</summary>
+      <returns>
+        <paramref name="textView" />에 대한 올바른 형식의 <see cref="T:Microsoft.VisualStudio.Text.Tagging.ITagAggregator`1" />입니다.</returns>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Tagging.ITagAggregator`1" />를 가져올 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="options">새로 만드는 집계에 사용할 옵션입니다.</param>
+      <typeparam name="T">집계할 태그 형식입니다.</typeparam>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider">
+      <summary>지정된 버퍼의 <see cref="T:Microsoft.VisualStudio.Text.Tagging.ITagger`1" />를 만듭니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.IViewTaggerProvider.CreateTagger``1(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Text.ITextBuffer)">
+      <summary>지정된 뷰 및 버퍼의 태그 공급자를 만듭니다.</summary>
+      <returns>
+        <paramref name="textView" />에 대한 올바른 형식의 <see cref="T:Microsoft.VisualStudio.Text.Tagging.ITagAggregator`1" />입니다.</returns>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="buffer">
+        <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />입니다.</param>
+      <typeparam name="T">태그의 형식입니다.</typeparam>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag">
+      <summary>개요 영역의 태그를 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag.#ctor(System.Boolean,System.Boolean,System.Object,System.Object)">
+      <summary>지정된 기본 축소 상태를 사용하여 <see cref="T:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="isDefaultCollapsed">영역이 기본적으로 축소되면 true이고, 그렇지 않으면 false입니다.</param>
+      <param name="isImplementation">영역이 구현 영역이면 true이고, 그렇지 않으면 false입니다.</param>
+      <param name="collapsedForm">축소된 UI의 데이터 개체입니다.</param>
+      <param name="collapsedHintForm">축소된 UI 도구 설명의 데이터 개체입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag.#ctor(System.Object,System.Object)">
+      <summary>지정된 개체를 사용하여 <see cref="T:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="collapsedForm">축소된 UI의 데이터 개체입니다.</param>
+      <param name="collapsedHintForm">축소된 UI 도구 설명의 데이터 개체입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag.CollapsedForm">
+      <summary>축소된 UI의 데이터 개체를 가져옵니다. 기본값이 설정된 경우 null을 반환합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag.CollapsedHintForm">
+      <summary>축소된 UI 도구 설명의 데이터 개체를 가져옵니다. 기본값이 설정된 경우 null을 반환합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag.IsDefaultCollapsed">
+      <summary>영역이 기본적으로 축소되었는지 여부를 확인합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag.IsImplementation">
+      <summary>영역이 구현 영역인지 여부를 확인합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag">
+      <summary>공간 협상 프로세스가 필요한 장식 요소의 태그를 나타냅니다. 이 태그는 뷰에서 장식을 배치하기 위한 공간을 제공하는 데 사용됩니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,Microsoft.VisualStudio.Text.PositionAffinity,System.Object,System.Object)">
+      <summary>지정된 속성을 사용하여 <see cref="T:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="width">태그의 너비(픽셀)입니다.</param>
+      <param name="topSpace">
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 텍스트 위쪽과 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 위쪽 사이에 필요한 공간입니다.</param>
+      <param name="baseline">공간 협상 프로세스가 필요한 장식 요소의 기준선입니다.</param>
+      <param name="textHeight">공간 협상 프로세스가 필요한 장식 요소에서 텍스트 부분의 높이(픽셀)입니다.</param>
+      <param name="bottomSpace">
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 텍스트 아래쪽과 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 아래쪽 사이에 필요한 공간입니다.</param>
+      <param name="affinity">공간 협상 프로세스가 필요한 장식 요소의 <see cref="T:Microsoft.VisualStudio.Text.PositionAffinity" />입니다.</param>
+      <param name="identityTag">
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />.GetAdornmentBounds에 사용되고 공간 협상 프로세스가 필요한 장식 요소와 연결된 고유 개체입니다.</param>
+      <param name="providerTag">
+        <see cref="M:Microsoft.VisualStudio.Text.Formatting.ITextViewLine.GetAdornmentTags(System.Object)" />에 사용되고 장식 공급자를 식별하는 고유 개체입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag.Affinity">
+      <summary>공간 협상 프로세스가 필요한 장식 요소의 <see cref="T:Microsoft.VisualStudio.Text.PositionAffinity" />를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag.Baseline">
+      <summary>공간 협상 프로세스가 필요한 장식 요소의 기준선을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag.BottomSpace">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 텍스트 아래쪽과 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 아래쪽 사이에 필요한 공간을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag.IdentityTag">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />.GetAdornmentBounds에 사용되고 공간 협상 프로세스가 필요한 장식 요소와 연결된 고유 개체를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag.ProviderTag">
+      <summary>장식 공급자를 식별하는 고유 개체를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag.TextHeight">
+      <summary>공간 협상 프로세스가 필요한 장식 요소에서 텍스트 부분의 높이를 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag.TopSpace">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 텍스트 위쪽과 <see cref="T:Microsoft.VisualStudio.Text.Formatting.ITextViewLine" />의 위쪽 사이에 필요한 공간을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag.Width">
+      <summary>장식의 너비를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Tagging.SquiggleTag">
+      <summary>뷰에서 물결선 장식을 배치하는 데 사용되는 물결선 태그를 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.SquiggleTag.#ctor">
+      <summary>도구 설명 콘텐츠 없이 SyntaxError 형식에 대한 <see cref="T:Microsoft.VisualStudio.Text.Tagging.SquiggleTag" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.SquiggleTag.#ctor(System.String)">
+      <summary>도구 설명 콘텐츠 없이 지정된 형식에 대한 <see cref="T:Microsoft.VisualStudio.Text.Tagging.SquiggleTag" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="squiggleType">사용할 물결선의 형식입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.SquiggleTag.#ctor(System.String,System.Object)">
+      <summary>지정된 형식에 대한 <see cref="T:Microsoft.VisualStudio.Text.Tagging.SquiggleTag" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="squiggleType">사용할 물결선의 형식입니다.</param>
+      <param name="toolTipContent">표시할 도구 설명 콘텐츠입니다. null일 수 있습니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="squiggleType" /> is null.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.SquiggleTag.SquiggleType">
+      <summary>사용할 물결선의 형식을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.SquiggleTag.ToolTipContent">
+      <summary>이 물결선에 대한 도구 설명을 표시하는 데 사용할 콘텐츠를 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag">
+      <summary>뷰에서 텍스트 표식 장식을 배치하는 데 사용되는 텍스트 표식 태그를 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag.#ctor(System.String)">
+      <summary>지정된 형식에 대한 <see cref="T:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="type">사용할 텍스트 표식의 형식입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="type" /> is null.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag.Type">
+      <summary>사용할 장식의 형식을 가져옵니다.</summary>
+    </member>
+  </members>
+</doc>

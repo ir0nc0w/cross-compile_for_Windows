@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Copyright (C) 1981-2007 Microsoft Corporation -->
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    <noInheritable/>
+<assemblyIdentity type="win32" processorArchitecture="x86" name="Microsoft.VisualStudio.CompilerHostObjectsProxy.dll" version="1.0.0.0" />
+<file name="Microsoft.VisualStudio.CompilerHostObjectsProxy.dll">
+    <comClass clsid="{D52CE2AF-51C6-4541-BCA1-C04545E31DB7}" threadingModel="Both"/>
+</file>
+  <comInterfaceExternalProxyStub name="ICscHostObject2" iid="{D6D4E228-259A-4076-B5D0-0627338BCC10}" numMethods="4" proxyStubClsid32="{D52CE2AF-51C6-4541-BCA1-C04545E31DB7}"/>
+  <comInterfaceExternalProxyStub name="ICscHostObject" iid="{8520CC4D-64DC-4855-BE3F-4C28CCE048EE}" numMethods="46" proxyStubClsid32="{D52CE2AF-51C6-4541-BCA1-C04545E31DB7}"/>
+  <comInterfaceExternalProxyStub name="ICscHostObject3" iid="{F9353662-F1ED-4A23-A323-5F5047E85F5D}" numMethods="4" proxyStubClsid32="{D52CE2AF-51C6-4541-BCA1-C04545E31DB7}"/>
+  <comInterfaceExternalProxyStub name="IVsProjBuildableProjectCfgCallBackPrivate" iid="{7A813E7F-1526-4903-83A4-339AC4C80E19}" numMethods="4" proxyStubClsid32="{D52CE2AF-51C6-4541-BCA1-C04545E31DB7}"/>
+  <comInterfaceExternalProxyStub name="ITaskHost" iid="{9049A481-D0E9-414F-8F92-D4F67A0359A6}" numMethods="3" proxyStubClsid32="{D52CE2AF-51C6-4541-BCA1-C04545E31DB7}"/>
+  <comInterfaceExternalProxyStub name="IVbcHostObject2" iid="{F59AFC84-D102-48B1-A090-1B90C79D3E09}" numMethods="6" proxyStubClsid32="{D52CE2AF-51C6-4541-BCA1-C04545E31DB7}"/>
+  <comInterfaceExternalProxyStub name="IVbcHostObject3" iid="{1186FE8F-8ABA-48D6-8CE3-32CA42F53728}" numMethods="4" proxyStubClsid32="{D52CE2AF-51C6-4541-BCA1-C04545E31DB7}"/>
+  <comInterfaceExternalProxyStub name="IVbcHostObject" iid="{7D7AC3BE-253A-40E8-A3FF-357D0DA7C47A}" numMethods="49" proxyStubClsid32="{D52CE2AF-51C6-4541-BCA1-C04545E31DB7}"/>
+</assembly>

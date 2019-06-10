@@ -1,0 +1,7 @@
+#!/bin/sh
+WINE=/home/cwmyung/.wine/drive_c
+./syz-declextract -extra-arg="--driver-mode=cl" \
+	-extra-arg="-I$WINE/sdk7/include/um" \
+	-extra-arg="-I$WINE/vc/include" \
+	Windows.h \
+

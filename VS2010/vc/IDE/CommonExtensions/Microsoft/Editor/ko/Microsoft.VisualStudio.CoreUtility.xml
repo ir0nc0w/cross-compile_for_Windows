@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.CoreUtility</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute">
+      <summary>현재 정의의 기본 정의를 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute.#ctor(System.String)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="name">기본 정의 이름입니다. 정의 이름은 대/소문자를 구분하지 않습니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" />is null or an empty string.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute.BaseDefinition">
+      <summary>기본 정의 이름을 가져옵니다.</summary>
+      <returns>기본 정의 이름입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.ContentTypeAttribute">
+      <summary>확장명 부분과 특정 콘텐츠 형식 간의 연결을 선언합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.ContentTypeAttribute.#ctor(System.String)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Utilities.ContentTypeAttribute" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="name">콘텐츠 형식 이름입니다.  콘텐츠 형식 이름은 대/소문자를 구분합니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" />is null or an empty string.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.ContentTypeAttribute.ContentTypes">
+      <summary>콘텐츠 형식 이름입니다.</summary>
+      <returns>콘텐츠 형식의 이름입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.ContentTypeDefinition">
+      <summary>콘텐츠 형식을 지정합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.ContentTypeDefinition.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Utilities.ContentTypeDefinition" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.DisplayNameAttribute">
+      <summary>편집자 구성 요소 부분에 대한 표시 이름을 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.DisplayNameAttribute.#ctor(System.String)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Utilities.DisplayNameAttribute" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="displayName">편집자 구성 요소 부분에 대한 표시 이름입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.DisplayNameAttribute.DisplayName">
+      <summary>편집자 구성 요소 부분에 대한 표시 이름을 가져옵니다.</summary>
+      <returns>표시 이름입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.FileExtensionAttribute">
+      <summary>파일 확장명을 식별합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.FileExtensionAttribute.#ctor(System.String)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Utilities.FileExtensionAttribute" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="fileExtension">파일 확장명입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.FileExtensionAttribute.FileExtension">
+      <summary>파일 확장명을 가져옵니다.</summary>
+      <returns>파일 확장명입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition">
+      <summary>콘텐츠 형식과 파일 확장명 사이의 매핑을 지정합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.IContentType">
+      <summary>개체의 콘텐츠 형식입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.IContentType.BaseTypes">
+      <summary>현재 <see cref="T:Microsoft.VisualStudio.Utilities.IContentType" />이 파생되는 모든 콘텐츠 형식의 집합입니다.</summary>
+      <returns>이 값은 빈 집합일 수는 있어도 null일 수는 없습니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.IContentType.DisplayName">
+      <summary>콘텐츠 형식의 표시 이름을 가져옵니다.</summary>
+      <returns>콘텐츠 형식의 표시 이름입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.IContentType.IsOfType(System.String)">
+      <summary>이 <see cref="T:Microsoft.VisualStudio.Utilities.IContentType" />이 <paramref name="type" />에 지정된 콘텐츠 형식에서 파생되는 경우 true를 반환합니다.</summary>
+      <returns>
+            이 콘텐츠 형식이 <paramref name="type" />에 지정된 형식에서 파생되는 경우 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="type">기본 콘텐츠 형식의 이름입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.IContentType.TypeName">
+      <summary>콘텐츠 형식의 이름을 가져옵니다.</summary>
+      <returns>콘텐츠 형식의 이름입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService">
+      <summary>콘텐츠 형식의 컬렉션을 유지 관리하는 서비스입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService.AddContentType(System.String,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>새 콘텐츠 형식을 만들고 추가합니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Utilities.IContentType" />입니다.</returns>
+      <param name="typeName">콘텐츠 형식의 이름입니다.</param>
+      <param name="baseTypeNames">기본 콘텐츠 형식으로 사용할 콘텐츠 형식 이름 목록입니다. 선택적 요소.</param>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="typeName" /> or one of the <paramref name="baseTypeNames" /> is the name of <see cref="P:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService.UnknownContentType" />, or the content type already exists, or one of the base types would introduce a cyclic base type relationship.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="typeName" /> is null or empty.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService.ContentTypes">
+      <summary>"알 수 없음" 콘텐츠 형식을 포함하여 모든 콘텐츠 형식의 열거형을 가져옵니다.</summary>
+      <returns>콘텐츠 형식입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService.GetContentType(System.String)">
+      <summary>지정된 <paramref name="typeName" />의 <see cref="T:Microsoft.VisualStudio.Utilities.IContentType" /> 개체를 가져옵니다.</summary>
+      <returns>콘텐츠 형식이거나, 콘텐츠 형식이 없는 경우 null입니다.</returns>
+      <param name="typeName">콘텐츠 형식의 이름입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService.RemoveContentType(System.String)">
+      <summary>콘텐츠 형식을 제거합니다.</summary>
+      <param name="typeName">제거할 콘텐츠 형식입니다.</param>
+      <exception cref="T:System.InvalidOperationException">The specified content type cannot be removed.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService.UnknownContentType">
+      <summary>"알 수 없음" 콘텐츠 형식을 가져옵니다.</summary>
+      <returns>이 값은 null이 될 수 없습니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService">
+      <summary>파일 확장명과 콘텐츠 형식 사이의 연결을 관리하는 서비스입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService.AddFileExtension(System.String,Microsoft.VisualStudio.Utilities.IContentType)">
+      <summary>레지스트리에 새 파일 확장명을 추가합니다.</summary>
+      <param name="extension">파일 확장명입니다. 마침표는 선택적입니다.</param>
+      <param name="contentType">파일 확장명의 콘텐츠 형식입니다.</param>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="extension" /> is already present in the registry.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService.GetContentTypeForExtension(System.String)">
+      <summary>지정된 파일 확장명과 연결된 콘텐츠 형식을 가져옵니다.</summary>
+      <returns>이 확장명과 연결된 <see cref="T:Microsoft.VisualStudio.Utilities.IContentType" />입니다. 연결이 없으면 "알 수 없음" 콘텐츠 형식을 반환합니다. null은 반환하지 않습니다.</returns>
+      <param name="extension">파일 확장명입니다. null일 수 없고 마침표를 포함할 수 없습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService.GetExtensionsForContentType(Microsoft.VisualStudio.Utilities.IContentType)">
+      <summary>지정된 콘텐츠 형식과 연결된 파일 확장명 목록을 가져옵니다.</summary>
+      <returns>해당 콘텐츠 형식과 연결된 파일 확장명 목록입니다.</returns>
+      <param name="contentType">콘텐츠 형식입니다. null일 수 없습니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService.RemoveFileExtension(System.String)">
+      <summary>지정된 파일 확장명을 레지스트리에서 제거합니다.</summary>
+      <param name="extension">파일 확장명입니다. 마침표는 선택적입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.IOrderable">
+      <summary>정렬 가능한 부분과 연결됩니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.IOrderable.After">
+      <summary>목록에서 이 부분 앞에 표시되는 부분입니다.</summary>
+      <returns>목록에서 이 부분 앞에 표시되는 부분입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.IOrderable.Before">
+      <summary>목록에서 이 부분 뒤에 표시되는 부분입니다.</summary>
+      <returns>목록에서 이 부분 뒤에 표시되는 부분입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.IOrderable.Name">
+      <summary>같은 형식의 부분과 관련하여 특정 부분을 고유하게 식별합니다.</summary>
+      <returns>부분의 이름입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.IPropertyOwner">
+      <summary>임의 속성 집합의 소유권을 제공합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.IPropertyOwner.Properties">
+      <summary>속성 소유자가 제어하는 속성 컬렉션입니다.</summary>
+      <returns>속성 소유자가 제어하는 속성 컬렉션입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.MultipleBaseMetadataAttribute">
+      <summary>단일 구성 요소 부분에 여러 번 나타날 수 있는 특성의 기본 클래스입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.MultipleBaseMetadataAttribute.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Utilities.MultipleBaseMetadataAttribute" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.NameAttribute">
+      <summary>이름을 편집자 확장명 부분과 연결합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.NameAttribute.#ctor(System.String)">
+      <summary>특성의 새 인스턴스를 생성합니다.</summary>
+      <param name="name">편집자 확장명 부분의 이름입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> is null.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="name" /> is an empty string.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.NameAttribute.Name">
+      <summary>편집자 확장명 부분의 이름입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.OrderAttribute">
+      <summary>확장명 부분의 여러 인스턴스를 정렬합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.OrderAttribute.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Utilities.OrderAttribute" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.OrderAttribute.After">
+      <summary>이 특성이 적용된 확장명 부분은 지정된 이름의 확장명 부분 뒤에 정렬됩니다.</summary>
+      <returns>이 부분 앞에 정렬되는 부분입니다.</returns>
+      <exception cref="T:System.ArgumentNullException">The value is null.</exception>
+      <exception cref="T:System.ArgumentException">The value is an empty string.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.OrderAttribute.Before">
+      <summary>이 특성이 적용된 확장명 부분은 지정된 이름의 확장명 부분 앞에 정렬됩니다.</summary>
+      <returns>이 부분 뒤에 정렬되는 부분입니다.</returns>
+      <exception cref="T:System.ArgumentNullException">The value is null.</exception>
+      <exception cref="T:System.ArgumentException">The value is an empty string.</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.Orderer">
+      <summary>정렬 가능한 확장명 부분에 대한 토폴로지 정렬을 수행합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.Orderer.Order``2(System.Collections.Generic.IEnumerable{System.Lazy{``0,``1}})">
+      <summary>모든 정렬 가능한 항목, 즉 IOrderable 인터페이스를 구현하는 항목의 목록을 정렬합니다.</summary>
+      <returns>정렬된 항목의 목록입니다.</returns>
+      <param name="itemsToOrder">정렬할 항목의 목록입니다.</param>
+      <typeparam name="TValue">값의 형식입니다.</typeparam>
+      <typeparam name="TMetadata">메타데이터의 형식입니다.</typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="itemsToOrder" /> is null.</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.PropertyCollection">
+      <summary>속성 소유자가 컬렉션의 속성 수명을 제어하도록 허용합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.PropertyCollection.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Utilities.PropertyCollection" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.PropertyCollection.AddProperty(System.Object,System.Object)">
+      <summary>새 속성을 컬렉션에 추가합니다.</summary>
+      <param name="key">속성을 검색할 수 있는 키입니다. null이 아니어야 합니다.</param>
+      <param name="property">키와 연결할 속성입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="key" /> is null.</exception>
+      <exception cref="T:System.ArgumentException">An element with the same key already exists in the PropertyCollection.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.PropertyCollection.ContainsProperty(System.Object)">
+      <summary>속성 컬렉션에 지정된 키의 속성이 있는지 여부를 확인합니다.</summary>
+      <returns>
+            속성이 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="key">키입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.PropertyCollection.GetOrCreateSingletonProperty``1(System.Func`1)">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.PropertyCollection.GetOrCreateSingletonProperty``1(System.Object,System.Func`1)">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.PropertyCollection.GetProperty``1(System.Object)">
+      <summary>지정된 키와 연결된 속성을 가져옵니다.</summary>
+      <returns>속성 값이거나, 속성이 설정되어 있지 않으면 null입니다.</returns>
+      <param name="key">키입니다.</param>
+      <typeparam name="TProperty">속성의 형식입니다.</typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="key" /> is null.</exception>
+      <exception cref="T:System.Collections.Generic.KeyNotFoundException">
+        <paramref name="key" /> does not exist in the property collection.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.PropertyCollection.GetProperty(System.Object)">
+      <summary>지정된 키와 연결된 속성을 가져옵니다.</summary>
+      <returns>속성 값이거나, 속성이 설정되어 있지 않으면 null입니다.</returns>
+      <param name="key">키입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="key" /> is null.</exception>
+      <exception cref="T:System.Collections.Generic.KeyNotFoundException">
+        <paramref name="key" /> does not exist in the property collection.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.PropertyCollection.Item(System.Object)">
+      <summary>지정된 키의 <see cref="T:System.Object" />를 가져오거나 설정합니다.</summary>
+      <param name="key">항목의 키입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Utilities.PropertyCollection.PropertyList">
+      <summary>속성 컬렉션을 읽기 전용 컬렉션으로 반환합니다.</summary>
+      <returns>읽기 전용 컬렉션입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.PropertyCollection.RemoveProperty(System.Object)">
+      <summary>지정된 키와 연결된 속성을 제거합니다.</summary>
+      <returns>
+            속성을 찾아 제거했으면 true이고, 속성이 없으면 false입니다.</returns>
+      <param name="key">제거할 속성의 키입니다.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="key" /> is null.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.PropertyCollection.TryGetProperty``1(System.Object,``0@)">
+      <summary>지정된 키와 연결된 속성을 가져옵니다.</summary>
+      <returns>
+            속성이 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="key">키입니다.</param>
+      <param name="property">검색된 속성이거나, 지정된 키와 연결된 속성이 없을 경우 기본값(TValue)입니다.</param>
+      <typeparam name="TProperty">지정된 키와 연결된 속성의 형식입니다.</typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="key" /> is null.</exception>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Utilities.SingletonBaseMetadataAttribute">
+      <summary>단일 구성 요소 부분에 한 번만 나타날 수 있는 특성의 기본 클래스입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Utilities.SingletonBaseMetadataAttribute.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Utilities.SingletonBaseMetadataAttribute" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+  </members>
+</doc>

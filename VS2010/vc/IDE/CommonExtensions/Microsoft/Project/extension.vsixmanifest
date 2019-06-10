@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="Microsoft.VisualStudio.Project.VisualC">
+    <Name>VC++ Project System</Name>
+    <Author>Microsoft Corporation</Author>
+    <Version>10.0</Version>
+    <Description>Microsoft Visual C++ Project System</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>VST_All</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SystemComponent>true</SystemComponent>
+  </Identifier>
+
+  <References/>
+
+  <Content>
+    <MefComponent>Microsoft.VisualStudio.Project.Contracts.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.Project.Contracts.Implementation.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.Project.Framework.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.Project.Framework.Implementation.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.Project.Utilities.v10.0.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.Project.VS.Implementation.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.Project.VisualC.VCProjectEngine.dll</MefComponent>
+    <MefComponent>Microsoft.VisualStudio.HpcDebugger.Impl.dll</MefComponent>
+  </Content>
+</Vsix>

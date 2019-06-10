@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.Language.StandardClassification</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService">
+      <summary>표준 분류에 대한 액세스를 제공합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.CharacterLiteral">
+      <summary>문자 리터럴을 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>문자 리터럴 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.Comment">
+      <summary>형식 언어에서 주석을 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>주석 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.ExcludedCode">
+      <summary>형식 언어에서 전처리기나 다른 방법을 통해 제외된 블록을 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>제외된 코드 블록 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.FormalLanguage">
+      <summary>형식 언어를 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>형식 언어 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.Identifier">
+      <summary>형식 언어에서 식별자를 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>식별자 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.Keyword">
+      <summary>형식 언어에서 키워드를 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>키워드 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.Literal">
+      <summary>형식 언어에서 리터럴을 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>리터럴 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.NaturalLanguage">
+      <summary>자연어를 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>자연어 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.NumberLiteral">
+      <summary>형식 언어에서 리터럴 분류 형식에서 파생된 숫자 리터럴을 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>숫자 리터럴 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.Operator">
+      <summary>형식 언어에서 공백을 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>연산자 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.Other">
+      <summary>형식 언어에서 임의의 항목을 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>기타 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.PreprocessorKeyword">
+      <summary>형식 언어에서 전처리기 키워드를 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>전처리기 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.StringLiteral">
+      <summary>문자열 리터럴을 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>문자열 리터럴 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.SymbolDefinition">
+      <summary>형식 언어에서 기호 정의를 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>기호 정의 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.SymbolReference">
+      <summary>형식 언어에서 기호에 대한 참조를 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>기호 참조 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService.WhiteSpace">
+      <summary>형식 언어에서 공백을 나타내는 분류 형식을 가져옵니다.</summary>
+      <returns>공백 <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType" />입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.StandardClassification.LanguagePriority">
+      <summary>언어 분류에 대한 기본 제공 우선 순위를 나타냅니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.LanguagePriority.FormalLanguage">
+      <summary>형식 언어 분류 정의에 대한 우선 순위입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.LanguagePriority.NaturalLanguage">
+      <summary>자연어 분류 정의에 대한 우선 순위입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames">
+      <summary>미리 정의된 분류 형식 이름 목록을 정의합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.Character">
+      <summary>문자를 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.Comment">
+      <summary>주석을 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.ExcludedCode">
+      <summary>전처리기 매크로나 다른 방법을 통해 제외된 항목을 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.FormalLanguage">
+      <summary>형식 언어를 나타내는 분류 형식의 이름입니다. 이 분류 형식은 형식 언어 분류 집합에 속한 모든 분류 형식의 기본 분류 형식으로 사용됩니다. 예를 들면, 리터럴 및 키워드가 여기에 해당됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.Identifier">
+      <summary>식별자를 나타내는 분류 형식의 이름입니다. C#의 경우 변수 이름이 여기에 해당될 수 있습니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.Keyword">
+      <summary>키워드를 나타내는 분류 형식의 이름입니다. C#의 경우 foreach가 키워드에 해당됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.Literal">
+      <summary>리터럴을 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.NaturalLanguage">
+      <summary>자연어 분류를 나타내는 분류 형식의 이름입니다. 이 분류 형식은 자연어 분류 집합에 속한 다른 분류 형식의 기본 분류 형식으로 사용됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.Number">
+      <summary>숫자를 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.Operator">
+      <summary>연산자를 나타내는 분류 형식의 이름입니다. C#의 경우 +가 연산자에 해당됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.Other">
+      <summary>다른 모든 분류 형식을 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.PreprocessorKeyword">
+      <summary>전처리기 키워드를 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.String">
+      <summary>문자열을 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.SymbolDefinition">
+      <summary>기호 정의를 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.SymbolReference">
+      <summary>기호 참조를 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.StandardClassification.PredefinedClassificationTypeNames.WhiteSpace">
+      <summary>공백을 나타내는 분류 형식의 이름입니다.</summary>
+    </member>
+  </members>
+</doc>

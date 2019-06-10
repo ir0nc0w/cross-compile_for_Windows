@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+  <getstarteditemgroup title="Get Started">
+    <itemsubgroup id="welcome_title" title="시작">
+      <item>
+        <title id="express_vc_welcome_welcometo_title">Visual C++ 2010 Express 시작</title>
+        <image>pack://application:,,,/Microsoft.VisualStudio.Shell.StartPage;Component/Images/StartPage/welcome_whatsnew.png</image>
+        <description id="express_vc_welcome_welcometo_desc">기존의 우수한 기능을 그대로 사용할 수 있습니다. Visual C++ 2010 Express는 개발자가 Windows용 대화형 응용 프로그램을 신속하게 작성하는 데 도움이 됩니다. 새로운 Visual C++ 2010 Express 개발 환경에서는 성능이 개선되고 새 기능이 많이 추가되어 획기적인 아이디어를 뛰어난 응용 프로그램으로 실현하는 작업이 그 어느 때보다도 용이해졌습니다. 초급 개발자 학습 센터에서 학습을 시작하거나 Coding4Fun에서 최신의 훌륭한 프로젝트를 확인하십시오.</description>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_welcome_welcometo_BeginnerDeveloperLearningCenter_title">초급 개발자 학습 센터</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160402&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_welcome_welcometo_Coding4Fun_title">Coding4Fun</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160406&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_vc_welcome_welcometo_MoreOnExpress_title">Visual C++ 2010 Express 추가 정보</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160410&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+
+      <item>
+        <title id="express_welcome_create_title">첫 응용 프로그램 신속하게 만들기</title>
+        <image>pack://application:,,,/Microsoft.VisualStudio.Shell.StartPage;Component/Images/StartPage/welcome_create.png</image>
+        <description id="express_vc_welcome_create_desc">프로그래밍을 익히고 Visual C++ 2010 Express를 배울 수 있는 가장 좋은 방법은 프로그램을 만들어 보는 것입니다. 다음 비디오에서는 프로그램을 만드는 방법을 보여 줍니다. 첫 응용 프로그램을 만든 후에는 [유용한 정보] 탭을 클릭하여 추가 리소스에 액세스할 수 있습니다.</description>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_vc_welcome_create_VideoIntroVC_title">Visual C++ Express에 대한 비디오 소개</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160414&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+
+      <item>
+        <title id="express_vc_welcome_whatsnew_title">Visual C++ 2010 Express의 새로운 기능</title>
+        <image>pack://application:,,,/Microsoft.VisualStudio.Shell.StartPage;Component/Images/StartPage/welcome_resources.png</image>
+        <description id="express_vc_welcome_whatsnew_desc">Visual C++ 2010 Express의 다양한 생산성 향상 기능을 살펴보십시오. 이러한 기능에는 우수한 Windows 응용 프로그램을 작성하는 데 사용할 수 있는 개발 환경, Visual C++ 언어 및 .NET Framework의 향상된 기능이 포함됩니다.</description>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_welcome_whatsnew_newdevwindows_title">Windows용 개발을 위한 새로운 기능 보기</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160426&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_vc_welcome_whatsnew_touride_title">새로운 Visual C++ Express IDE 둘러보기</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160418&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_vc_welcome_whatsnew_newinlanguage_title">Visual C++ 언어의 새로운 기능</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160421&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+    </itemsubgroup>
+    
+    <itemsubgroup id="express_learn_tabheader" title="유용한 정보">
+      <item>
+        <title id="express_vc_learn_readguide_title">C++ 초급자 설명서 보기</title>
+        <image>pack://application:,,,/Microsoft.VisualStudio.Shell.StartPage;Component/Images/StartPage/welcome_create.png</image>
+        <description id="express_vc_learn_readguide_desc">이 단계별 설명서는 초보 프로그래머나 C++를 처음 사용하는 사용자에게 적합합니다. 이 시리즈에서는 모듈 방식을 사용하고 샘플 프로젝트와 진행률 확인 기능이 포함되어 있으므로 자신의 속도에 맞게 C++ 사용법을 쉽게 익힐 수 있습니다. 초급자 센터에서는 보다 많은 자습서와 샘플을 사용해 볼 수 있습니다.</description>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_vc_learn_tutorials_vcbeginnerguide_title">C++ 초급자 설명서</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160437&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_welcome_welcometo_BeginnerDeveloperLearningCenter_title">초급 개발자 학습 센터</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160438&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+
+      <item>
+        <title id="express_learn_forum_title">포럼에 질문하기</title>
+        <image>pack://application:,,,/Microsoft.VisualStudio.Shell.StartPage;Component/Images/StartPage/welcome_resources.png</image>
+        <description id="express_vc_learn_forum_desc">가장 좋은 학습 방법 중 하나는 질문을 하거나 다른 개발자의 질문에 답변하는 것입니다. Visual C++ Express에 대한 MSDN 포럼에서 이러한 활동을 할 수 있습니다. 다른 개발자들과의 정보 교환을 통해 Visual C++, .NET Framework 및 Windows 개발에 관한 많은 정보를 얻을 수 있습니다.</description>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_vc_learn_forum_visitforum_title">Visual C++ Express에 대한 MSDN 포럼</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160442&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+
+      <item>
+        <title id="express_learn_devcenters_title">개발자 센터에서 실력 쌓기</title>
+        <image>pack://application:,,,/Microsoft.VisualStudio.Shell.StartPage;Component/Images/StartPage/welcome_whatsnew.png</image>
+        <description id="express_learn_devcenters_desc">개발자 센터는 실력을 쌓는 데 도움이 되는 자습서, 샘플, 비디오, 블로그, 포럼 및 기타 리소스에 액세스할 수 있는 관문입니다.</description>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_vc_learn_devcenters_windowsdevcenter_title">Windows 개발자 센터</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160450&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_vc_learn_devcenters_languagecenter_title">Visual C++ 개발자 센터</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160445&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+
+      <item>
+        <title id="express_learn_community_title">커뮤니티에 참여하기</title>
+        <image>pack://application:,,,/Microsoft.VisualStudio.Shell.StartPage;Component/Images/StartPage/welcome_resources.png</image>
+        <description id="express_learn_community_desc">CodePlex에서는 다른 개발자가 게시한 응용 프로그램을 사용해 보거나, 자신이 작성한 응용 프로그램을 공유하거나, 오픈 소스 프로젝트에 참여할 수 있습니다. Channel 9에서는 새로운 기술에 대한 비디오를 볼 수 있습니다.</description>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_learn_community_codeplex_desc">CodePlex</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160454&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_learn_community_channel9_desc">Channel9</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160458&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+    </itemsubgroup>
+
+    <itemsubgroup id="express_upgrade_tabheader" title="업그레이드">
+      <item>
+        <title id="express_upgrade_vs2010_title">Visual Studio 2010으로 업그레이드</title>
+        <image>pack://application:,,,/Microsoft.VisualStudio.Shell.StartPage;Component/Images/StartPage/welcome_whatsnew.png</image>
+        <description id="express_upgrade_vs2010_desc">귀하가 보유한 기술을 보다 높은 수준으로 끌어 올릴 준비가 되셨습니까? Visual Studio 2010을 사용하여 모든 기능이 포함된 전문적인 개발 도구와 생산성 확장 기능을 체험해 보십시오. 한 도구 내에 모두 포함된 C#, Visual Basic 또는 C++를 사용하여 Windows, 웹, Windows Azure, Microsoft Office 및 SharePoint를 대상으로 하는 응용 프로그램을 작성할 수 있습니다. 또한 Silverlight, F# 및 그 이상의 최신 기술을 사용해 볼 수 있습니다. Visual Studio 2010은 Visual Studio 2010 Express 제품과 함께 설치할 수 있습니다. 지금 바로 90일 무료 버전을 다운로드하십시오.</description>
+        <commands>
+          <command>
+            <commandtype>Browse</commandtype>
+            <title id="express_upgrade_vs2010_trynow_title">지금 Visual Studio 2010 체험하기</title>
+            <parameter>http://go.microsoft.com/fwlink/?LinkID=160462&amp;clcid=%VSSPV_LCID_HEX%</parameter>
+          </command>
+        </commands>
+      </item>
+    </itemsubgroup>
+  </getstarteditemgroup>
+</items>

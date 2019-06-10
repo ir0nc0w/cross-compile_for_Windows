@@ -1,0 +1,1193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.Platform.VSEditor.Interop</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxAdornmentPositioningBehavior"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxAdornmentPositioningBehavior.VxAdornmentPositioningBehaviorOwnerControlled">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxAdornmentPositioningBehavior.VxAdornmentPositioningBehaviorViewportRelative">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxAdornmentPositioningBehavior.VxAdornmentPositioningBehaviorTextRelative">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxCaretMovementDirection"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxCaretMovementDirection.VxCaretMovementDirectionPrevious">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxCaretMovementDirection.VxCaretMovementDirectionNext">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxCharacterType"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxCharacterType.VxCharacterTypeAlphaNumeric">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxCharacterType.VxCharacterTypeWhiteSpace">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxCharacterType.VxCharacterTypeSymbols">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxCompletionMatchType"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxCompletionMatchType.VxCompletionMatchTypeMatchDisplayText">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxCompletionMatchType.VxCompletionMatchTypeMatchInsertionText">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxConnectionReason"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxConnectionReason.VxConnectionReasonTextViewLifetime">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxConnectionReason.VxConnectionReasonContentTypeChange">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxConnectionReason.VxConnectionReasonBufferGraphChange">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxDelegatedUndoPrimitiveState"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxDelegatedUndoPrimitiveState.VxDelegatedUndoPrimitiveStateInactive">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxDelegatedUndoPrimitiveState.VxDelegatedUndoPrimitiveStateRedoing">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxDelegatedUndoPrimitiveState.VxDelegatedUndoPrimitiveStateUndoing">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxDifferenceType"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxDifferenceType.VxDifferenceTypeAdd">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxDifferenceType.VxDifferenceTypeRemove">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxDifferenceType.VxDifferenceTypeChange">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEdgeInsertionMode"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEdgeInsertionMode.VxEdgeInsertionModeAllow">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEdgeInsertionMode.VxEdgeInsertionModeDeny">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEditOptions"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEditOptions.VxEditOptionsNone">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEditOptions.VxEditOptionsComputeMinimalChange">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEnsureSpanVisibleFallback"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEnsureSpanVisibleFallback.VxEnsureSpanVisibleFallbackSpanStart">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEnsureSpanVisibleFallback.VxEnsureSpanVisibleFallbackSpanEnd">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEnsureSpanVisibleFallback.VxEnsureSpanVisibleFallbackNoFallback">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxFileActionType"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxFileActionType.VxFileActionTypeContentSavedToDisk">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxFileActionType.VxFileActionTypeContentLoadedFromDisk">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxFindOptions"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxFindOptions.VxFindOptionsNone">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxFindOptions.VxFindOptionsMatchCase">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxFindOptions.VxFindOptionsUseRegularExpressions">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxFindOptions.VxFindOptionsWholeWord">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxFindOptions.VxFindOptionsSearchReverse">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxHowToShow"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxHowToShow.VxHowToShowAsIs">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxHowToShow.VxHowToShowCentered">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxHowToShow.VxHowToShowOnFirstLineOfView">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand.VxIntellisenseKeyboardCommandUp">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand.VxIntellisenseKeyboardCommandDown">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand.VxIntellisenseKeyboardCommandPageUp">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand.VxIntellisenseKeyboardCommandPageDown">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand.VxIntellisenseKeyboardCommandHome">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand.VxIntellisenseKeyboardCommandEnd">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand.VxIntellisenseKeyboardCommandEnter">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand.VxIntellisenseKeyboardCommandEscape">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand.VxIntellisenseKeyboardCommandIncreaseFilterLevel">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxIntellisenseKeyboardCommand.VxIntellisenseKeyboardCommandDecreaseFilterLevel">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxInternalState"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxInternalState.VxInternalStateInitialized">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxInternalState.VxInternalStateCalculating">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxInternalState.VxInternalStateStartedAndCalculating">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxInternalState.VxInternalStateStarted">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxInternalState.VxInternalStateDismissed">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLetterCase"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLetterCase.VxLetterCaseUppercase">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLetterCase.VxLetterCaseLowercase">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLineBreakBoundaryConditions"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLineBreakBoundaryConditions.VxLineBreakBoundaryConditionsNone">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLineBreakBoundaryConditions.VxLineBreakBoundaryConditionsPrecedingReturn">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLineBreakBoundaryConditions.VxLineBreakBoundaryConditionsSucceedingNewline">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLineCalculationState"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLineCalculationState.VxLineCalculationStatePrimary">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLineCalculationState.VxLineCalculationStateAppend">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLineCalculationState.VxLineCalculationStatePrepend">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxLineCalculationState.VxLineCalculationStateBipend">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxMarginCornerPlacement"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxMarginCornerPlacement.VxMarginCornerPlacementTopRight">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxMarginCornerPlacement.VxMarginCornerPlacementBottomRight">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxMarginPlacement"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxMarginPlacement.VxMarginPlacementLeft">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxMarginPlacement.VxMarginPlacementRight">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxMarginPlacement.VxMarginPlacementTop">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxMarginPlacement.VxMarginPlacementBottom">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPointTrackingMode"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPointTrackingMode.VxPointTrackingModePositive">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPointTrackingMode.VxPointTrackingModeNegative">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPopupStyles"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPopupStyles.VxPopupStylesNone">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPopupStyles.VxPopupStylesHasBorder">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPopupStyles.VxPopupStylesResizable">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPopupStyles.VxPopupStylesDismissOnMouseLeave">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPopupStyles.VxPopupStylesPositionLeftOrRight">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPopupStyles.VxPopupStylesPreferLeftOrTopPosition">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPopupStyles.VxPopupStylesRightOrBottomJustify">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPositionAffinity"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPositionAffinity.VxPositionAffinityPredecessor">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPositionAffinity.VxPositionAffinitySuccessor">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxQuickInfoState"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxQuickInfoState.VxQuickInfoStateInitialized">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxQuickInfoState.VxQuickInfoStateCalculating">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxQuickInfoState.VxQuickInfoStateStarted">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxQuickInfoState.VxQuickInfoStateDismissed">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxScrollDirection"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxScrollDirection.VxScrollDirectionUp">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxScrollDirection.VxScrollDirectionDown">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSmartTagState"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSmartTagState.VxSmartTagStateCollapsed">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSmartTagState.VxSmartTagStateExpanded">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSmartTagType"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSmartTagType.VxSmartTagTypeFactoid">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSmartTagType.VxSmartTagTypeEphemeral">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotPoint"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotPoint.position"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotPoint.snapshot"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotSpan"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotSpan.snapshot"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotSpan.span"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan.length"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan.start"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode.VxSpanTrackingModeEdgeExclusive">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode.VxSpanTrackingModeEdgeInclusive">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode.VxSpanTrackingModeEdgePositive">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode.VxSpanTrackingModeEdgeNegative">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanType"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanType.VxSpanTypeEmpty">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanType.VxSpanTypeMultipleCharacters">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanType.VxSpanTypeWord">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanType.VxSpanTypeMultipleWords">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanType.VxSpanTypeSentence">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanType.VxSpanTypeMultipleSentences">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanType.VxSpanTypeParagraph">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanType.VxSpanTypeMultipleParagraphs">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanType.VxSpanTypeDocument">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupClass">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupConstant">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupDelegate">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupEnum">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupEnumMember">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupEvent">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupException">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupField">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupInterface">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupMacro">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupMap">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupMapItem">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupMethod">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupOverload">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupModule">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupNamespace">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupOperator">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupProperty">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupStruct">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupTemplate">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupTypedef">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupType">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupUnion">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupVariable">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupValueType">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupIntrinsic">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupJSharpMethod">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupJSharpField">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupJSharpClass">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupJSharpNamespace">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupJSharpInterface">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupError">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphBscFile">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphAssembly">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphLibrary">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphVBProject">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphCoolProject">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphCppProject">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphDialogId">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphOpenFolder">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphClosedFolder">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphArrow">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphCSharpFile">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphCSharpExpansion">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphKeyword">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphInformation">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphReference">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphRecursion">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlItem">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphJSharpProject">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphJSharpDocument">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphForwardType">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphCallersGraph">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphCallGraph">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphWarning">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphMaybeReference">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphMaybeCaller">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphMaybeCall">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphExtensionMethod">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphExtensionMethodInternal">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphExtensionMethodFriend">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphExtensionMethodProtected">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphExtensionMethodPrivate">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphExtensionMethodShortcut">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlAttribute">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlChild">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlDescendant">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlNamespace">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlAttributeQuestion">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlAttributeCheck">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlChildQuestion">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlChildCheck">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlDescendantQuestion">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphXmlDescendantCheck">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphGroup.VxStandardGlyphGroupGlyphGroupUnknown">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphItem"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphItem.VxStandardGlyphItemGlyphItemPublic">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphItem.VxStandardGlyphItemGlyphItemInternal">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphItem.VxStandardGlyphItemGlyphItemFriend">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphItem.VxStandardGlyphItemGlyphItemProtected">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphItem.VxStandardGlyphItemGlyphItemPrivate">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphItem.VxStandardGlyphItemGlyphItemShortcut">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStandardGlyphItem.VxStandardGlyphItemTotalGlyphItems">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStringDifferenceTypes"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStringDifferenceTypes.VxStringDifferenceTypesLine">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStringDifferenceTypes.VxStringDifferenceTypesWord">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxStringDifferenceTypes.VxStringDifferenceTypesCharacter">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextBufferChangedClientPriority"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextBufferChangedClientPriority.VxTextBufferChangedClientPriorityHigh">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextBufferChangedClientPriority.VxTextBufferChangedClientPriorityMedium">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextBufferChangedClientPriority.VxTextBufferChangedClientPriorityLow">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextEditAction"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextEditAction.VxTextEditActionNone">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextEditAction.VxTextEditActionType">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextEditAction.VxTextEditActionDelete">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextEditAction.VxTextEditActionBackspace">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextEditAction.VxTextEditActionPaste">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextEditAction.VxTextEditActionEnter">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextEditAction.VxTextEditActionAutoIndent">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextEditAction.VxTextEditActionReplace">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextEditAction.VxTextEditActionProvisionalOverwrite">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextViewLineChange"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextViewLineChange.VxTextViewLineChangeNone">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextViewLineChange.VxTextViewLineChangeNewOrReformatted">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTextViewLineChange.VxTextViewLineChangeTranslated">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes.VxTrackingFidelityModesForward">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes.VxTrackingFidelityModesBackward">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes.VxTrackingFidelityModesUndoRedo">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoHistoryState"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoHistoryState.VxUndoHistoryStateIdle">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoHistoryState.VxUndoHistoryStateUndoing">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoHistoryState.VxUndoHistoryStateRedoing">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionCompletionResult"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionCompletionResult.VxUndoTransactionCompletionResultTransactionAdded">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionCompletionResult.VxUndoTransactionCompletionResultTransactionMerged">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionState"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionState.VxUndoTransactionStateOpen">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionState.VxUndoTransactionStateCompleted">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionState.VxUndoTransactionStateCanceled">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionState.VxUndoTransactionStateRedoing">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionState.VxUndoTransactionStateUndoing">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionState.VxUndoTransactionStateUndone">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxUndoTransactionState.VxUndoTransactionStateInvalid">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxViewRelativePosition"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxViewRelativePosition.VxViewRelativePositionTop">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxViewRelativePosition.VxViewRelativePositionBottom">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxVisibilityState"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxVisibilityState.VxVisibilityStateHidden">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxVisibilityState.VxVisibilityStatePartiallyVisible">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxVisibilityState.VxVisibilityStateFullyVisible">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxVisitState"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxVisitState.VxVisitStateNotVisited">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxVisitState.VxVisitStateVisiting">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxVisitState.VxVisitStateVisited">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxWordWrapStyles"></member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxWordWrapStyles.VxWordWrapStylesNone">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxWordWrapStyles.VxWordWrapStylesWordWrap">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxWordWrapStyles.VxWordWrapStylesVisibleGlyphs">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Platform.VSEditor.Interop._VxWordWrapStyles.VxWordWrapStylesAutoIndent">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumerableIVxContentType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumerableIVxContentType.GetEnumerator"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumerableIVxTextSnapshotLine"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumerableIVxTextSnapshotLine.GetEnumerator"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIUnknown"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIUnknown.GetCurrent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIUnknown.MoveNext"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIUnknown.Reset"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxContentType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxContentType.GetCurrent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxContentType.MoveNext"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxContentType.Reset"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextBuffer.GetCurrent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextBuffer.MoveNext"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextBuffer.Reset"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextChange"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextChange.GetCurrent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextChange.MoveNext"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextChange.Reset"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextSnapshot"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextSnapshot.GetCurrent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextSnapshot.MoveNext"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextSnapshot.Reset"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextSnapshotLine"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextSnapshotLine.GetCurrent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextSnapshotLine.MoveNext"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTextSnapshotLine.Reset"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTrackingSpan"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTrackingSpan.GetCurrent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTrackingSpan.MoveNext"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorIVxTrackingSpan.Reset"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorVxSnapshotSpan"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorVxSnapshotSpan.GetCurrent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorVxSnapshotSpan.MoveNext"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorVxSnapshotSpan.Reset"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorVxSpan"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorVxSpan.GetCurrent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorVxSpan.MoveNext"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IEnumeratorVxSpan.Reset"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIUnknown"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIUnknown.GetCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIUnknown.GetElement(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIUnknown.GetEnumerator"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextBuffer.GetCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextBuffer.GetElement(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextBuffer.GetEnumerator"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextChange"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextChange.GetCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextChange.GetElement(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextChange.GetEnumerator"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextSnapshot"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextSnapshot.GetCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextSnapshot.GetElement(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTextSnapshot.GetEnumerator"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTrackingSpan"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTrackingSpan.GetCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTrackingSpan.GetElement(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIVxTrackingSpan.GetEnumerator"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListVxSnapshotSpan"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListVxSnapshotSpan.GetCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListVxSnapshotSpan.GetElement(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListVxSnapshotSpan.GetEnumerator"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListVxSpan"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListVxSpan.GetCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListVxSpan.GetElement(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IListVxSpan.GetEnumerator"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.AdviseGraphBufferContentTypeChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBufferContentTypeChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.AdviseGraphBuffersChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBuffersChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.CreateMappingPoint(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotPoint)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.CreateMappingSpan(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.GetTopBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.MapDownToBuffer(System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPositionAffinity,System.Int32@)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.MapDownToBuffer_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.MapUpToTop(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotPoint,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPositionAffinity,System.Int32@)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.MapUpToTop_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.UnadviseGraphBufferContentTypeChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBufferContentTypeChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxBufferGraph.UnadviseGraphBuffersChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBuffersChangedEvent)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType.GetBaseTypes"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType.GetDisplayName"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType.GetTypeName"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType.IsOfType(System.String)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEvent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEvent.OnContentTypeChanged(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEventArgs)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEventArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEventArgs.GetAfter"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEventArgs.GetAfterContentType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEventArgs.GetAfterVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEventArgs.GetBefore"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEventArgs.GetBeforeContentType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEventArgs.GetBeforeVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEventArgs.GetEditTag"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxDisposable"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxDisposable.Dispose"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxEventArgsEvent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxEventArgsEvent.OnEventArgs(System.Object,System.Object)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBufferContentTypeChangedEvent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBufferContentTypeChangedEvent.OnGraphBufferContentTypeChanged(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBufferContentTypeChangedEventArgs)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBufferContentTypeChangedEventArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBufferContentTypeChangedEventArgs.GetAfterContentType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBufferContentTypeChangedEventArgs.GetBeforeContentType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBufferContentTypeChangedEventArgs.GetTextBuffer"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBuffersChangedEvent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBuffersChangedEvent.OnGraphBuffersChanged(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBuffersChangedEventArgs)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBuffersChangedEventArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBuffersChangedEventArgs.GetAddedBuffers"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxGraphBuffersChangedEventArgs.GetRemovedBuffers"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxMappingPoint"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxMappingPoint.GetAnchorBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxMappingPoint.GetBufferGraph"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxMappingPoint.GetPoint(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPositionAffinity,System.Int32@)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxMappingSpan"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxMappingSpan.GetAnchorBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxMappingSpan.GetBufferGraph"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxMappingSpan.GetSpans(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSnapshotSpanCollection"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSnapshotSpanCollection.GetCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSnapshotSpanCollection.GetElement(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSnapshotSpanCollection.GetEnumerator"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSnapshotSpanCollection.IntersectsWith(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSnapshotSpanCollection)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSnapshotSpanCollection.OverlapsWith(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSnapshotSpanCollection)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection.Equals(System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection.GetCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection.GetElement(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection.GetEnumerator"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection.GetHashCode"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection.IntersectsWith(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection.OverlapsWith(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedSpanCollection.ToString"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedTextChangeCollection"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedTextChangeCollection.GetCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedTextChangeCollection.GetElement(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedTextChangeCollection.GetEnumerator"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxNormalizedTextChangeCollection.GetIncludesLineChanges"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxPlatformFactory"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxPlatformFactory.CreateTextBufferFactoryService(System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxPlatformFactory.CreateTextDocumentFactoryService(System.Object)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.AdviseChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.AdviseContentTypeChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.AdviseReadOnlyRegionsChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.AdviseSourceBuffersChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.AdviseSourceSpansChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.ChangeContentType(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType,System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.CheckEditAccess"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.CreateEdit(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEditOptions,System.Int32,System.Int32,System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.CreateEdit_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.CreateReadOnlyRegionEdit(System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.CreateReadOnlyRegionEdit_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.Delete(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.Delete_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.DeleteSpans(System.Int32,System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.GetContentType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.GetCurrentSnapshot"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.GetCurrentSnapshot_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.GetEditTransactionInProgress"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.GetProperties"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.GetSourceBuffers"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.Insert(System.Int32,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.Insert_2(System.Int32,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.InsertSpan(System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.InsertSpan_2(System.Int32,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.InsertSpans(System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIUnknown)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.Replace(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.Replace_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.ReplaceSpans(System.Int32,System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEditOptions)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.ReplaceSpans_2(System.Int32,System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop.IListIUnknown,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEditOptions)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.TakeThreadOwnership"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.UnadviseChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.UnadviseContentTypeChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.UnadviseReadOnlyRegionsChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.UnadviseSourceBuffersChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBuffer.UnadviseSourceSpansChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEvent)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.AdviseChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.AdviseContentTypeChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.AdviseReadOnlyRegionsChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.ChangeContentType(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType,System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.CheckEditAccess"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.CreateEdit(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEditOptions,System.Int32,System.Int32,System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.CreateEdit_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.CreateReadOnlyRegionEdit(System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.CreateReadOnlyRegionEdit_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.Delete(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.Delete_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.GetContentType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.GetCurrentSnapshot"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.GetCurrentSnapshot_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.GetEditTransactionInProgress"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.GetProperties"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.GetSourceBuffers"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.Insert(System.Int32,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.Insert_2(System.Int32,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.Replace(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.Replace_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.TakeThreadOwnership"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.UnadviseChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.UnadviseContentTypeChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionBufferBase.UnadviseReadOnlyRegionsChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEvent)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.CreateTrackingPoint(System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPointTrackingMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.CreateTrackingPoint_2(System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPointTrackingMode,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.CreateTrackingSpan(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.CreateTrackingSpan_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.CreateTrackingSpan_3(System.Int32,System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.CreateTrackingSpan_4(System.Int32,System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetLength"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetLineCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetLineFromLineNumber(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetLineFromPosition(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetLineNumberFromPosition(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetLines"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetMatchingSnapshot(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetSourceSnapshots"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetSourceSpans(System.Int32,System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetSourceSpans_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetSpanCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetText(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetText_2(System.Int32,System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetTextBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetTextBuffer_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.GetVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.IsReadOnly(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.IsReadOnly_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.MapFromSourceSnapshot(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotPoint,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPositionAffinity,System.Int32@)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.MapFromSourceSnapshot_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSnapshotSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.MapToSourceSnapshot(System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPositionAffinity,System.Int32@)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.MapToSourceSnapshots(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.Write(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSnapshot.Write_2(System.Object)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEvent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEvent.OnProjectionSourceBuffersChanged(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetAddedBuffers"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetAfter"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetAfter_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetAfterVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetBefore"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetBefore_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetBeforeVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetChanges"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetDeletedSpans"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetEditTag"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetInsertedSpans"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetOptions"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetRemovedBuffers"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceBuffersChangedEventArgs.GetSpanPosition"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEvent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEvent.OnProjectionSourceSpansChanged(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetAfter"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetAfter_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetAfterVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetBefore"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetBefore_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetBeforeVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetChanges"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetDeletedSpans"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetEditTag"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetInsertedSpans"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetOptions"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxProjectionSourceSpansChangedEventArgs.GetSpanPosition"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxPropertyCollection"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxPropertyCollection.AddProperty(System.Object,System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxPropertyCollection.GetProperty_2(System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxPropertyCollection.RemoveProperty(System.Object)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxPropertyOwner"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxPropertyOwner.GetProperties"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegion.GetEdgeInsertionMode"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegion.GetSpan"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionEdit"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionEdit.Apply"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionEdit.Cancel"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionEdit.CreateReadOnlyRegion(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionEdit.CreateReadOnlyRegion_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionEdit.CreateReadOnlyRegion_3(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEdgeInsertionMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionEdit.GetSnapshot"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionEdit.RemoveReadOnlyRegion(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegion)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEvent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEvent.OnReadOnlyRegionsChanged(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEventArgs)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEventArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEventArgs.GetAfter"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEventArgs.GetAfterVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEventArgs.GetBefore"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEventArgs.GetBeforeVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEventArgs.GetEditTag"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.AdviseChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.AdviseContentTypeChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.AdviseReadOnlyRegionsChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.ChangeContentType(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType,System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.CheckEditAccess"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.CreateEdit(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxEditOptions,System.Int32,System.Int32,System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.CreateEdit_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.CreateReadOnlyRegionEdit(System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.CreateReadOnlyRegionEdit_2"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.Delete(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.GetContentType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.GetCurrentSnapshot"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.GetProperties"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.Insert(System.Int32,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.Replace(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.TakeThreadOwnership"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.UnadviseChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.UnadviseContentTypeChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentTypeChangedEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer.UnadviseReadOnlyRegionsChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxReadOnlyRegionsChangedEvent)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBufferEdit"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBufferEdit.Apply"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBufferEdit.Cancel"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBufferEdit.GetSnapshot"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBufferFactoryService"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBufferFactoryService.CreateTextBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBufferFactoryService.CreateTextBuffer_2(System.String,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBufferFactoryService.CreateTextBuffer_3(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetDelta"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetLineCountDelta"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetNewEnd"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetNewLength"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetNewPosition"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetNewSpan"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetNewText"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetOldEnd"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetOldLength"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetOldPosition"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetOldSpan"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextChange.GetOldText"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEvent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEvent.OnTextContentChanged(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEventArgs)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEventArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEventArgs.GetAfter"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEventArgs.GetAfterVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEventArgs.GetBefore"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEventArgs.GetBeforeVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEventArgs.GetChanges"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEventArgs.GetEditTag"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextContentChangedEventArgs.GetOptions"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.AdviseDirtyStateChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxEventArgsEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.AdviseFileActionOccurred(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFileActionEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.Dispose"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.GetFilePath"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.GetIsDirty"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.GetTextBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.Reload"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.Save"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.SaveAs(System.String,System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.SaveAs_2(System.String,System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.SaveCopy(System.String,System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.UnadviseDirtyStateChanged(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxEventArgsEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocument.UnadviseFileActionOccurred(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFileActionEvent)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentEvent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentEvent.OnTextDocument(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentEventArgs)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentEventArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentEventArgs.GetTextDocument"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFactoryService"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFactoryService.AdviseTextDocumentCreated(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFactoryService.AdviseTextDocumentDisposed(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFactoryService.CreateAndLoadTextDocument(System.String,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxContentType)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFactoryService.CreateTextDocument(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextBuffer,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFactoryService.UnadviseTextDocumentCreated(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentEvent)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFactoryService.UnadviseTextDocumentDisposed(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentEvent)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFileActionEvent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFileActionEvent.OnTextDocumentFileAction(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFileActionEventArgs)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFileActionEventArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFileActionEventArgs.GetFileActionType"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextDocumentFileActionEventArgs.GetFilePath"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextEdit"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextEdit.Apply"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextEdit.Cancel"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextEdit.Delete(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextEdit.Delete_2(System.Int32,System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextEdit.GetSnapshot"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextEdit.Insert(System.Int32,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextEdit.Replace(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,System.String)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextEdit.Replace_2(System.Int32,System.Int32,System.String)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.CreateTrackingPoint(System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPointTrackingMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.CreateTrackingPoint_2(System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPointTrackingMode,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.CreateTrackingSpan(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.CreateTrackingSpan_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.CreateTrackingSpan_3(System.Int32,System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.CreateTrackingSpan_4(System.Int32,System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.GetLength"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.GetLineCount"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.GetLineFromLineNumber(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.GetLineFromPosition(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.GetLineNumberFromPosition(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.GetLines"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.GetText(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.GetText_2(System.Int32,System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.GetTextBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.GetVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.IsReadOnly(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.IsReadOnly_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.Write(System.Object,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot.Write_2(System.Object)"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotChangedEventArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotChangedEventArgs.GetAfter"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotChangedEventArgs.GetAfterVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotChangedEventArgs.GetBefore"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotChangedEventArgs.GetBeforeVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotChangedEventArgs.GetEditTag"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetEnd"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetEndIncludingLineBreak"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetExtent"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetExtentIncludingLineBreak"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetLength"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetLengthIncludingLineBreak"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetLineBreakLength"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetLineBreakText"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetLineNumber"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetSnapshot"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetStart"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetText"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshotLine.GetTextIncludingLineBreak"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.CreateTrackingPoint(System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPointTrackingMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.CreateTrackingPoint_2(System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxPointTrackingMode,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.CreateTrackingSpan(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.CreateTrackingSpan_2(Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpan,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.CreateTrackingSpan_3(System.Int32,System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.CreateTrackingSpan_4(System.Int32,System.Int32,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxSpanTrackingMode,Microsoft.VisualStudio.Platform.VSEditor.Interop._VxTrackingFidelityModes)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.GetChanges"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.GetLength"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.GetNext"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.GetReiteratedVersionNumber"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.GetTextBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion.GetVersionNumber"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingPoint"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingPoint.GetCharacter(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingPoint.GetPoint(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingPoint.GetPosition(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingPoint.GetPosition_2(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingPoint.GetTextBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingPoint.GetTrackingFidelity"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingPoint.GetTrackingMode"></member>
+    <member name="T:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan.GetEndPoint(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan.GetSpan(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan.GetSpan_2(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextVersion)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan.GetStartPoint(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan.GetText(Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTextSnapshot)"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan.GetTextBuffer"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan.GetTrackingFidelity"></member>
+    <member name="M:Microsoft.VisualStudio.Platform.VSEditor.Interop.IVxTrackingSpan.GetTrackingMode"></member>
+  </members>
+</doc>

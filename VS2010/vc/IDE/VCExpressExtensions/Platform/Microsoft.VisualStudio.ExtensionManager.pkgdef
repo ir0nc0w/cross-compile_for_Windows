@@ -1,0 +1,27 @@
+[$RootKey$\Packages\{e7576c05-1874-450c-9e98-cf3a0897a069}]
+@="Microsoft.VisualStudio.ExtensionManager.VSPackage.ExtensionManagerPackage, Microsoft.VisualStudio.ExtensionManager.Implementation, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+"InprocServer32"="$WinDir$\system32\mscoree.dll"
+"Class"="Microsoft.VisualStudio.ExtensionManager.VSPackage.ExtensionManagerPackage"
+"Assembly"="Microsoft.VisualStudio.ExtensionManager.Implementation, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+[$RootKey$\ToolsOptionsPages\Environment\ExtensionManager]
+@="#102"
+"Package"="{e7576c05-1874-450c-9e98-cf3a0897a069}"
+"Page"="{539391d7-9414-4715-b033-8669db0abee1}"
+[$RootKey$\AutomationProperties\Environment\ExtensionManager]
+"Name"="Environment.ExtensionManager"
+"Package"="{e7576c05-1874-450c-9e98-cf3a0897a069}"
+[$RootKey$\UserSettings\Environment_Group\Environment_ExtensionManager]
+@="102"
+"Package"="{e7576c05-1874-450c-9e98-cf3a0897a069}"
+"Category"="{539391d7-9414-4715-b033-8669db0abee1}"
+"ToolsOptionsPath"="Environment"
+"VSSettingsMigration"=dword:00000000
+[$RootKey$\Services\{316f4de6-3ca4-4f0d-b003-962d28f65238}]
+@="{e7576c05-1874-450c-9e98-cf3a0897a069}"
+"Name"="SVsExtensionManager"
+[$RootKey$\Services\{6B606DD8-F77E-4335-B9AC-5557A49E789B}]
+@="{e7576c05-1874-450c-9e98-cf3a0897a069}"
+"Name"="SVsExtensionDownloadInstallDialog"
+[$RootKey$\Services\{94fcfe35-a054-4233-b25a-9aa0b8aabb95}]
+@="{e7576c05-1874-450c-9e98-cf3a0897a069}"
+"Name"="SVsExtensionRepository"

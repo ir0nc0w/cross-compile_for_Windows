@@ -1,0 +1,4 @@
+[$Initialization$]
+"ApplicationExtensionsFolder" = "$RootFolder$\Common7\IDE\VCExpressExtensions"
+"PkgDefSearchPath"       = "$ApplicationExtensionsFolder$;$RootFolder$\Common7\IDE\CommonExtensions;$RootFolder$\Common7\IDE\VCExpress.admin.pkgdef;"
+"RegistryRoot"           = "Software\Microsoft\VCExpress\10.0"

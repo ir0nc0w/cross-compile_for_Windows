@@ -1,0 +1,1310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.Language.Intellisense</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1">
+      <summary>AddRange 작업을 허용하는 ObservableCollection을 나타냅니다.</summary>
+      <typeparam name="T">컬렉션의 형식입니다.</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+      <summary>각 항목에 대한 이벤트를 발생시키지 않고 ObservableCollection에 항목 목록을 추가합니다.</summary>
+      <param name="items">추가할 항목 목록입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.AsReadOnly">
+      <summary>컬렉션의 읽기 전용 버전을 가져옵니다.</summary>
+      <returns>컬렉션의 읽기 전용 버전입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.BeginBulkOperation">
+      <summary>대량 변경 작업을 수행하기 위해 컬렉션의 변경 이벤트를 일시 중단합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.ClearItems">
+      <summary>컬렉션에서 모든 항목을 제거합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.EndBulkOperation">
+      <summary>대량 변경 작업이 완료된 후 컬렉션의 변경 이벤트를 복원합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.InsertItem(System.Int32,`0)">
+      <summary>지정된 인덱스에 항목을 삽입합니다.</summary>
+      <param name="index">항목을 삽입할 위치입니다.</param>
+      <param name="item">삽입할 항목입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.MoveItem(System.Int32,System.Int32)">
+      <summary>항목을 한 위치에서 다른 위치로 이동합니다.</summary>
+      <param name="oldIndex">원래 위치입니다.</param>
+      <param name="newIndex">새 위치입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+      <summary>컬렉션이 변경될 때 발생합니다.</summary>
+      <param name="e">이벤트의 인수입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.RemoveItem(System.Int32)">
+      <summary>컬렉션에서 지정된 위치에 있는 항목을 제거합니다.</summary>
+      <param name="index">항목을 제거할 위치입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.BulkObservableCollection`1.SetItem(System.Int32,`0)">
+      <summary>지정된 인덱스에 있는 항목을 바꿉니다.</summary>
+      <param name="index">항목을 바꿀 위치입니다.</param>
+      <param name="item">바꿀 항목입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.Completion">
+      <summary>완성 집합의 항목을 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.Completion.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.Completion" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.Completion.#ctor(System.String)">
+      <summary>지정된 텍스트 및 설명을 사용하여 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.Completion" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="displayText">IntelliSense 발표자에서 표시할 텍스트입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.Completion.#ctor(System.String,System.String,System.String,System.Windows.Media.ImageSource,System.String)">
+      <summary>지정된 텍스트 및 설명을 사용하여 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.Completion" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="displayText">IntelliSense 발표자에서 표시할 텍스트입니다.</param>
+      <param name="insertionText">이 완성이 커밋될 경우 버퍼에 삽입될 텍스트입니다.</param>
+      <param name="description">완성의 표시 텍스트와 함께 표시할 수 있는 설명입니다.</param>
+      <param name="iconSource">소스인 아이콘입니다. </param>
+      <param name="iconAutomationText">아이콘의 자동화 이름으로 사용되는 텍스트입니다. </param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.Completion.Description">
+      <summary>완성의 표시 텍스트와 함께 표시할 수 있는 설명을 가져옵니다.</summary>
+      <returns>설명입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.Completion.DisplayText">
+      <summary>IntelliSense 발표자가 표시할 텍스트를 가져옵니다.</summary>
+      <returns>표시 텍스트입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.Completion.IconAutomationText">
+      <summary>표시될 때 아이콘의 자동화 이름으로 사용되는 텍스트를 가져오거나 설정합니다.</summary>
+      <returns>텍스트입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.Completion.IconSource">
+      <summary>완성을 설명하는 데 사용할 수 있는 아이콘을 가져오거나 설정합니다.</summary>
+      <returns>아이콘입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.Completion.InsertionText">
+      <summary>이 완성이 커밋될 경우 버퍼에 삽입될 텍스트를 가져옵니다.</summary>
+      <returns>삽입할 텍스트입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.Completion.Properties">
+      <summary>완성의 속성을 가져옵니다.</summary>
+      <returns>속성입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.CompletionMatchType">
+      <summary>완성 항목에 대해 수행할 수 있는 일치 형식을 정의합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.CompletionMatchType.MatchDisplayText">
+      <summary>완성의 표시 텍스트를 일치시킵니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.CompletionMatchType.MatchInsertionText">
+      <summary>완성의 삽입 텍스트를 일치시킵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.#ctor"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.AreGradientsAllowed"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.BackgroundBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.BorderBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.CompletionTextRunProperties"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.SelectionBackgroundBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.SelectionBorderBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.SelectionTextRunProperties"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.TabItemHotBackgroundBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.TabItemHotBorderBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.TabItemHotTextRunProperties"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.TabPanelBackgroundBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.TooltipBackgroundBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.TooltipBorderBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionPresenterStyle.TooltipTextRunProperties"></member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus">
+      <summary>완성 집합의 완전한 선택 상태를 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus.#ctor(Microsoft.VisualStudio.Language.Intellisense.Completion,System.Boolean,System.Boolean)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="completion">이 선택 상태에서 선택된 완성입니다.</param>
+      <param name="isSelected">
+                완성이 완전히 선택되면 true이고, 그렇지 않으면 false입니다.</param>
+      <param name="isUnique">
+                완성이 고유한 일치이면 true이고, 그렇지 않으면 false입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus.Completion">
+      <summary>이 선택 상태 인스턴스가 나타내는 선택된 완성을 가져옵니다.</summary>
+      <returns>완성입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus.Equals(System.Object)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus" /> 인스턴스가 같은지 여부를 확인합니다.</summary>
+      <returns>두 개체가 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="obj">비교할 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus.GetHashCode">
+      <summary>이 인스턴스의 해시 코드를 가져옵니다.</summary>
+      <returns>해시 코드입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus.IsSelected">
+      <summary>완성이 완전히 선택되었는지 여부를 확인합니다.</summary>
+      <returns>완성이 선택되었으면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus.IsUnique">
+      <summary>완성이 고유한 일치인지 여부를 확인합니다.</summary>
+      <returns>완성이 고유하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus.op_Equality(Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus,Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus" /> 인스턴스가 같은지 여부를 확인합니다.</summary>
+      <returns>
+            인스턴스가 같으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="status1">첫 번째 인스턴스입니다.</param>
+      <param name="status2">두 번째 인스턴스입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus.op_Inequality(Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus,Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus)">
+      <summary>두 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus" /> 인스턴스가 다른지 여부를 확인합니다.</summary>
+      <returns>
+            인스턴스가 다르면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="status1">첫 번째 인스턴스입니다.</param>
+      <param name="status2">두 번째 인스턴스입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSet">
+      <summary>완성 집합을 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.#ctor">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSet" />의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.#ctor(System.String,System.String,Microsoft.VisualStudio.Text.ITrackingSpan,System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.Language.Intellisense.Completion},System.Collections.Generic.IEnumerable{Microsoft.VisualStudio.Language.Intellisense.Completion})"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.ApplicableTo">
+      <summary>이 완성이 적용되는 텍스트 추적 범위를 가져오거나 설정합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.CompletionBuilders">
+      <summary>이 완성 집합에 속한 완성 작성기의 목록을 가져오거나 설정합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.Completions">
+      <summary>이 완성 집합에 속한 완성 목록을 가져오거나 설정합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.DisplayName">
+      <summary>이 완성 집합의 지역화된 이름을 가져오거나 설정합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.Filter"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.Filter(Microsoft.VisualStudio.Language.Intellisense.CompletionMatchType,System.Boolean)">
+      <summary>완성 집합을 완성 집합의 적용 가능 텍스트와 일치하도록 필터링하고 가장 일치하는 완성을 확인합니다.</summary>
+      <param name="matchType">
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionMatchType" />입니다.</param>
+      <param name="caseSensitive">
+                일치 조건에서 대/소문자를 구분하면 true이고, 그렇지 않으면 false입니다.</param>
+      <exception cref="T:System.InvalidOperationException">Both the completions and the completion builders have been overridden.</exception>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.MatchCompletionList(System.Collections.Generic.IList{Microsoft.VisualStudio.Language.Intellisense.Completion},Microsoft.VisualStudio.Language.Intellisense.CompletionMatchType,System.Boolean)">
+      <summary>완성 목록을 일치시킵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus" />입니다.</returns>
+      <param name="completionList">완성 목록입니다.</param>
+      <param name="matchType">
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionMatchType" />입니다.</param>
+      <param name="caseSensitive">
+                일치 조건에서 대/소문자를 구분하면 true이고, 그렇지 않으면 false입니다.</param>
+      <exception cref="T:System.InvalidOperationException">The span to which this completion applies is null.</exception>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.Moniker"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.Recalculate">
+      <summary>이 완성 집합에 대해 완성 집합을 다시 계산합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.SelectBestMatch">
+      <summary>완성 집합에서 가장 일치하는 완성을 확인합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.SelectBestMatch(Microsoft.VisualStudio.Language.Intellisense.CompletionMatchType,System.Boolean)">
+      <summary>완성 집합에서 가장 일치하는 완성을 다시 확인합니다.</summary>
+      <param name="matchType">
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionMatchType" />입니다.</param>
+      <param name="caseSensitive">
+                일치 조건에서 대/소문자를 구분하면 true이고, 그렇지 않으면 false입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.SelectionStatus">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus" />를 가져오거나 설정합니다.</summary>
+      <exception cref="T:System.ArgumentNullException">The value is null.</exception>
+      <exception cref="T:System.ArgumentException">The <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSelectionStatus" /> is not contained in either the completions or the completion builders.</exception>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.SelectionStatusChanged">
+      <summary>선택 상태가 변경된 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.WritableCompletionBuilders">
+      <summary>쓰기 가능한 완성 작성기의 ObservableCollection을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.WritableCompletions">
+      <summary>쓰기 가능한 완성의 ObservableCollection을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.CompletionMatchResult"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.CompletionMatchResult.#ctor"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.CompletionMatchResult.CharsMatchedCount"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CompletionSet.CompletionMatchResult.SelectionStatus"></member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.CurrentParameterChangedEventArgs">
+      <summary>시그니처 도움말 세션에서 현재 매개 변수의 변경에 대한 정보를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.CurrentParameterChangedEventArgs.#ctor(Microsoft.VisualStudio.Language.Intellisense.IParameter,Microsoft.VisualStudio.Language.Intellisense.IParameter)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CurrentParameterChangedEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="previousCurrentParameter">이전에 현재 매개 변수였던 매개 변수입니다.</param>
+      <param name="newCurrentParameter">지금 현재 매개 변수인 매개 변수입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CurrentParameterChangedEventArgs.NewCurrentParameter">
+      <summary>지금 현재 매개 변수인 매개 변수를 가져옵니다.</summary>
+      <returns>새 현재 매개 변수입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.CurrentParameterChangedEventArgs.PreviousCurrentParameter">
+      <summary>이전에 현재 매개 변수였던 매개 변수를 가져옵니다.</summary>
+      <returns>이전 현재 매개 변수입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.#ctor(System.Collections.Generic.IList{`0})"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Add(System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Add(`0)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Clear"></member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.CollectionChanged"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Contains(System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Contains(`0)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.CopyTo(System.Array,System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.CopyTo(`0[],System.Int32)"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Count"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Filter(System.Predicate{`0})"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.GetEnumerator"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.IndexOf(System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.IndexOf(`0)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Insert(System.Int32,System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Insert(System.Int32,`0)"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.IsFixedSize"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.IsReadOnly"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.IsSynchronized"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Item(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Remove(System.Object)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.Remove(`0)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.RemoveAt(System.Int32)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.StopFiltering"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.SyncRoot"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.System#Collections#IEnumerable#GetEnumerator"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.FilteredObservableCollection`1.System#Collections#IList#Item(System.Int32)"></member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker">
+      <summary>문 완성을 담당하는 중앙 브로커를 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker.CreateCompletionSession(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Text.ITrackingPoint,System.Boolean)">
+      <summary>완성 세션을 만들지만 해당 세션을 시작하지 않습니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession" />입니다.</returns>
+      <param name="textView">완성 세션을 만들 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="triggerPoint">문 완성이 요청된 텍스트 버퍼의 지점입니다.</param>
+      <param name="trackCaret">
+                이 세션에서 캐럿을 추적해야 하면 true이고, 그렇지 않으면 false입니다. 캐럿이 추적되는 경우 적용 범위에 해당 캐럿을 포함하는 완성 항목만 표시됩니다. </param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker.DismissAllSessions(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>모든 활성 문 완성 세션을 닫습니다.</summary>
+      <param name="textView">모든 해당 세션을 닫을 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker.GetSessions(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>활성 문 완성 세션의 목록을 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession" /> 형식의 <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />입니다.</returns>
+      <param name="textView">완성을 가져올 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker.IsCompletionActive(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>문 완성이 지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대해 활성인지 여부를 확인합니다.</summary>
+      <returns>
+            Sessions.Count &gt; 0이면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="textView">문 완성이 활성인지 여부를 확인할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker.TriggerCompletion(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>캐럿 위치가 완성이 삽입될 위치라고 가정하고 문 완성 프로세스를 시작합니다.</summary>
+      <returns>유효한 문 완성 세션입니다. 세션을 만들 수 없는 경우 null이 될 수 있습니다.</returns>
+      <param name="textView">문 완성을 트리거할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICompletionBroker.TriggerCompletion(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Text.ITrackingPoint,System.Boolean)">
+      <summary>특정 위치에서 문 완성 프로세스를 시작합니다. 특정 트리거 지점과 함께 호출되면 캐럿 이동이 무시되고 브로커에서 세션을 닫는 작업을 담당하지 않습니다.</summary>
+      <returns>유효한 문 완성 세션입니다. 세션을 만들 수 없는 경우 null이 될 수 있습니다.</returns>
+      <param name="textView">문 완성을 트리거할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="triggerPoint">문 완성이 요청된 텍스트 버퍼의 지점입니다.</param>
+      <param name="trackCaret">
+                이 세션에서 캐럿을 추적해야 하면 true이고, 그렇지 않으면 false입니다. 캐럿이 추적되는 경우 적용 범위에 해당 캐럿을 포함하는 완성 항목만 표시됩니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession">
+      <summary>IntelliSense 세션 형식의 문 완성 세션을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession.Commit">
+      <summary>완성 세션을 커밋합니다. 선택한 완성의 삽입 텍스트가 적용 가능 범위 대신 버퍼에 삽입됩니다.</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession.Committed">
+      <summary>완성 세션이 커밋된 후 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession.CompletionSets">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSet" /> 개체의 컬렉션을 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSet" /> 개체의 컬렉션입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession.Filter"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession.IsStarted">
+      <summary>완성 세션이 시작되었는지 여부를 확인합니다.</summary>
+      <returns>완성 세션이 시작되었으면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession.SelectedCompletionSet">
+      <summary>선택된 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSet" />을 가져오거나 설정합니다.</summary>
+      <returns>선택한 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.CompletionSet" />입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession.SelectedCompletionSetChanged">
+      <summary>
+        <see cref="P:Microsoft.VisualStudio.Language.Intellisense.ICompletionSession.SelectedCompletionSet" /> 속성이 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource">
+      <summary>지정된 콘텐츠 형식에 대한 완성을 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource.AugmentCompletionSession(Microsoft.VisualStudio.Language.Intellisense.ICompletionSession,System.Collections.Generic.IList{Microsoft.VisualStudio.Language.Intellisense.CompletionSet})"></member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider">
+      <summary>완성 소스를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider.TryCreateCompletionSource(Microsoft.VisualStudio.Text.ITextBuffer)">
+      <summary>지정된 컨텍스트에 대한 완성 공급자를 만듭니다.</summary>
+      <returns>유효한 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource" /> 인스턴스이거나, 공급자를 만들 수 없는 경우 null입니다.</returns>
+      <param name="textBuffer">공급자를 만들 텍스트 버퍼입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IconDescription">
+      <summary>문 완성에서 항목을 표시하는 데 사용할 아이콘을 설명합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IconDescription.#ctor(Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup,Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem)">
+      <summary>그룹 및 그룹 내의 항목에서 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.IconDescription" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="group">표시될 아이콘의 아이콘 그룹입니다.</param>
+      <param name="item">표시될 아이콘 그룹 내의 특정 아이콘입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IconDescription.Group">
+      <summary>표시될 아이콘의 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup" />을 가져옵니다.</summary>
+      <returns>아이콘의 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IconDescription.Item">
+      <summary>표시될 아이콘 그룹 내의 특정 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem" />을 가져옵니다.</summary>
+      <returns>특정 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem" />입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IconDescription.ToString">
+      <summary>특정 아이콘에 대한 설명을 제공합니다.</summary>
+      <returns>문자열입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ICustomCommit">
+      <summary>완성에 사용자 지정 커밋 작업을 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICustomCommit.Commit">
+      <summary>완성의 자체 커밋 논리를 사용하여 완성을 커밋합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ICustomIntellisensePresenter">
+      <summary>사용자 지정 IntelliSense 발표자를 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICustomIntellisensePresenter.Render">
+      <summary>IntelliSense 세션을 렌더링합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ICustomKeyboardHandler">
+      <summary>키보드 이벤트의 사용자 지정 처리기를 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICustomKeyboardHandler.CaptureKeyboard">
+      <summary>처리기에 키보드 이벤트 캡처를 시작할 수 있다는 신호를 보냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ICustomKeyboardHandler.ReleaseKeyboard">
+      <summary>처리기에 키보드 이벤트 캡처를 중지하라는 신호를 보냅니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IGlyphService">
+      <summary>표준 문자 모양 집합을 가져옵니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IGlyphService.GetGlyph(Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup,Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem)">
+      <summary>WPF <see cref="T:System.Windows.Media.ImageSource" /> 형식의 문자 모양을 가져옵니다.</summary>
+      <returns>요청된 문자 모양을 포함하는 유효한 WPF <see cref="T:System.Windows.Media.ImageSource" />입니다.</returns>
+      <param name="group">이 문자 모양에 대한 그룹 설명입니다.</param>
+      <param name="item">이 문자 모양에 대한 항목 설명입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseCommandTarget">
+      <summary>명령 처리 체인에서 키보드 명령 처리를 중재하는 방법을 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseCommandTarget.ExecuteKeyboardCommand(Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand)">
+      <summary>사용자가 시작한 키보드 명령을 실행합니다.</summary>
+      <returns>
+            명령이 처리되었으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="command">실행할 키보드 명령입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController">
+      <summary>단일 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />를 통해 노출된 하나 이상의 제목 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" /> 개체에 대한 IntelliSense 프로세스를 제어합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.ConnectSubjectBuffer(Microsoft.VisualStudio.Text.ITextBuffer)">
+      <summary>프로젝션 또는 콘텐츠 형식이 변경됨에 따라 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />와 연결된 버퍼 그래프에 새 제목 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />가 나타날 경우 호출됩니다.</summary>
+      <param name="subjectBuffer">새로 연결된 텍스트 버퍼입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.Detach(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에서 컨트롤러를 분리합니다.</summary>
+      <param name="textView">컨트롤러를 분리할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController.DisconnectSubjectBuffer(Microsoft.VisualStudio.Text.ITextBuffer)">
+      <summary>프로젝션 또는 콘텐츠 형식이 변경됨에 따라 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />와 연결된 버퍼 그래프에서 제목 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />가 제거될 경우 호출됩니다.</summary>
+      <param name="subjectBuffer">연결이 끊어진 텍스트 버퍼입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseControllerProvider">
+      <summary>특정 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 개체에 대한 IntelliSense 컨트롤러를 만듭니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseControllerProvider.TryCreateIntellisenseController(Microsoft.VisualStudio.Text.Editor.ITextView,System.Collections.Generic.IList{Microsoft.VisualStudio.Text.ITextBuffer})">
+      <summary>특정 텍스트 뷰에 대한 IntelliSense 컨트롤러를 만들려고 시도합니다.</summary>
+      <returns>유효한 IntelliSense 컨트롤러이거나, 컨트롤러를 만들 수 없는 경우 null입니다.</returns>
+      <param name="textView">컨트롤러를 만들어야 하는 텍스트 뷰입니다.</param>
+      <param name="subjectBuffers">잠재적으로 뷰에 표시될 수 있는 일치되는 콘텐츠 형식을 가진 텍스트 버퍼 집합입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisensePresenter">
+      <summary>IntelliSense 정보의 발표자를 정의합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IIntellisensePresenter.Session">
+      <summary>이 발표자가 렌더링하는 세션을 가져옵니다.</summary>
+      <returns>세션입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisensePresenterProvider">
+      <summary>지정된 IntelliSense 세션에 대해 IntelliSense 발표자를 만듭니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisensePresenterProvider.TryCreateIntellisensePresenter(Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession)">
+      <summary>지정된 IntelliSense 세션에 대해 IntelliSense 발표자를 만들려고 시도합니다.</summary>
+      <returns>유효한 IntelliSense 발표자이거나, 발표자를 만들 수 없는 경우 null입니다.</returns>
+      <param name="session">발표자를 만들 세션입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession">
+      <summary>IntelliSense 세션을 나타내거나 IntelliSense 프로세스의 단일 인스턴스를 나타냅니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Collapse"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Dismiss">
+      <summary>세션을 닫습니다. 그러면 발표자가 소멸되고 세션이 세션 스택에서 제거됩니다.</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Dismissed">
+      <summary>세션이 닫힐 경우 발생합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.GetTriggerPoint(Microsoft.VisualStudio.Text.ITextBuffer)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />와 관련하여 이 IntelliSense 세션이 트리거된 <see cref="T:Microsoft.VisualStudio.Text.ITrackingPoint" />를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.ITrackingPoint" />입니다.</returns>
+      <param name="textBuffer">트리거 지점을 반환할 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.GetTriggerPoint(Microsoft.VisualStudio.Text.ITextSnapshot)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshot" />과 관련하여 이 IntelliSense 세션이 트리거된 <see cref="T:Microsoft.VisualStudio.Text.SnapshotPoint" />를 가져옵니다.</summary>
+      <returns>null을 허용하는 <see cref="T:Microsoft.VisualStudio.Text.SnapshotPoint" />입니다.</returns>
+      <param name="textSnapshot">
+        <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshot" />입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.IsDismissed">
+      <summary>세션이 닫혔는지 여부를 확인합니다.</summary>
+      <returns>세션이 닫혔으면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Match">
+      <summary>세션에서 가장 일치하는 항목을 확인하고 선택 항목을 이 항목으로 설정합니다.</summary>
+      <returns>일치하는 항목이 발견되면 true입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Presenter">
+      <summary>이 세션에 대한 IntelliSense를 렌더링하는 데 사용되는 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisensePresenter" />를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisensePresenter" />입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.PresenterChanged">
+      <summary>이 세션의 IntelliSense 발표자가 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Recalculate">
+      <summary>동일한 트리거 지점을 사용하여 이 세션과 관련된 기본 IntelliSense 항목을 다시 계산합니다.</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Recalculated"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.Start">
+      <summary>세션을 시작합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession.TextView">
+      <summary>내부에서 이 IntelliSense 세션이 트리거된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack">
+      <summary>세션 활성화 및 통화를 관리하는 IntelliSense 세션의 스택을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack.CollapseAllSessions"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack.MoveSessionToTop(Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession)">
+      <summary>세션 스택에 이미 있는 세션을 스택의 맨 위로 이동합니다. 키보드 세션이 다시 확인됩니다.</summary>
+      <param name="session">이동할 세션입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack.PopSession">
+      <summary>스택의 맨 위에 있는 세션을 제거하고 이를 반환합니다.</summary>
+      <returns>제거된 세션입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack.PushSession(Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession)">
+      <summary>스택의 맨 위에 세션을 추가합니다.</summary>
+      <param name="session">스택의 맨 위에 추가할 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSession" />입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack.Sessions">
+      <summary>스택의 세션 목록을 맨 아래부터 맨 위까지 순서대로 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack.TopSession">
+      <summary>스택의 맨 위에 있는 세션을 가져옵니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStackMapService">
+      <summary>응용 프로그램의 서로 다른 모든 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 인스턴스에 대해 만들어진 모든 IntelliSense 세션 스택에 대한 액세스를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStackMapService.GetStackForTextView(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>특정 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 인스턴스에 대한 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack" />을 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseSessionStack" />입니다.</returns>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand">
+      <summary>IntelliSense 발표자에 대해 실행할 수 있는 키보드 명령 집합을 나타냅니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.Up">
+      <summary>위쪽 화살표 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.Down">
+      <summary>아래쪽 화살표 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.PageUp">
+      <summary>Page Up 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.PageDown">
+      <summary>Page Down 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.TopLine">
+      <summary>맨 위 줄로 이동 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.BottomLine">
+      <summary>맨 아래 줄로 이동 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.Home">
+      <summary>Home 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.End">
+      <summary>End 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.Enter">
+      <summary>Enter 또는 Return 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.Escape">
+      <summary>Esc 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.IncreaseFilterLevel">
+      <summary>필터 수준 높이기 명령입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseKeyboardCommand.DecreaseFilterLevel">
+      <summary>필터 수준 낮추기 명령입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IntellisenseSpaceReservationManagerNames">
+      <summary>기본 IntelliSense 발표자에 의해 사용되는 공간 예약 관리자의 이름을 정의합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseSpaceReservationManagerNames.CompletionSpaceReservationManagerName">
+      <summary>문 완성에 대한 공간 예약 관리자 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseSpaceReservationManagerNames.QuickInfoSpaceReservationManagerName">
+      <summary>요약 정보에 대한 공간 예약 관리자 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseSpaceReservationManagerNames.SignatureHelpSpaceReservationManagerName">
+      <summary>시그니처 도움말에 대한 공간 예약 관리자 이름입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.IntellisenseSpaceReservationManagerNames.SmartTagSpaceReservationManagerName">
+      <summary>스마트 태그에 대한 공간 예약 관리자 이름입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IParameter">
+      <summary>시그니처 설명 내부의 개별 매개 변수 설명을 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IParameter.Documentation">
+      <summary>매개 변수와 연결된 설명서를 가져옵니다.</summary>
+      <returns>설명서입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IParameter.Locus">
+      <summary>시그니처의 콘텐츠에 상대적인 이 매개 변수의 텍스트 위치를 가져옵니다.</summary>
+      <returns>이 매개 변수의 <see cref="T:Microsoft.VisualStudio.Text.Span" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IParameter.Name">
+      <summary>이 매개 변수의 이름을 가져옵니다.</summary>
+      <returns>이름입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IParameter.PrettyPrintedLocus">
+      <summary>알맞은 형태로 인쇄된 시그니처의 콘텐츠에 상대적인 이 매개 변수의 텍스트 위치를 가져옵니다.</summary>
+      <returns>이 매개 변수의 <see cref="T:Microsoft.VisualStudio.Text.Span" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IParameter.Signature">
+      <summary>이 매개 변수가 속한 시그니처를 가져옵니다.</summary>
+      <returns>매개 변수의 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ISignature" />입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IPopupIntellisensePresenter">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 내에서 팝업으로 렌더링되는 IntelliSense 발표자를 정의합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IPopupIntellisensePresenter.Opacity">
+      <summary>이 팝업 발표자의 불투명도를 가져오거나 설정합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IPopupIntellisensePresenter.PopupStyles">
+      <summary>팝업 스타일을 결정하는 플래그 집합을 가져옵니다.</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.IPopupIntellisensePresenter.PopupStylesChanged"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IPopupIntellisensePresenter.PresentationSpan">
+      <summary>이 발표자와 관련된 <see cref="T:Microsoft.VisualStudio.Text.ITrackingSpan" />을 가져옵니다.</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.IPopupIntellisensePresenter.PresentationSpanChanged">
+      <summary>PresentationSpan 속성이 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IPopupIntellisensePresenter.SpaceReservationManagerName">
+      <summary>이 발표자의 팝업을 만드는 데 사용되는 공간 예약 관리자의 이름을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IPopupIntellisensePresenter.SurfaceElement">
+      <summary>발표자가 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 팝업 내에 표시하고자 하는 WPF <see cref="T:System.Windows.UIElement" />를 가져옵니다.</summary>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.IPopupIntellisensePresenter.SurfaceElementChanged">
+      <summary>WPF SurfaceElement가 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker">
+      <summary>요약 정보 브로커를 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker.CreateQuickInfoSession(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Text.ITrackingPoint,System.Boolean)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />의 지정된 위치에 요약 정보 세션을 만들지만 이를 시작하지는 않습니다.</summary>
+      <returns>유효한 요약 정보 세션이거나, 요약 정보 세션을 만들 수 없는 경우 null입니다.</returns>
+      <param name="textView">요약 정보를 만들 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="triggerPoint">텍스트 버퍼에서 요약 정보를 트리거할 <see cref="T:Microsoft.VisualStudio.Text.ITrackingPoint" />입니다.</param>
+      <param name="trackMouse">마우스가 세션의 적용 가능 범위를 벗어날 경우 세션을 자동으로 닫아야 하면 true이고, 그렇지 않으면 false입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker.GetSessions(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>이 브로커가 작동하는 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 활성 요약 정보 세션 집합을 가져옵니다.</summary>
+      <returns>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" /> 개체에 대해 활성인 유효한 요약 정보 세션 목록입니다.</returns>
+      <param name="textView">요약 정보 세션을 반환할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker.IsQuickInfoActive(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 활성 요약 정보 세션이 적어도 하나 이상 있는지 여부를 확인합니다.</summary>
+      <returns>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 활성 요약 정보 세션이 적어도 하나 이상 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="textView">요약 정보 세션 상태를 확인할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker.TriggerQuickInfo(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />의 캐럿 위치에서 요약 정보를 트리거합니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession" />입니다.</returns>
+      <param name="textView">요약 정보를 트리거할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoBroker.TriggerQuickInfo(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Text.ITrackingPoint,System.Boolean)">
+      <summary>마우스를 추적하거나 추적하지 않으면서 버퍼의 지정된 위치에서 요약 정보를 트리거합니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession" />입니다.</returns>
+      <param name="textView">요약 정보를 트리거할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="triggerPoint">텍스트 버퍼에서 요약 정보를 트리거할 <see cref="T:Microsoft.VisualStudio.Text.ITrackingPoint" />입니다.</param>
+      <param name="trackMouse">
+                마우스가 세션의 적용 가능 범위를 벗어날 경우 세션을 닫아야 하면 true이고, 그렇지 않으면 false입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession">
+      <summary>요약 정보를 표시하는 데 사용되는 IntelliSense 세션을 정의합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession.ApplicableToSpan">
+      <summary>이 세션에 대한 적용 범위를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.ITrackingSpan" />입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession.ApplicableToSpanChanged">
+      <summary>이 세션의 ApplicableToSpan 속성이 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession.QuickInfoContent">
+      <summary>이 세션에서 표시할 콘텐츠를 가져옵니다.</summary>
+      <returns>콘텐츠입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession.TrackMouse">
+      <summary>이 세션에서 마우스를 추적하는지 여부를 확인합니다.</summary>
+      <returns>세션에서 마우스를 추적하면 true이고, 그렇지 않으면 false입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource">
+      <summary>텍스트 버퍼에 대한 요약 정보의 공급자 역할을 하는 요약 정보 공급자를 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource.AugmentQuickInfoSession(Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSession,System.Collections.Generic.IList{System.Object},Microsoft.VisualStudio.Text.ITrackingSpan@)"></member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider">
+      <summary>요약 정보 공급자의 팩터리를 설명합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSourceProvider.TryCreateQuickInfoSource(Microsoft.VisualStudio.Text.ITextBuffer)">
+      <summary>지정된 컨텍스트에 대한 요약 정보 공급자를 만듭니다.</summary>
+      <returns>유효한 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.IQuickInfoSource" />이거나, 공급자를 만들 수 없는 경우 null입니다.</returns>
+      <param name="textBuffer">공급자를 만들 텍스트 버퍼입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ISignature">
+      <summary>시그니처 도움말 도구와 같은 도구에 표시되는 개별 시그니처를 나타냅니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISignature.ApplicableToSpan">
+      <summary>이 시그니처 도움말을 적용할 수 있는 버퍼의 텍스트 범위를 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.ITrackingSpan" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISignature.Content">
+      <summary>표시할 모든 문자를 포함하여 시그니처의 콘텐츠를 가져옵니다.</summary>
+      <returns>콘텐츠입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISignature.CurrentParameter">
+      <summary>이 시그니처의 현재 매개 변수를 가져옵니다.</summary>
+      <returns>현재 매개 변수입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.ISignature.CurrentParameterChanged">
+      <summary>현재 매개 변수가 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISignature.Documentation">
+      <summary>이 시그니처와 연결된 설명서의 내용을 가져옵니다.</summary>
+      <returns>설명서 내용입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISignature.Parameters">
+      <summary>이 시그니처에서 인식하는 매개 변수 목록을 가져옵니다.</summary>
+      <returns>매개 변수의 목록입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISignature.PrettyPrintedContent">
+      <summary>화면에 표시하기 알맞은 형태로 인쇄된 시그니처의 콘텐츠를 가져옵니다.</summary>
+      <returns>시그니처 콘텐츠입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker">
+      <summary>시그니처 도움말 프로세스의 기본 구성 요소인 시그니처 도움말 브로커를 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker.CreateSignatureHelpSession(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Text.ITrackingPoint,System.Boolean)">
+      <summary>시그니처 도움말 세션을 만들지만 시작하지는 않습니다.</summary>
+      <returns>유효한 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession" />입니다. 세션을 만들 수 없는 경우 null이 될 수 있습니다.</returns>
+      <param name="textView">시그니처 도움말이 요청된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="triggerPoint">시그니처 도움말이 요청된 텍스트 버퍼의 지점입니다.</param>
+      <param name="trackCaret">
+                이 세션에서 캐럿을 추적해야 하면 true이고, 그렇지 않으면 false입니다. 캐럿이 추적되는 경우 적용 범위에 해당 캐럿을 포함하는 항목만 표시됩니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker.DismissAllSessions(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>이 브로커의 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 있는 활성 시그니처 도움말 세션을 닫습니다.</summary>
+      <param name="textView">모든 시그니처 도움말 세션을 닫을 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker.GetSessions(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>이 브로커의 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 모든 시그니처 도움말 세션 목록을 가져옵니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession" /> 형식의 <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />입니다.</returns>
+      <param name="textView">
+        <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker.IsSignatureHelpActive(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>시그니처 도움말이 활성인지 여부를 확인합니다.</summary>
+      <returns>
+            지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대해 시그니처 도움말 세션이 적어도 하나 이상 있으면 true이고, 그렇지 않으면 false입니다.</returns>
+      <param name="textView">시그니처 도움말 상태를 확인할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker.TriggerSignatureHelp(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>캐럿 위치에서 시그니처 도움말 프로세스를 시작합니다.</summary>
+      <returns>유효한 시그니처 도움말 세션입니다. 세션을 만들 수 없는 경우 null이 될 수 있습니다.</returns>
+      <param name="textView">시그니처 도움말을 트리거할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpBroker.TriggerSignatureHelp(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Text.ITrackingPoint,System.Boolean)">
+      <summary>지정된 지점에서 시그니처 도움말 프로세스를 시작합니다.</summary>
+      <returns>유효한 시그니처 도움말 세션입니다. 세션을 만들 수 없는 경우 null이 될 수 있습니다.</returns>
+      <param name="textView">시그니처 도움말을 트리거할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="triggerPoint">시그니처 도움말이 요청된 텍스트 버퍼의 지점입니다.</param>
+      <param name="trackCaret">
+                이 세션에서 캐럿을 추적해야 하면 true이고, 그렇지 않으면 false입니다. 캐럿이 추적되는 경우 적용 범위에 해당 캐럿을 포함하는 항목만 표시됩니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession">
+      <summary>시그니처 도움말을 표시하는 데 사용되는 IntelliSense 세션을 정의합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession.SelectedSignature">
+      <summary>현재 선택된 유효한 시그니처 집합 중에서 시그니처를 가져옵니다.</summary>
+      <returns>선택된 시그니처입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession.SelectedSignatureChanged">
+      <summary>SelectedSignature 속성이 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession.Signatures">
+      <summary>이 세션에 대한 유효한 시그니처 집합을 가져옵니다.</summary>
+      <returns>유효한 시그니처입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource">
+      <summary>IntelliSense 프로세스에서 사용되는 시그니처 도움말 정보의 공급자를 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource.AugmentSignatureHelpSession(Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession,System.Collections.Generic.IList{Microsoft.VisualStudio.Language.Intellisense.ISignature})"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSource.GetBestMatch(Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession)">
+      <summary>지정된 시그니처 도움말 세션에 대해 가장 일치하는 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ISignature" /> 인스턴스를 계산합니다. 이 정보에 있어 우선 순위가 가장 높은 시그니처 도움말 공급자에게만 문의합니다.</summary>
+      <returns>지정된 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession" />의 Signatures 컬렉션의 멤버이기도 한 유효한 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ISignature" />입니다. 가장 일치하는 항목을 확인할 수 없는 경우 null을 반환할 수 있으며, 가장 일치하는 항목을 확인하기 위해 그 다음으로 우선 순위가 높은 시그니처 도움말 공급자에게 문의합니다.</returns>
+      <param name="session">가장 일치하는 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ISignature" />를 확인할 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider">
+      <summary>지정된 컨텍스트에 열린 지정된 <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer" />에서 시그니처 도움말 공급자를 만드는 데 사용되는 확장을 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSourceProvider.TryCreateSignatureHelpSource(Microsoft.VisualStudio.Text.ITextBuffer)">
+      <summary>지정된 컨텍스트에 열린 지정된 텍스트 버퍼를 위한 시그니처 도움말 공급자를 만들려고 시도합니다.</summary>
+      <returns>유효한 시그니처 도움말 공급자이거나, 시그니처 도움말 공급자를 만들 수 없는 경우 null입니다.</returns>
+      <param name="textBuffer">시그니처 도움말 공급자를 만들 텍스트 버퍼입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction">
+      <summary>스마트 태그 작업을 정의합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction.ActionSets">
+      <summary>이 스마트 태그 작업 내에 포함된 스마트 태그 작업 집합의 목록을 가져옵니다.</summary>
+      <returns>작업 집합의 목록입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction.DisplayText">
+      <summary>기본 스마트 태그 발표자에 표시되는 텍스트를 가져옵니다.</summary>
+      <returns>표시 텍스트입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction.Icon">
+      <summary>기본 스마트 태그에서 표시 텍스트와 함께 아이콘으로 표시되는 이미지 정보를 가져옵니다.</summary>
+      <returns>아이콘입니다.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction.Invoke">
+      <summary>스마트 태그 작업을 호출하는 데 사용되는 콜백입니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction.IsEnabled">
+      <summary>스마트 태그 작업을 사용할 수 있는지 여부를 확인합니다. 기본적으로, 사용하도록 설정되어 있지 않은 스마트 태그가 렌더링되지만 호출할 수는 없습니다.</summary>
+      <returns>작업을 사용할 수 있으면 true입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ISmartTagBroker">
+      <summary>스마트 태그 트리거를 담당하는 스마트 태그 브로커를 정의합니다. 스마트 태그를 트리거하기 위한 브로커의 구성 요소 호출 메서드입니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISmartTagBroker.CreateSmartTagSession(Microsoft.VisualStudio.Text.Editor.ITextView,Microsoft.VisualStudio.Language.Intellisense.SmartTagType,Microsoft.VisualStudio.Text.ITrackingPoint,Microsoft.VisualStudio.Language.Intellisense.SmartTagState)">
+      <summary>지정된 위치에서 지정된 형식의 스마트 태그에 대한 스마트 태그 세션을 만듭니다.</summary>
+      <returns>유효한 스마트 태그 세션입니다.</returns>
+      <param name="textView">스마트 태그 세션을 만들 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+      <param name="type">만들 스마트 태그의 형식입니다.</param>
+      <param name="triggerPoint">스마트 태그 세션을 만들 버퍼 내의 위치입니다.</param>
+      <param name="state">스마트 태그 세션의 초기 상태입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISmartTagBroker.GetSessions(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>브로커가 활성인 textview 및 제목 버퍼에 대해 현재 활성인 스마트 태그 세션 목록을 가져옵니다.</summary>
+      <returns>지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대한 스마트 태그 세션의 목록입니다.</returns>
+      <param name="textView">스마트 태그 세션의 목록을 검색할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISmartTagBroker.IsSmartTagActive(Microsoft.VisualStudio.Text.Editor.ITextView)">
+      <summary>스마트 태그가 활성인지 여부를 확인합니다.</summary>
+      <returns>
+            지정된 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />에 대해 스마트 태그 세션이 적어도 하나 이상 있으면 true 이고, 그렇지 않으면 false입니다.</returns>
+      <param name="textView">활성 스마트 태그 세션이 있는지 여부를 확인할 <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView" />입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession">
+      <summary>스마트 태그 시스템의 특정 호출에 대한 모든 정보를 캡슐화하는 스마트 태그 세션을 정의합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.ActionSets">
+      <summary>이 세션에서 표시하는 작업의 컬렉션을 가져옵니다.</summary>
+      <returns>작업 집합입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.ApplicableToSpan">
+      <summary>이 세션을 텍스트 버퍼에서 적용할 수 있는 범위를 가져오거나 설정합니다. 스마트 태그 발표자에 의해 렌더링되는 팝업의 위치를 지정하는 데 사용됩니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Text.ITrackingSpan" />입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.ApplicableToSpanChanged">
+      <summary>
+        <see cref="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.ApplicableToSpan" /> 속성이 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.IconSource">
+      <summary>이 세션을 표시할 때 사용할 수 있는 아이콘을 가져오거나 설정합니다. 기본 발표자는 해당 태그를 가리킬 때 나타나는 스마트 태그 단추에서 이 아이콘을 렌더링합니다.</summary>
+      <returns>
+        <see cref="T:System.Windows.Media.ImageSource" />입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.IconSourceChanged">
+      <summary>세션의 아이콘이 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.State">
+      <summary>이 세션의 현재 상태를 가져오거나 설정합니다. 축소된 세션은 기본 발표자에 의해 작은 컬러 사각형으로 렌더링됩니다. 확장된 세션은 유효한 모든 작업이 포함된 메뉴로 렌더링됩니다.</summary>
+      <returns>현재 상태입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.StateChanged">
+      <summary>이 세션의 상태가 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.TagSpan">
+      <summary>태그를 렌더링할 범위입니다.</summary>
+      <returns>범위입니다.</returns>
+    </member>
+    <member name="E:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.TagSpanChanged">
+      <summary>TagSpan 속성이 변경될 경우 발생합니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.TagText">
+      <summary>태그와 함께 표시될 텍스트를 가져오거나 설정합니다.</summary>
+      <returns>태그 텍스트입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession.Type">
+      <summary>이 스마트 태그 세션의 형식입니다.</summary>
+      <returns>세션의 형식입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource">
+      <summary>스마트 태그 데이터의 공급자를 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource.AugmentSmartTagSession(Microsoft.VisualStudio.Language.Intellisense.ISmartTagSession,System.Collections.Generic.IList{Microsoft.VisualStudio.Language.Intellisense.SmartTagActionSet})"></member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider">
+      <summary>스마트 태그 소스의 공급자를 정의합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider.TryCreateSmartTagSource(Microsoft.VisualStudio.Text.ITextBuffer)">
+      <summary>지정된 버퍼의 스마트 태그 소스를 만들려고 시도합니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource" />이거나, 스마트 태그 소스를 만들 수 없는 경우 null입니다.</returns>
+      <param name="textBuffer">스마트 태그 소스를 만들 텍스트 버퍼입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ITextFormattable"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ITextFormattable.GetHighlightedTextRunProperties(System.Windows.Media.TextFormatting.TextRunProperties)"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ITextFormattable.GetTextRunProperties(System.Windows.Media.TextFormatting.TextRunProperties)"></member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IUIElementProvider`2">
+      <summary>지정된 컨텍스트에 대해 특정 형식의 개체에 대한 WPF UIElement의 공급자를 정의합니다.</summary>
+      <typeparam name="TItem">항목의 형식입니다.</typeparam>
+      <typeparam name="TContext">컨텍스트의 형식입니다.</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IUIElementProvider`2.GetUIElement(`0,`1,Microsoft.VisualStudio.Language.Intellisense.UIElementType)">
+      <summary>지정된 컨텍스트에 대한 항목을 표시하기 위한 UIElement를 가져옵니다.</summary>
+      <returns>유효한 WPF UIElement이거나, WPF UIElement를 만들 수 없는 경우 null입니다.</returns>
+      <param name="itemToRender">UIElement를 반환할 항목입니다.</param>
+      <param name="context">항목을 렌더링할 컨텍스트입니다.</param>
+      <param name="elementType">반환될 UIElement의 형식입니다.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.IWpfKeyboardTrackingService">
+      <summary>WPF 편집기의 호스트에서 키보드 추적을 담당하는 MEF 서비스를 정의합니다. VisualStudio와 같은 일부 호스트는 자체적인 키보드 처리를 수행하기 때문에 WPF 요소가 키보드 포커스를 가지는 경우에도 WPF 요소의 동작을 일관되지 않게 만들 수 있으므로 키보드 추적이 필요합니다. 키보드를 추적하면 모든 키보드 이벤트가 WPF로 먼저 라우팅되므로 포커스가 있는 WPF 컨트롤이 키보드 이벤트를 처리할 기회를 얻게 됩니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IWpfKeyboardTrackingService.BeginTrackingKeyboard(System.IntPtr,System.Collections.Generic.IList{System.UInt32})">
+      <summary>키보드 추적을 시작합니다. 일단 호출되면 모든 키보드 이벤트가 호스트 응용 프로그램에서 인식하기 전에 먼저 WPF로 라우팅됩니다.</summary>
+      <param name="handle">메시지가 리디렉션될 유효한 Win32 창 핸들(HWND)입니다.</param>
+      <param name="messagesToCapture">지정된 창 핸들로 리디렉션될 Win32 메시지 목록입니다.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.IWpfKeyboardTrackingService.EndTrackingKeyboard">
+      <summary>키보드 추적을 중지합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.QuickInfoPresenterStyle"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.QuickInfoPresenterStyle.#ctor"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.QuickInfoPresenterStyle.AreGradientsAllowed"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.QuickInfoPresenterStyle.BackgroundBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.QuickInfoPresenterStyle.BorderBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.QuickInfoPresenterStyle.QuickInfoAppearanceCategory"></member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.SelectedSignatureChangedEventArgs">
+      <summary>시그니처 도움말 IntelliSense 세션에서 선택된 시그니처의 변경 사항에 대한 정보를 제공합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.SelectedSignatureChangedEventArgs.#ctor(Microsoft.VisualStudio.Language.Intellisense.ISignature,Microsoft.VisualStudio.Language.Intellisense.ISignature)">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.SelectedSignatureChangedEventArgs" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="previousSelectedSignature">이전에 선택된 시그니처입니다.</param>
+      <param name="newSelectedSignature">현재 선택된 시그니처입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SelectedSignatureChangedEventArgs.NewSelectedSignature">
+      <summary>현재 선택된 시그니처를 가져옵니다.</summary>
+      <returns>현재 선택된 시그니처입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SelectedSignatureChangedEventArgs.PreviousSelectedSignature">
+      <summary>이전에 선택된 시그니처를 가져옵니다.</summary>
+      <returns>이전에 선택된 시그니처입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle.#ctor"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle.AreGradientsAllowed"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle.BackgroundBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle.BorderBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle.CurrentParameterDocumentationTextRunProperties"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle.CurrentParameterNameTextRunProperties"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle.ForegroundBrush"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle.SignatureAppearanceCategory"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle.SignatureDocumentationTextRunProperties"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SignatureHelpPresenterStyle.UpDownSignatureTextRunProperties"></member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.SmartTag">
+      <summary>텍스트 범위에서 수행할 수 있는 작업을 포함하는 데 사용되는 태그입니다. 이 태그는 Intellisense 인프라에서 사용되며 스마트 태그 Intellisense 세션을 생성합니다.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.SmartTag.#ctor(Microsoft.VisualStudio.Language.Intellisense.SmartTagType,System.Collections.ObjectModel.ReadOnlyCollection{Microsoft.VisualStudio.Language.Intellisense.SmartTagActionSet})">
+      <summary>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.SmartTag" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="smartTagType">만들 스마트 태그 세션의 형식입니다.</param>
+      <param name="actionSets">스마트 태그 세션에 포함될 작업 집합입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SmartTag.ActionSets">
+      <summary>스마트 태그 세션에 포함될 작업 집합입니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.SmartTagActionSet" /> 형식의 <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />입니다.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SmartTag.SmartTagType">
+      <summary>만들 스마트 태그 세션의 형식입니다.</summary>
+      <returns>
+        <see cref="T:Microsoft.VisualStudio.Language.Intellisense.SmartTagType" />입니다.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.SmartTagActionSet"></member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.SmartTagActionSet.#ctor(System.Collections.ObjectModel.ReadOnlyCollection{Microsoft.VisualStudio.Language.Intellisense.ISmartTagAction})"></member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.SmartTagActionSet.Actions"></member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.SmartTagState">
+      <summary>스마트 태그 세션 상태 집합입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.SmartTagState.Collapsed">
+      <summary>세션이 축소 모드로 렌더링됩니다. 이 모드는 기본 발표자에서 작은 컬러 사각형으로 표시됩니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.SmartTagState.Intermediate">
+      <summary>세션이 축소되지도 않고 확장되지도 않습니다. 기본 발표자에서 이 모드는 단추로 표시되지만 작업 메뉴는 없습니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.SmartTagState.Expanded">
+      <summary>세션이 확장 모드로 렌더링됩니다. 이 모드는 기본 발표자에서 사용자가 작업을 선택할 수 있는 메뉴로 표시됩니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.SmartTagType">
+      <summary>스마트 태그 세션 형식의 집합입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.SmartTagType.Factoid">
+      <summary>장기간 유효한 일반 태그입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.SmartTagType.Ephemeral">
+      <summary>특정 기간 동안만 유효한 태그입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup">
+      <summary>기본 완성 도구 구현에 표시될 수 있는 문자 모양의 서로 다른 형식을 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupClass">
+      <summary>클래스에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupConstant">
+      <summary>상수에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupDelegate">
+      <summary>대리자에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupEnum">
+      <summary>열거형에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupEnumMember">
+      <summary>열거형 멤버에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupEvent">
+      <summary>이벤트에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupException">
+      <summary>예외에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupField">
+      <summary>필드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupInterface">
+      <summary>인터페이스에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupMacro">
+      <summary>매크로에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupMap">
+      <summary>맵에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupMapItem">
+      <summary>맵 항목에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupMethod">
+      <summary>메서드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupOverload">
+      <summary>오버로드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupModule">
+      <summary>모듈에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupNamespace">
+      <summary>네임스페이스에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupOperator">
+      <summary>연산자에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupProperty">
+      <summary>속성에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupStruct">
+      <summary>구조체에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupTemplate">
+      <summary>템플릿에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupTypedef">
+      <summary>typedef에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupType">
+      <summary>형식에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupUnion">
+      <summary>공용 구조체에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupVariable">
+      <summary>변수에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupValueType">
+      <summary>값 형식에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupIntrinsic">
+      <summary>내장 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupJSharpMethod">
+      <summary>J# 메서드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupJSharpField">
+      <summary>J# 필드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupJSharpClass">
+      <summary>J# 클래스에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupJSharpNamespace">
+      <summary>J# 네임스페이스에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupJSharpInterface">
+      <summary>J# 인터페이스에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupError">
+      <summary>오류에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphBscFile">
+      <summary>BSC 파일에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphAssembly">
+      <summary>어셈블리에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphLibrary">
+      <summary>라이브러리에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphVBProject">
+      <summary>VB 프로젝트에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphCoolProject">
+      <summary>C# 프로젝트에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphCppProject">
+      <summary>C++ 프로젝트에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphDialogId">
+      <summary>대화 상자 식별자에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphOpenFolder">
+      <summary>열린 폴더에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphClosedFolder">
+      <summary>닫힌 폴더에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphArrow">
+      <summary>화살표 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphCSharpFile">
+      <summary>C# 파일에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphCSharpExpansion">
+      <summary>C# 확장에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphKeyword">
+      <summary>키워드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphInformation">
+      <summary>정보에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphReference">
+      <summary>참조에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphRecursion">
+      <summary>재귀에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlItem">
+      <summary>XML 항목에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphJSharpProject">
+      <summary>J# 프로젝트에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphJSharpDocument">
+      <summary>J# 문서에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphForwardType">
+      <summary>전달된 형식에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphCallersGraph">
+      <summary>호출자 그래프에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphCallGraph">
+      <summary>호출 그래프에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphWarning">
+      <summary>빌드 경고에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphMaybeReference">
+      <summary>참조일 가능성이 있는 항목에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphMaybeCaller">
+      <summary>호출자일 가능성이 있는 항목에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphMaybeCall">
+      <summary>호출일 가능성이 있는 항목에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphExtensionMethod">
+      <summary>확장 메서드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphExtensionMethodInternal">
+      <summary>internal 확장 메서드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphExtensionMethodFriend">
+      <summary>friend 확장 메서드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphExtensionMethodProtected">
+      <summary>protected 확장 메서드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphExtensionMethodPrivate">
+      <summary>private 확장 메서드에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphExtensionMethodShortcut">
+      <summary>확장 메서드 바로 가기에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlAttribute">
+      <summary>XML 특성에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlChild">
+      <summary>자식 XML 요소에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlDescendant">
+      <summary>하위 XML 요소에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlNamespace">
+      <summary>XML 네임스페이스에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlAttributeQuestion">
+      <summary>XML 특성에 대해 물음표가 있는 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlAttributeCheck">
+      <summary>XML 특성에 대해 확인 표시가 있는 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlChildQuestion">
+      <summary>XML 자식 요소에 대해 물음표가 있는 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlChildCheck">
+      <summary>XML 자식 요소에 대해 확인 표시가 있는 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlDescendantQuestion">
+      <summary>XML 하위 요소에 대해 물음표가 있는 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphXmlDescendantCheck">
+      <summary>XML 하위 요소에 대해 확인 표시가 있는 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphGroup.GlyphGroupUnknown">
+      <summary>알 수 없는 형식에 대한 기호를 설명합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem">
+      <summary>문 완성에 사용되는 아이콘 또는 문자 모양을 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem.GlyphItemPublic">
+      <summary>public 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem.GlyphItemInternal">
+      <summary>내부 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem.GlyphItemFriend">
+      <summary>friend 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem.GlyphItemProtected">
+      <summary>protected 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem.GlyphItemPrivate">
+      <summary>private 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem.GlyphItemShortcut">
+      <summary>바로 가기 기호를 설명합니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.StandardGlyphItem.TotalGlyphItems">
+      <summary>표준 특성을 모두 가지거나 표준 특성을 전혀 가지지 않은 기호를 설명합니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.UIElementType">
+      <summary>UIElement 형식입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.UIElementType.Small">
+      <summary>해당 개체를 나타내는 작은 크기의 UIElement입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.UIElementType.Large">
+      <summary>해당 개체를 나타내는 큰 크기의 UIElement입니다.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Language.Intellisense.UIElementType.Tooltip">
+      <summary>해당 개체를 나타내는 도구 설명에서 호스팅될 UIElement입니다.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Language.Intellisense.ValueChangedEventArgs`1">
+      <summary>모든 종류의 값 변경에 대한 정보를 제공합니다.</summary>
+      <typeparam name="TValue">값의 형식입니다.</typeparam>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Language.Intellisense.ValueChangedEventArgs`1.#ctor(`0,`0)">
+      <summary>속성의 새 값 및 이전 값을 사용하여 <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ValueChangedEventArgs`1" />의 새 인스턴스를 초기화합니다.</summary>
+      <param name="oldValue">이전 값입니다.</param>
+      <param name="newValue">새 값입니다.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ValueChangedEventArgs`1.NewValue">
+      <summary>새 값을 가져옵니다.</summary>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Language.Intellisense.ValueChangedEventArgs`1.OldValue">
+      <summary>이전 값을 가져옵니다.</summary>
+    </member>
+  </members>
+</doc>

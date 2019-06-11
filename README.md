@@ -6,7 +6,7 @@
 ## Layout
 ```
 .
-├── README.md                                                                                                               │                     
+├── README.md
 ├── VS2010/
 │    └── vc/
 │ 		  ├── IDE/	

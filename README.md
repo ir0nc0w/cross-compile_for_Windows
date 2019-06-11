@@ -9,28 +9,28 @@
 ├── README.md
 ├── VS2010/
 │    └── vc/
-│ 		  ├── IDE/	
-│ 		  ├── bin/	
-│		  ├── include/
-│		  └── lib/
+│ 	 ├── IDE/	
+│ 	 ├── bin/	
+│	 ├── include/
+│	 └── lib/
 ├── VS2012/
 │    └── vc/
-│ 		  ├── IDE/	
-│ 		  ├── bin/	
-│		  ├── include/
-│         ├── lib/
-│		  └── redist/
+│ 	 ├── IDE/	
+│ 	 ├── bin/	
+│	 ├── include/
+│        ├── lib/
+│	 └── redist/
 ├── VS2017/            
 │    └── vc/
-│ 	  ├── bin/	
-│         ├── include/
-│         └── lib/
+│ 	 ├── bin/	
+│        ├── include/
+│        └── lib/
 ├── SDK7/
 │	 ├── include/
 │        └── lib/
 └── SDK10/
-     ├── include/
-     └── lib/
+     	 ├── include/
+     	 └── lib/
 ```
 
 ## How to install

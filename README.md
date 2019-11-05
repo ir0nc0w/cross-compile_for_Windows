@@ -4,24 +4,24 @@
 - reference : https://ooo-imath.sourceforge.io/wiki/index.php/Cross-compiling_for_Windows
 
 ## Layout
-``
+```
 .
-├── README.md                                                                                                                         │                                                                                                                                        
+├── README.md
+│                                            
 ├── VS2010/
 │    └── vc/
 │ 		  ├── IDE/	
 │ 		  ├── bin/	
 │		  ├── include/
 │		  └── lib/
-├── VS2012/                                                                                                                              │                                                                                                                                        
+├── VS2012/                               
 │    └── vc/
 │ 		  ├── IDE/	
 │ 		  ├── bin/	
 │		  ├── include/
 │         ├── lib/
 │		  └── redist/
-├── VS2017/                                                                                                                            │                                                                                                                                        
-│    └── vc/
+├── VS2017/                                                                                 │    └── vc/
 │ 		  ├── bin/	
 │		  ├── include/
 │         └── lib/
@@ -36,59 +36,71 @@
 
 ## How to install
 ### WINE
-1) install wine
+1) install `wine`
 
 ### VS2010
 1) cp -r VS2010/ /home/you/.wine/drive_c
 2) wine regedit
+
+```
 3) HKEY_LOCAL_MACHINE
 	└── System
 		└── CurrentControlSet
 			└── Control
 				└── Session Manager
 					└── Environment
+```
+
 4) Add the path in PATH
-	: C:\VS2010\vc\bin;C:\VS2010\vc\IDE;
+	: `C:\VS2010\vc\bin;C:\VS2010\vc\IDE;`
 5) check `wine cl`
 
 ### VS2012
-1) cp -r VS2012/ /home/you/.wine/drive_c
-2) wine regedit
+1) `cp -r VS2012/ /home/you/.wine/drive_c`
+2) `wine regedit`
+
+```
 3) HKEY_LOCAL_MACHINE
 	└── System
 		└── CurrentControlSet
 			└── Control
 				└── Session Manager
 					└── Environment
+```
+
 4) Add the path in PATH
-	: C:\VS2012\vc\bin;C:\VS2010\vc\IDE;
+	: `C:\VS2012\vc\bin;C:\VS2010\vc\IDE;`
 5) check `wine cl`
 
 ### VS2017
-1) cp -r VS2017/ /home/you/.wine/drive_c
-2) wine regedit
+1) `cp -r VS2017/ /home/you/.wine/drive_c`
+2) `wine regedit`
+
+```
 3) HKEY_LOCAL_MACHINE
 	└── System
 		└── CurrentControlSet
 			└── Control
 				└── Session Manager
 					└── Environment
+```
+
 4) Add the path in PATH
-	: C:\VS2017\vc\bin;
+	: `C:\VS2017\vc\bin;`
 5) check `wine cl`
 
 ### SDK7
-1) cp -r SDK7/ /home/you/.wine/drive_c
+1) `cp -r SDK7/ /home/you/.wine/drive_c`
 
 
 ### SDK10
-1) cp -r SDK10/ /home/you/.wine/drive_c
+1) `cp -r SDK10/ /home/you/.wine/drive_c`
 
 
 ## When you compile
 ### [Example] VS2012 with SDK7; x86 to x64 cross compile
 
-```
+```shell
 LD="wine link" LIB="C:/VS2012/vc/lib/amd64;C:/SDK7/x64" \
 	wine cl $1 /EHsc -o $2.exe \
 	/IC:/VS2012/vc/include /IC:SDK7/include \
